@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-LightItalic.woff2") format("woff2"), url("/fonts/Gilroy-LightItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-LightItalic.woff2") format("woff2"), url("../fonts/Gilroy-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-BoldItalic.woff2") format("woff2"), url("/fonts/Gilroy-BoldItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-BoldItalic.woff2") format("woff2"), url("../fonts/Gilroy-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-BoldItalic.woff2") format("woff2"), url("/fonts/Gilroy-BoldItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-BoldItalic.woff2") format("woff2"), url("../fonts/Gilroy-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Regular.woff2") format("woff2"), url("/fonts/Gilroy-Regular.woff") format("woff");
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-BlackItalic.woff2") format("woff2"), url("/fonts/Gilroy-BlackItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-BlackItalic.woff2") format("woff2"), url("../fonts/Gilroy-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Medium.woff2") format("woff2"), url("/fonts/Gilroy-Medium.woff") format("woff");
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-LightItalic.woff2") format("woff2"), url("/fonts/Gilroy-LightItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-LightItalic.woff2") format("woff2"), url("../fonts/Gilroy-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Black.woff2") format("woff2"), url("/fonts/Gilroy-Black.woff") format("woff");
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Bold.woff2") format("woff2"), url("/fonts/Gilroy-Bold.woff") format("woff");
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -72,7 +72,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-RegularItalic.woff2") format("woff2"), url("/fonts/Gilroy-RegularItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-RegularItalic.woff2") format("woff2"), url("../fonts/Gilroy-RegularItalic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -80,7 +80,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Heavy.woff2") format("woff2"), url("/fonts/Gilroy-Heavy.woff") format("woff");
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -88,7 +88,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Light.woff2") format("woff2"), url("/fonts/Gilroy-Light.woff") format("woff");
+  src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -96,7 +96,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-MediumItalic.woff2") format("woff2"), url("/fonts/Gilroy-MediumItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-MediumItalic.woff2") format("woff2"), url("../fonts/Gilroy-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -104,7 +104,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Extrabold.woff2") format("woff2"), url("/fonts/Gilroy-Extrabold.woff") format("woff");
+  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -112,7 +112,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Bold.woff2") format("woff2"), url("/fonts/Gilroy-Bold.woff") format("woff");
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -120,7 +120,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Medium.woff2") format("woff2"), url("/fonts/Gilroy-Medium.woff") format("woff");
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -128,7 +128,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Black.woff2") format("woff2"), url("/fonts/Gilroy-Black.woff") format("woff");
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -136,7 +136,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("/fonts/Gilroy-HeavyItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("../fonts/Gilroy-HeavyItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -144,7 +144,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Extrabold.woff2") format("woff2"), url("/fonts/Gilroy-Extrabold.woff") format("woff");
+  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -152,7 +152,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("/fonts/Gilroy-HeavyItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2"), url("../fonts/Gilroy-HeavyItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -160,7 +160,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-ExtraboldItalic.woff2") format("woff2"), url("/fonts/Gilroy-ExtraboldItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-ExtraboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-ExtraboldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -168,7 +168,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Regular.woff2") format("woff2"), url("/fonts/Gilroy-Regular.woff") format("woff");
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -176,7 +176,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Heavy.woff2") format("woff2"), url("/fonts/Gilroy-Heavy.woff") format("woff");
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -184,7 +184,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-BlackItalic.woff2") format("woff2"), url("/fonts/Gilroy-BlackItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-BlackItalic.woff2") format("woff2"), url("../fonts/Gilroy-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -192,7 +192,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-MediumItalic.woff2") format("woff2"), url("/fonts/Gilroy-MediumItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-MediumItalic.woff2") format("woff2"), url("../fonts/Gilroy-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -200,7 +200,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-ExtraboldItalic.woff2") format("woff2"), url("/fonts/Gilroy-ExtraboldItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-ExtraboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-ExtraboldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -208,7 +208,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-RegularItalic.woff2") format("woff2"), url("/fonts/Gilroy-RegularItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-RegularItalic.woff2") format("woff2"), url("../fonts/Gilroy-RegularItalic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -216,7 +216,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Light.woff2") format("woff2"), url("/fonts/Gilroy-Light.woff") format("woff");
+  src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -224,7 +224,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Semibold.woff2") format("woff2"), url("/fonts/Gilroy-Semibold.woff") format("woff");
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -232,7 +232,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Semibold.woff2") format("woff2"), url("/fonts/Gilroy-Semibold.woff") format("woff");
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -240,7 +240,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-UltraLight.woff2") format("woff2"), url("/fonts/Gilroy-UltraLight.woff") format("woff");
+  src: url("../fonts/Gilroy-UltraLight.woff2") format("woff2"), url("../fonts/Gilroy-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -248,7 +248,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-UltraLight.woff2") format("woff2"), url("/fonts/Gilroy-UltraLight.woff") format("woff");
+  src: url("../fonts/Gilroy-UltraLight.woff2") format("woff2"), url("../fonts/Gilroy-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -256,7 +256,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-SemiboldItalic.woff2") format("woff2"), url("/fonts/Gilroy-SemiboldItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-SemiboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-SemiboldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -264,7 +264,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Thin.woff2") format("woff2"), url("/fonts/Gilroy-Thin.woff") format("woff");
+  src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -272,7 +272,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-ThinItalic.woff2") format("woff2"), url("/fonts/Gilroy-ThinItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-ThinItalic.woff2") format("woff2"), url("../fonts/Gilroy-ThinItalic.woff") format("woff");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -280,7 +280,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-UltraLightItalic.woff2") format("woff2"), url("/fonts/Gilroy-UltraLightItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-UltraLightItalic.woff2") format("woff2"), url("../fonts/Gilroy-UltraLightItalic.woff") format("woff");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -288,7 +288,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-Thin.woff2") format("woff2"), url("/fonts/Gilroy-Thin.woff") format("woff");
+  src: url("../fonts/Gilroy-Thin.woff2") format("woff2"), url("../fonts/Gilroy-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -296,7 +296,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-UltraLightItalic.woff2") format("woff2"), url("/fonts/Gilroy-UltraLightItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-UltraLightItalic.woff2") format("woff2"), url("../fonts/Gilroy-UltraLightItalic.woff") format("woff");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -304,7 +304,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-ThinItalic.woff2") format("woff2"), url("/fonts/Gilroy-ThinItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-ThinItalic.woff2") format("woff2"), url("../fonts/Gilroy-ThinItalic.woff") format("woff");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
@@ -312,7 +312,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/Gilroy-SemiboldItalic.woff2") format("woff2"), url("/fonts/Gilroy-SemiboldItalic.woff") format("woff");
+  src: url("../fonts/Gilroy-SemiboldItalic.woff2") format("woff2"), url("../fonts/Gilroy-SemiboldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -320,7 +320,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-ExtraLight.woff2") format("woff2"), url("/fonts/Oswald-ExtraLight.woff") format("woff");
+  src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"), url("../fonts/Oswald-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -328,7 +328,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Medium.woff2") format("woff2"), url("/fonts/Oswald-Medium.woff") format("woff");
+  src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -336,7 +336,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Light.woff2") format("woff2"), url("/fonts/Oswald-Light.woff") format("woff");
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -344,7 +344,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-SemiBold.woff2") format("woff2"), url("/fonts/Oswald-SemiBold.woff") format("woff");
+  src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -352,7 +352,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Medium.woff2") format("woff2"), url("/fonts/Oswald-Medium.woff") format("woff");
+  src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -360,7 +360,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Light.woff2") format("woff2"), url("/fonts/Oswald-Light.woff") format("woff");
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -368,7 +368,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Bold.woff2") format("woff2"), url("/fonts/Oswald-Bold.woff") format("woff");
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -376,7 +376,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Regular.woff2") format("woff2"), url("/fonts/Oswald-Regular.woff") format("woff");
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -384,7 +384,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Regular.woff2") format("woff2"), url("/fonts/Oswald-Regular.woff") format("woff");
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -392,7 +392,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-SemiBold.woff2") format("woff2"), url("/fonts/Oswald-SemiBold.woff") format("woff");
+  src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -400,7 +400,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-ExtraLight.woff2") format("woff2"), url("/fonts/Oswald-ExtraLight.woff") format("woff");
+  src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"), url("../fonts/Oswald-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -408,7 +408,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Bold.woff2") format("woff2"), url("/fonts/Oswald-Bold.woff") format("woff");
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -416,7 +416,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Light.woff2") format("woff2"), url("/fonts/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -424,7 +424,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Bold.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -432,7 +432,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-ExtraBoldItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -440,7 +440,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -448,7 +448,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("/fonts/OpenSans-ExtraBold.woff") format("woff");
+  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -456,7 +456,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-BoldItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -464,7 +464,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -472,7 +472,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-BoldItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -480,7 +480,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Light.woff2") format("woff2"), url("/fonts/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -488,7 +488,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Italic.woff2") format("woff2"), url("/fonts/OpenSans-Italic.woff") format("woff");
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -496,7 +496,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-LightItalic.woff2") format("woff2"), url("/fonts/OpenSans-LightItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2"), url("../fonts/OpenSans-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -504,7 +504,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("/fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -512,7 +512,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Italic.woff2") format("woff2"), url("/fonts/OpenSans-Italic.woff") format("woff");
+  src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -520,7 +520,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-LightItalic.woff2") format("woff2"), url("/fonts/OpenSans-LightItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2"), url("../fonts/OpenSans-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -528,7 +528,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-ExtraBoldItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -536,7 +536,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("/fonts/OpenSans-ExtraBold.woff") format("woff");
+  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -544,7 +544,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Bold.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -552,7 +552,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("/fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -560,7 +560,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-SemiBoldItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -568,7 +568,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"), url("/fonts/OpenSans-SemiBoldItalic.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -576,7 +576,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Bold.woff2") format("woff2"), url("/fonts/Oswald-Bold.woff") format("woff");
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -584,7 +584,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Light.woff2") format("woff2"), url("/fonts/Oswald-Light.woff") format("woff");
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -592,7 +592,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Bold.woff2") format("woff2"), url("/fonts/Oswald-Bold.woff") format("woff");
+  src: url("../fonts/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -600,7 +600,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Medium.woff2") format("woff2"), url("/fonts/Oswald-Medium.woff") format("woff");
+  src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -608,7 +608,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Medium.woff2") format("woff2"), url("/fonts/Oswald-Medium.woff") format("woff");
+  src: url("../fonts/Oswald-Medium.woff2") format("woff2"), url("../fonts/Oswald-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -616,7 +616,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Regular.woff2") format("woff2"), url("/fonts/Oswald-Regular.woff") format("woff");
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -624,7 +624,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-ExtraLight.woff2") format("woff2"), url("/fonts/Oswald-ExtraLight.woff") format("woff");
+  src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"), url("../fonts/Oswald-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -632,7 +632,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Regular.woff2") format("woff2"), url("/fonts/Oswald-Regular.woff") format("woff");
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -640,7 +640,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-Light.woff2") format("woff2"), url("/fonts/Oswald-Light.woff") format("woff");
+  src: url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -648,7 +648,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-ExtraLight.woff2") format("woff2"), url("/fonts/Oswald-ExtraLight.woff") format("woff");
+  src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"), url("../fonts/Oswald-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -656,7 +656,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-SemiBold.woff2") format("woff2"), url("/fonts/Oswald-SemiBold.woff") format("woff");
+  src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -664,7 +664,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/fonts/Oswald-SemiBold.woff2") format("woff2"), url("/fonts/Oswald-SemiBold.woff") format("woff");
+  src: url("../fonts/Oswald-SemiBold.woff2") format("woff2"), url("../fonts/Oswald-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
