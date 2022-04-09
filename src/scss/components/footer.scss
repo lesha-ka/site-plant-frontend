@@ -1,0 +1,98 @@
+.footer {
+    background-color: $green;
+    &-inner {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-social {
+        align-self: stretch;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &-social-icons {
+        display: flex;
+    }
+    &-social-icon {
+        transition: all 0.5s ease-in-out;
+        &:hover, &:active {
+            transform: scale(1.26);
+        }
+        &:not(:last-child) {
+            margin-right: 27px;
+        }
+    }
+    &-links-title {
+        display: block;
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-20;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+    &-link {
+        display: block;
+        font-family: $open-sans;
+        font-weight: 600;
+        @include fz-14;
+        color: #FFFFFF99;
+        transition: all 0.3s ease-in-out;
+        &:hover, &:active {
+            color: $white;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    &-link-big {
+        display: block;
+        font-family: $open-sans;
+        font-weight: 700;
+        @include fz-16;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+        &:hover, &:active {
+            transform: scale(1.18) translateX(10px);
+        }
+    }
+    &-links-subtitle {
+        display: block;
+        font-family: $open-sans;
+        font-weight: 600;
+        @include fz-14;
+        color: #FFFFFF99;
+        margin-bottom: 5px;
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+    }
+    &-copyright {
+        background: #85bf53;
+        &-inner {
+            position: relative;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        &-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-family: $open-sans;
+            font-weight: 600;
+            @include fz-14;
+            line-height: 19px;            
+            color: #FFFFFF99;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &-payment {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    } 
+}

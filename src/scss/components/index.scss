@@ -1,0 +1,514 @@
+.wrapper-index {
+    position: relative;
+    background: url(../img/index-bg.png);
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 260px;
+        height: 580px;
+        background: url(../img/index/leaf-left.png) no-repeat;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        width: 255px;
+        height: 580px;
+        background: url(../img/index/leaf-right.png) no-repeat;
+    }
+} 
+.main {
+    padding: 80px 0 110px;
+}
+.banner {
+    background: url("../img/index/trees.png") no-repeat right bottom, linear-gradient(136.69deg, #F7FFEC 9.75%, #FFFFFF 66.54%);
+    border-radius: 12px;
+    padding: 114px 146px;
+    max-width: 1350px;
+    margin: 0 auto;
+    &-title {
+        font-family: $gilroy;
+        font-weight: 700;
+        font-size: 62px;
+        line-height: 1.24;
+        color: $green;
+    }
+    &-subtitle {
+        display: inline-block;
+        margin-top: 15px;
+        font-family: $gilroy;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.24;
+        color: $d-green;
+    }
+    &-date {
+        margin-top: 15px;
+        text-align: right;
+        display: block;
+        font-weight: 400;
+        color: $l-gray;
+        @include fz-18;
+    }
+}
+.offers {
+    margin-top: 100px;
+    background: $beige;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    &-title {
+        font-family: $open-sans;
+        font-weight: 600;
+        color: $blue;
+        font-size: 28px;
+        line-height: 1.35;
+        display: inline-block;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            left: -20px;
+            top: 10px;
+            width: 8px;
+            height: 52%;
+            border-radius: 8px;
+            background-color: $blue;
+        }
+    }
+    &-timer {
+        font-family: $oswald;
+        font-weight: 500;
+        margin-top: 16px;
+        color: $gray;
+    }
+    &-timer-item {
+        position: relative;
+        background-color: $white;
+        @include fz-14;
+        padding: 10px;
+        color: $blue;
+        border-radius: 3px;
+        margin: 0 5px;
+        &:first-child {
+            margin-left: 0;
+            margin-right: 5px;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            filter: blur(27px);
+        }
+    }
+    &-cards {
+        margin: 30px 0 40px;
+        display: flex;
+    }
+    &-cards-more {
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-22;
+        color: $green;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    &-card {
+        position: relative;
+        width: calc(25%  - 22.5px);
+        max-height: 400px;
+        overflow: hidden;
+        margin-right: 30px;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+        & img {
+            object-fit: cover;
+        }
+        &:hover .card-inner {
+            display: block;
+        }
+    }
+}
+.card {
+    &:hover .card-inner {
+        display: block;
+    }
+    &-inner {
+        display: none;
+        text-align: left;
+        font-family: $open-sans;
+        @include fz-14;
+        font-weight: 400;
+        position: absolute;
+        color: $white;
+        bottom: 5px;
+        left: 5px;
+        width: calc(100% - 10px);
+        background: #3D4F3CB3;
+        border-radius: 4px;
+        padding: 10px 12px 14px;
+        &:hover {
+            display: block;
+        }
+    }
+    &-text {
+        margin-top: 9px;
+    }
+    &-price {
+        font-family: $oswald;
+        margin-top: 10px;
+        display: inline-block;
+        font-weight: 300;
+        @include fz-24;
+        line-height: 1.5;
+        & del {
+            font-weight: 400;
+            @include fz-16;
+        }
+    }
+    &-form {
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+        margin-left: 18px;
+        padding: 0 0 0 10px;
+        border: 1px solid $white;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: $white;
+    }
+    &-minus {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        background-image: url(../img/icons/minus.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &-plus {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        background-image: url(../img/icons/plus.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &-count {
+        font-weight: 600;
+        text-align: center;
+        background: none;
+        outline: 0;
+        border: none;
+        color: $d-green;
+        @include fz-14;
+        max-width: 32px;
+    }
+    &-add {     
+        margin-left: 12px;       
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        width: 37px;
+        height: 100%;
+        outline: none;
+        background-image: url(../img/icons/basket-g.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-left: 1px solid #3d4f3c4d;
+        border-radius: 5px;
+    }
+}
+.indicators {
+    margin-top: 60px;
+    background-color: $beige;
+    padding: 60px;
+    &-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        background-color: $white;
+        border-radius: 24px;
+        padding: 21px 21px 21px 177px;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 188px;
+            height: 266px;
+            left: -40px;
+            top: 0;
+            background: url(../img/index/flower-left.png) center no-repeat;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 130px;
+            height: 213px;
+            right: -130px;
+            bottom: -20px;
+            background: url(../img/index/flower-right.png) center no-repeat;
+        }
+    }
+    &-title {
+        font-family: $gilroy;
+        font-weight: 700;
+        @include fz-22;
+        color: $d-green;
+    }
+    &-description {
+        max-width: 314px;
+        margin-top: 10px;
+        font-family: $gilroy;
+        font-weight: 400;
+        @include fz-14;
+        color: $d-green;
+    }
+    &-items {
+        margin-left: 53px;
+        display: flex;
+    }
+    &-item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 31px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $blue;
+            bottom: 15px;
+            width: 100%;
+            height: 8px;
+            border-radius: 16px;
+        }
+    }
+    &-value {
+        font-family: $gilroy;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.5;
+        color: $green;
+    }
+    &-parameter {
+        max-width: 129px;
+        font-family: $gilroy;
+        font-weight: 400;
+        @include fz-14;
+        color: $d-green;
+    }
+}
+.products {
+    margin-top: 60px;
+    &-item {
+        position: relative;
+        background: $beige;
+        padding-bottom: 30px;
+        &:not(:first-child) {
+            margin-top: 100px;
+        }
+    }
+    &-header {
+        padding: 20px 20px 20px 70px;
+        background: $white;
+        border-radius: 10px 10px 0px 0px;
+    }
+    &-name {
+        position: relative;
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-24;
+        color: $blue;
+        &::before {
+            position: absolute;
+            content: "";
+            left: -20px;
+            top: 5px;
+            width: 8px;
+            height: 22px;
+            border-radius: 8px;
+            background-color: $blue;
+        }
+    }
+    &-more {
+        display: block;
+        text-align: center;
+        font-family: $oswald;
+        font-style: normal;
+        font-weight: 500;
+        @include fz-22;
+        text-align: center;
+        color: $green;
+    }
+    &-slider {
+        padding: 30px;
+        &-item {
+            border-radius: 12px;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+        &-sale {
+            width: 341px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: block;
+            padding: 20px 10px 20px 20px;
+            background: linear-gradient(92.48deg, #1D1A1AB3 0.95%, #1D1212B3 36.39%, #221616B3 98.18%);
+            box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.68);
+            border-radius: 12px;
+        }
+        &-text {
+            font-family: $oswald;
+            color: $white;
+            @include fz-24;
+            font-weight: 300;
+            margin-right: 55px;
+        }
+        &-value {
+            margin-top: 16px;
+            font-family: $oswald;
+            text-align: right;
+            color: $yellow;
+            font-size: 32px;
+            line-height: 1.5;
+            & small {
+                margin-right: 5px;
+                @include fz-24;
+            }
+            &-red {
+                color: $red;
+            }
+        }
+        & .slick-arrow {
+            cursor: pointer;
+            top: 20px;
+            position: absolute;
+            border: none;
+            font-size: 0;
+            border: 2px solid $blue;
+            height: 35px;
+            width: 35px;
+            border-radius: 5px;
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                border: 2px solid #4F69C6;
+                outline: none;
+                transform: scale(1.17);
+            }
+            &:active {
+                transform: scale(1.06);
+                border: 2px solid #4F69C6;
+                filter: drop-shadow(0px 0px 2px #4F69C6);
+            }
+        }
+        & .slick-next {
+            right: 30px;
+            background-image: url(../img/icons/arrow-next.svg);
+        }
+        & .slick-prev {
+            right: 80px;
+            background-image: url(../img/icons/arrow-prev.svg);
+        }
+    }
+}
+.categories {
+    margin-top: 80px;
+    background-color: $white;
+    padding: 40px 0 60px;
+    &-title {
+        font-family: $oswald;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1.5;
+        text-align: center;
+        color: $blue;
+        margin-bottom: 40px;      
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+    &-item {
+        box-sizing: border-box;
+        background: $d-white;
+        border: 2px solid $d-white;
+        border-radius: 10px;
+        padding: 20px 15px;
+        text-align: center;
+        width: calc(16.66% - 25px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+        &:hover {
+            border: 2px solid $green;
+        }
+        &:active {
+            background: #EDFFD5;
+        }
+        &:nth-child(6n) {
+            margin-right: 0;
+        }
+        &:nth-child(n + 7) {
+            margin-bottom: 0;
+        }
+    }
+    &-img {
+        height: 70px;
+        display: table-cell;
+        vertical-align: middle;
+        & img {
+            max-height: 100%;
+            margin: 0 auto;
+        }    
+    }
+    &-name {
+        margin-top: 23px;
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-20;
+        text-align: center;
+        color: $green;
+    }
+}
+.viewed {
+    margin-top: 100px;
+    &-item {
+        position: relative;
+        background: $d-white;
+    }
+    & .slick-arrow {
+        border: 2px solid $green;
+        &:hover {
+            border: 2px solid $green;
+            outline: none;
+            transform: scale(1.17);
+        }
+        &:active {
+            transform: scale(1.06);
+            border: 2px solid $green;
+            filter: drop-shadow(0px 0px 2px $green);
+        }
+    }
+    & .slick-next {
+        background-image: url(../img/icons/arrow-next-green.svg);
+    }
+    & .slick-prev {
+        background-image: url(../img/icons/arrow-prev-green.svg);
+    }
+}

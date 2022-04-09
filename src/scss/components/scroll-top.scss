@@ -1,0 +1,27 @@
+.scroll-top {
+    cursor: pointer;
+    display: table;
+    position: fixed;
+    bottom: 400px;
+    right: 4.5%;
+    transition: all 0.5s ease;
+    background-color: $green;
+    border: 5px solid #9FCA77;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.75s ease;
+    &:hover, &:active {
+        border: 5px solid $green;
+    }
+    &-icon {
+        display: table-cell;
+        vertical-align: middle;
+        max-width: 17px;
+        border-radius: 50%;
+    }
+    &-icon img{        
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,11 @@
+block variables
+    - var title = 'Главная'
+    - var page = 'index'
+html 
+    head 
+        include html/static/head
+    body 
+    div(class=`wrapper wrapper-${page}`)
+        include html/static/header
+        include html/index
+        include html/static/footer
