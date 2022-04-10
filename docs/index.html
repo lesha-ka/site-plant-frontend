@@ -27,38 +27,48 @@
         <div class="header-row"> 
           <div class="header-logo"><img src="img/icons/logo.svg" alt="Лого"></div>
           <nav class="header-nav"><a class="header-nav-item" href="#" target="_blank"> О нас</a><a class="header-nav-item" href="#" target="_blank"> Контакты</a><a class="header-nav-item" href="#" target="_blank"> Доставка и оплата</a></nav>
-          <form class="header-search" action="#">
-            <div class="header-categories">Категории</div>
-            <ul class="header-category-list">
-              <li class="header-category">       
-                <input class="header-category-input" type="radio" name="category" id="category1" value="listveny">
-                <label class="header-category-label" for="category1">Лиственные деревья</label>
-              </li>
-              <li class="header-category">  
-                <input class="header-category-input" type="radio" name="category" id="category2" value="custarnik">
-                <label class="header-category-label" for="category2">Кустарники</label>
-              </li>
-              <li class="header-category">
-                <input class="header-category-input" type="radio" name="category" id="category3" value="рvojnye-rasteniya">
-                <label class="header-category-label" for="category3">Хвойные растения                        </label>
-              </li>
-              <li class="header-category">
-                <input class="header-category-input" type="radio" name="category" id="category4" value="plodovo-yagodnye">
-                <label class="header-category-label" for="category4">Плодово-ягодные</label>
-              </li>
-              <li class="header-category">            
-                <input class="header-category-input" type="radio" name="category" id="category5" value="bonsai-i-topiary">
-                <label class="header-category-label" for="category5">Бонсаи и топиары</label>
-              </li>
-              <li class="header-category"> 
-                <input class="header-category-input" type="radio" name="category" id="category6" value="solitaire">
-                <label class="header-category-label" for="category6">Solitaire</label>
-              </li>
-              <li class="header-category">         
-                <input class="header-category-input" type="radio" name="category" id="category7" value="krupnomery">
-                <label class="header-category-label" for="category7">Крупномеры</label>
-              </li>
-            </ul>
+          <form class="header-search js-SearchForm" action="#">
+            <div class="header-categories js-categories">Категории</div>
+            <div class="header-categories-inner js-categoryList">
+              <ul class="header-category-list">
+                <li class="header-category">       
+                  <input class="header-category-input" type="radio" name="category" id="category1" value="listveny">
+                  <label class="header-category-label" for="category1">Лиственные деревья</label>
+                </li>
+                <li class="header-category">  
+                  <input class="header-category-input" type="radio" name="category" id="category2" value="custarnik">
+                  <label class="header-category-label" for="category2">Кустарники</label>
+                </li>
+                <li class="header-category">
+                  <input class="header-category-input" type="radio" name="category" id="category3" value="рvojnye-rasteniya">
+                  <label class="header-category-label" for="category3">Хвойные растения                        </label>
+                </li>
+                <li class="header-category">
+                  <input class="header-category-input" type="radio" name="category" id="category4" value="plodovo-yagodnye">
+                  <label class="header-category-label" for="category4">Плодово-ягодные</label>
+                </li>
+                <li class="header-category">            
+                  <input class="header-category-input" type="radio" name="category" id="category5" value="bonsai-i-topiary">
+                  <label class="header-category-label" for="category5">Бонсаи и топиары</label>
+                </li>
+                <li class="header-category"> 
+                  <input class="header-category-input" type="radio" name="category" id="category6" value="solitaire">
+                  <label class="header-category-label" for="category6">Solitaire</label>
+                </li>
+                <li class="header-category">         
+                  <input class="header-category-input" type="radio" name="category" id="category7" value="krupnomery">
+                  <label class="header-category-label" for="category7">Крупномеры</label>
+                </li>
+                <li class="header-category">         
+                  <input class="header-category-input" type="radio" name="category" id="category7" value="krupnomery">
+                  <label class="header-category-label" for="category7">Крупномеры</label>
+                </li>
+                <li class="header-category">         
+                  <input class="header-category-input" type="radio" name="category" id="category7" value="krupnomery">
+                  <label class="header-category-label" for="category7">Крупномеры</label>
+                </li>
+              </ul>
+            </div>
             <input class="header-input" type="text" placeholder="Поиск">
             <button class="header-search-btn" type="submit"></button>
           </form>
@@ -97,9 +107,13 @@
             <ul class="offers-cards">
               <li class="offers-card"> <img src="img/index/offer1.jpg" alr="Кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer1" name="offer1">
+                    <label for="offer1"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -109,10 +123,13 @@
               </li>
               <li class="offers-card"> <img src="img/index/offer2.jpg" alr="Кустарник">
                 <div class="card-inner"> 
-                  <div class="offers-card-favorite"></div>
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer2" name="offer2">
+                    <label for="offer2"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -122,9 +139,13 @@
               </li>
               <li class="offers-card"> <img src="img/index/offer3.jpg" alr="Кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer3" name="offer3">
+                    <label for="offer3"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -134,9 +155,13 @@
               </li>
               <li class="offers-card"> <img src="img/index/offer4.jpg" alr="Кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer4" name="offer4">
+                    <label for="offer4"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -188,9 +213,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer2.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="summer1" name="summer1">
+                    <label for="summer1"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -200,9 +229,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer3.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="summer2" name="summer2">
+                    <label for="summer2"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -212,9 +245,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer2.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="summer3" name="summer3">
+                    <label for="summer3"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -224,9 +261,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer3.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="summer4" name="summer4">
+                    <label for="summer4"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -243,9 +284,13 @@
             <div class="products-slider js-productsSlider">
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush1.jpg" alt="кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="bush1" name="bush1">
+                    <label for="bush1"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -255,9 +300,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush2.jpg" alt="кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="bush2" name="bush2">
+                    <label for="bush2"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -267,37 +316,46 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush3.jpg" alt="кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="bush3" name="bush3">
+                    <label for="bush3"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
-                    <button class="card-add" type="button"></button>
                   </form>
                 </div>
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush4.jpg" alt="кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="bush4" name="bush4">
+                    <label for="bush4"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
-                    <button class="card-add" type="button"></button>
                   </form>
                 </div>
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush1.jpg" alt="кустарник">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="bush5" name="bush5">
+                    <label for="bush5"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
-                    <button class="card-add" type="button"></button>
                   </form>
                 </div>
               </div>
@@ -310,38 +368,47 @@
             <div class="products-slider js-productsSlider">
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries1.jpg" alt="ягоды">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="berries1" name="berries1">
+                    <label for="berries1"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
-                    <button class="card-add" type="button"></button>
                   </form>
                 </div>
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries2.jpg" alt="ягоды">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="berries2" name="berries2">
+                    <label for="berries2"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
-                    <button class="card-add" type="button"></button>
                   </form>
                 </div>
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries3.jpg" alt="ягоды"></div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries1.jpg" alt="ягоды">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="berries22" name="berries22">
+                    <label for="berries22"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
-                    <button class="card-add" type="button"></button>
                   </form>
                 </div>
               </div>
@@ -401,9 +468,13 @@
             <div class="products-slider products-slider-viewed js-productsSlider">
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/offer1.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer1" name="offer1">
+                    <label for="offer1"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -413,9 +484,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/offer2.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer2" name="offer2">
+                    <label for="offer2"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">
@@ -425,9 +500,13 @@
               </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/offer3.jpg" alt="летнее растение">
                 <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer3" name="offer3">
+                    <label for="offer3"></label>
+                  </form>
                   <p class="card-name">Кустарники</p>
                   <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                  <form class="card-form" action="post">
+                  <form class="card-basket">
                     <input class="card-minus" type="button">
                     <input class="card-count" type="text" value="1">
                     <input class="card-plus" type="button">

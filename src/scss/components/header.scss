@@ -49,6 +49,13 @@
         &:hover, &:active {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 4px rgba(77, 77, 77, 0.55);
         }
+        &-active {
+            border-radius: 60px 24px 0px 60px;
+            box-shadow: 0px 2px 10px rgba(99, 99, 99, 0.2);
+            &:hover, &:active {
+                box-shadow: 0px 2px 10px rgba(99, 99, 99, 0.2);
+            }
+        }
     }
     &-categories {
         position: relative;
@@ -59,18 +66,6 @@
         color: $white;
         padding: 14px 16px 14px 47px;
         cursor: pointer;
-        &:hover  {
-            border-radius: 24px 0px 0px 0px;
-        }
-        &:active {
-            border-radius: 24px 0px 0px 0px;
-        }
-        &:hover + .header-category-list {
-            display: block;
-        }
-        &:active + .header-category-list {
-            display: block;
-        }
         &::before {
             position: absolute;
             content: "";
@@ -80,31 +75,50 @@
             left: 16px;
             top: 17px;
         }
+        &-active {
+            border-radius: 24px 0px 0px 0px;
+        }
     }
-    &-category-list {
+    &-categories-inner {
         display: none;
+        overflow-y: hidden;
+        overflow-x: hidden;
         width: 100%;
         background: $white;
         left: 0;
         top: 50px;
         position: absolute;
-        padding: 15px 31px 13px 13px;
         border-radius: 0px 0px 4px 4px;
+        padding: 10px 30px 10px 0;
+    }
+    &-category-list {
+        padding: 15px 31px 0 13px;
         max-height: 256px;
         overflow-y: scroll;
-        &:hover {
-            display: block;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: $green #f0f7ea;
+        &::-webkit-scrollbar {
+            height: 60px;
+            width: 10px;
+            border-radius: 12px;
         }
-        &:active {
-            display: block;
+        &::-webkit-scrollbar-track {
+            background: #f0f7ea;
+            border-radius: 12px;
+        }
+        &::-webkit-scrollbar-thumb  {
+            background-color: $green;
+            border-radius: 12px;
+            border: none
         }
         &::after {
             pointer-events: none;
             position: absolute;
             content: "";
-            width: 90%;
-            bottom: 5px;
-            height: 27px;
+            width: 85%;
+            bottom: 10px;
+            height: 32px;
             background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
         }
     }

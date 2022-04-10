@@ -14,30 +14,37 @@ header.header
                 a.header-nav-item(href="#" target="_blank")  О нас
                 a.header-nav-item(href="#" target="_blank")  Контакты
                 a.header-nav-item(href="#" target="_blank")  Доставка и оплата
-            form.header-search(action="#")
-                .header-categories Категории
-                ul.header-category-list
-                    li.header-category        
-                        input.header-category-input(type="radio" name="category" id="category1" value="listveny")      
-                        label.header-category-label(for="category1") Лиственные деревья
-                    li.header-category   
-                        input.header-category-input(type="radio" name="category" id="category2" value="custarnik")            
-                        label.header-category-label(for="category2") Кустарники
-                    li.header-category
-                        input.header-category-input(type="radio" name="category" id="category3" value="рvojnye-rasteniya")               
-                        label.header-category-label(for="category3") Хвойные растения                        
-                    li.header-category
-                        input.header-category-input(type="radio" name="category" id="category4" value="plodovo-yagodnye")               
-                        label.header-category-label(for="category4") Плодово-ягодные
-                    li.header-category             
-                        input.header-category-input(type="radio" name="category" id="category5" value="bonsai-i-topiary")  
-                        label.header-category-label(for="category5") Бонсаи и топиары
-                    li.header-category 
-                        input.header-category-input(type="radio" name="category" id="category6" value="solitaire")              
-                        label.header-category-label(for="category6") Solitaire
-                    li.header-category          
-                        input.header-category-input(type="radio" name="category" id="category7" value="krupnomery")     
-                        label.header-category-label(for="category7") Крупномеры
+            form.header-search.js-SearchForm(action="#")
+                .header-categories.js-categories Категории
+                .header-categories-inner.js-categoryList
+                    ul.header-category-list
+                        li.header-category        
+                            input.header-category-input(type="radio" name="category" id="category1" value="listveny")      
+                            label.header-category-label(for="category1") Лиственные деревья
+                        li.header-category   
+                            input.header-category-input(type="radio" name="category" id="category2" value="custarnik")            
+                            label.header-category-label(for="category2") Кустарники
+                        li.header-category
+                            input.header-category-input(type="radio" name="category" id="category3" value="рvojnye-rasteniya")               
+                            label.header-category-label(for="category3") Хвойные растения                        
+                        li.header-category
+                            input.header-category-input(type="radio" name="category" id="category4" value="plodovo-yagodnye")               
+                            label.header-category-label(for="category4") Плодово-ягодные
+                        li.header-category             
+                            input.header-category-input(type="radio" name="category" id="category5" value="bonsai-i-topiary")  
+                            label.header-category-label(for="category5") Бонсаи и топиары
+                        li.header-category 
+                            input.header-category-input(type="radio" name="category" id="category6" value="solitaire")              
+                            label.header-category-label(for="category6") Solitaire
+                        li.header-category          
+                            input.header-category-input(type="radio" name="category" id="category7" value="krupnomery")     
+                            label.header-category-label(for="category7") Крупномеры
+                        li.header-category          
+                            input.header-category-input(type="radio" name="category" id="category7" value="krupnomery")     
+                            label.header-category-label(for="category7") Крупномеры
+                        li.header-category          
+                            input.header-category-input(type="radio" name="category" id="category7" value="krupnomery")     
+                            label.header-category-label(for="category7") Крупномеры
                 input.header-input(type="text" placeholder="Поиск")
                 button.header-search-btn(type="submit")
             .header-links
