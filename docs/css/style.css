@@ -1399,7 +1399,7 @@ main {
 .menu-inner {
   position: absolute;
   display: none;
-  top: calc(100% + 18px);
+  top: calc(100% + 9px);
   background: #ffffff;
   width: calc(100% + 10px);
   left: -5px;
