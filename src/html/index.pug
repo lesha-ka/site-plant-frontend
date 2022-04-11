@@ -1,10 +1,11 @@
 main.main
-    .container 
-        section.stocks
+    section.stocks
+        .container.container-notablet
             article.banner
                 h2.banner-title Акция
                 p.banner-subtitle Скидки на все<br>ливственные деревья
                     span.banner-date Конец акции 25.03.2022
+        .container.container-nomobile
             article.offers
                 h3.offers-title Специальные предложения 
                 .offers-timer
@@ -13,7 +14,7 @@ main.main
                     span.offers-timer-item 8 часов
                     | :
                     span.offers-timer-item 15 минут
-                ul.offers-cards
+                ul.offers-cards.js-offersBox.js-offerSlider
                     li.offers-card 
                         img(src="img/index/offer1.jpg" alr="Кустарник")
                         .card-inner 
@@ -70,13 +71,27 @@ main.main
                                 input.card-count(type="text" value="1")
                                 input.card-plus(type="button")
                                 button.card-add(type="button")
-                button.offers-cards-more(type="button") Показать ещё
+                    li.offers-card 
+                        img(src="img/index/offer1.jpg" alr="Кустарник")
+                        .card-inner 
+                            form.card-form(action="post")
+                                input.card-favorite(type="checkbox" id="offer1" name="offer1")
+                                label(for="offer1")
+                            p.card-name Кустарники
+                            p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                            span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                            form.card-basket
+                                input.card-minus(type="button")
+                                input.card-count(type="text" value="1")
+                                input.card-plus(type="button")
+                                button.card-add(type="button")
+                button.offers-cards-more.js-moreOffer(type="button") Показать еще
     section.indicators 
-        .container
+        .container.container-notablet
             .indicators-inner 
                 .indicators-text 
                     h3.indicators-title В&nbsp;нашем саду <br> более 10&nbsp;000+ растений
-                    p.indicators-description Зелёные растения обогащают атмосферу кислородом и&nbsp;является основным источником энергии и&nbsp;органического материала почти для всех экосистем.
+                    p.indicators-description Зелёные растения обогащают атмосферу кислородом&nbsp;и является основным источником энергии и&nbsp;органического материала почти для всех экосистем.
                 ul.indicators-items
                     li.indicators-item
                         .indicators-value 52+
@@ -87,16 +102,21 @@ main.main
                     li.indicators-item
                         .indicators-value 30+
                         .indicators-parameter Столько расстений мы продаем в в час
-    .container
+    .container.container-notablet
         section.products
             .products-item 
                 .products-header 
                     .products-name Лето
+                .products-banner 
+                    img.products-slider-img(src="img/index/summer1.jpg", alt="летнее растение")
+                    .products-slider-sale
+                        p.products-slider-text Скидки на все летние растения
+                        p.products-slider-value <small>До</small> 20%
                 .products-slider.js-productsSlider
-                    .products-slider-item.card
+                    .products-slider-item.card.card-banner
                         img.products-slider-img(src="img/index/summer1.jpg", alt="летнее растение")
                         .products-slider-sale
-                            p.products-slider-text Скидки на все летние расстений
+                            p.products-slider-text Скидки на все летние растения
                             p.products-slider-value <small>До</small> 20%
                     .products-slider-item.card
                         img.products-slider-img(src="img/index/summer2.jpg", alt="летнее растение")
@@ -157,6 +177,15 @@ main.main
             .products-item 
                 .products-header 
                     .products-name Кустарники
+                    ul.products-nav
+                        li.products-nav-item 
+                            a(href="#" target="_blank") Распродажа
+                        li.products-nav-item 
+                            a(href="#" target="_blank") Новинки
+                        li.products-nav-item 
+                            a(href="#" target="_blank") Советуем
+                        li.products-nav-item 
+                            a(href="#" target="_blank") Акция
                 .products-slider.js-productsSlider
                     .products-slider-item.card
                         img.products-slider-img(src="img/index/bush1.jpg", alt="кустарник")
@@ -229,6 +258,11 @@ main.main
             .products-item 
                 .products-header 
                     .products-name Ягоды
+                .products-banner
+                    img.products-slider-img(src="img/index/berries3.jpg", alt="ягоды")
+                    .products-slider-sale
+                        p.products-slider-text Скидки на все растения из&nbsp;раздела "Ягодные"
+                        p.products-slider-value.products-slider-value-red <small>До</small> 20%
                 .products-slider.js-productsSlider
                     .products-slider-item.card
                         img.products-slider-img(src="img/index/berries1.jpg", alt="ягоды")
@@ -256,8 +290,11 @@ main.main
                                 input.card-minus(type="button")
                                 input.card-count(type="text" value="1")
                                 input.card-plus(type="button")
-                    .products-slider-item.card
+                    .products-slider-item.card.card-banner
                         img.products-slider-img(src="img/index/berries3.jpg", alt="ягоды")
+                        .products-slider-sale
+                            p.products-slider-text Скидки на все растения из&nbsp;раздела "Ягодные"
+                            p.products-slider-value.products-slider-value-red <small>До</small> 20%
                     .products-slider-item.card
                         img.products-slider-img(src="img/index/berries1.jpg", alt="ягоды")
                         .card-inner 
@@ -272,9 +309,9 @@ main.main
                                 input.card-count(type="text" value="1")
                                 input.card-plus(type="button")
     section.categories
-        .container 
+        .container.container-notablet
             h3.categories-title Категории
-            ul.categories-list
+            ul.categories-list.js-categoriesSlider
                 li.categories-item
                     a(href="#" target="_blank") 
                         .categories-img 
@@ -335,7 +372,7 @@ main.main
                         .categories-img 
                             img(src="img/index/categories12.svg", alt="Сопутсвующие товары")
                         .categories-name Сопутсвующие товары
-    .container 
+    .container.container-notablet
         section.viewed
             .viewed-item 
                 .products-header 

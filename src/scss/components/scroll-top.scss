@@ -3,7 +3,7 @@
     display: table;
     position: fixed;
     bottom: 400px;
-    right: 4.5%;
+    right: 4.8%;
     transition: all 0.5s ease;
     background-color: $green;
     border: 5px solid #9FCA77;
@@ -12,6 +12,12 @@
     border-radius: 50%;
     opacity: 0;
     transition: all 0.75s ease;
+    @media #{$w1024} {
+        bottom: 390px;
+    }
+    @media #{$w768} {
+        display: none;
+    }
     &:hover, &:active {
         border: 5px solid $green;
     }

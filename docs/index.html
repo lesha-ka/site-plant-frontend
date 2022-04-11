@@ -92,19 +92,48 @@
             </div>
           </div>
         </div>
+        <div class="header-row header-row-mobile"> 
+          <div class="header-logo"><img src="img/icons/logo.svg" alt="Лого"></div>
+          <div class="header-burger js-headerMenu"></div>
+          <div class="menu-inner js-menuInner">
+            <form action="post">
+              <input class="menu-search" type="text" placeholder="Поиск">
+              <button class="header-search-btn" type="submit"></button>
+            </form>
+            <nav class="menu-links"><a class="menu-link" href="#">Профиль</a><a class="menu-link" href="#">Корзина</a><a class="menu-link" href="#">Избранное</a>
+              <div class="menu-link-list js-linkList">Категории
+                <ul class="menu-list-items js-linkItems">
+                  <li class="menu-list-item"><a href="#">Лиственные деревья</a></li>
+                  <li class="menu-list-item"><a href="#">Кустарники</a></li>
+                  <li class="menu-list-item"><a href="#">Хвойные растения</a></li>
+                  <li class="menu-list-item"><a href="#">Плодово-ягодные</a></li>
+                  <li class="menu-list-item"><a href="#">Бонсаи и топиары</a></li>
+                  <li class="menu-list-item"><a href="#">Solitaire</a></li>
+                  <li class="menu-list-item"><a href="#">Крупномеры</a></li>
+                  <li class="menu-list-item"><a href="#">Можжевильники</a></li>
+                  <li class="menu-list-item"><a href="#">Хиты продаж</a></li>
+                  <li class="menu-list-item"><a href="#">Новинки</a></li>
+                  <li class="menu-list-item"><a href="#">Сопутсвующие товары</a></li>
+                </ul>
+              </div><a class="menu-link" href="#">О нас</a><a class="menu-link" href="#">Контакты</a><a class="menu-link" href="#">Доставка и оплата</a>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
-      <div class="container"> 
-        <section class="stocks">
+      <section class="stocks">
+        <div class="container container-notablet">
           <article class="banner">
             <h2 class="banner-title">Акция</h2>
             <p class="banner-subtitle">Скидки на все<br>ливственные деревья<span class="banner-date">Конец акции 25.03.2022</span></p>
           </article>
+        </div>
+        <div class="container container-nomobile">
           <article class="offers">
             <h3 class="offers-title">Специальные предложения </h3>
             <div class="offers-timer"><span class="offers-timer-item">1 день</span>:<span class="offers-timer-item">8 часов</span>:<span class="offers-timer-item">15 минут</span></div>
-            <ul class="offers-cards">
+            <ul class="offers-cards js-offersBox js-offerSlider">
               <li class="offers-card"> <img src="img/index/offer1.jpg" alr="Кустарник">
                 <div class="card-inner"> 
                   <form class="card-form" action="post">
@@ -169,17 +198,33 @@
                   </form>
                 </div>
               </li>
+              <li class="offers-card"> <img src="img/index/offer1.jpg" alr="Кустарник">
+                <div class="card-inner"> 
+                  <form class="card-form" action="post">
+                    <input class="card-favorite" type="checkbox" id="offer1" name="offer1">
+                    <label for="offer1"></label>
+                  </form>
+                  <p class="card-name">Кустарники</p>
+                  <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
+                  <form class="card-basket">
+                    <input class="card-minus" type="button">
+                    <input class="card-count" type="text" value="1">
+                    <input class="card-plus" type="button">
+                    <button class="card-add" type="button"></button>
+                  </form>
+                </div>
+              </li>
             </ul>
-            <button class="offers-cards-more" type="button">Показать ещё</button>
+            <button class="offers-cards-more js-moreOffer" type="button">Показать еще</button>
           </article>
-        </section>
-      </div>
+        </div>
+      </section>
       <section class="indicators"> 
-        <div class="container">
+        <div class="container container-notablet">
           <div class="indicators-inner"> 
             <div class="indicators-text"> 
               <h3 class="indicators-title">В&nbsp;нашем саду <br> более 10&nbsp;000+ растений</h3>
-              <p class="indicators-description">Зелёные растения обогащают атмосферу кислородом и&nbsp;является основным источником энергии и&nbsp;органического материала почти для всех экосистем.</p>
+              <p class="indicators-description">Зелёные растения обогащают атмосферу кислородом&nbsp;и является основным источником энергии и&nbsp;органического материала почти для всех экосистем.</p>
             </div>
             <ul class="indicators-items">
               <li class="indicators-item">
@@ -198,16 +243,22 @@
           </div>
         </div>
       </section>
-      <div class="container">
+      <div class="container container-notablet">
         <section class="products">
           <div class="products-item"> 
             <div class="products-header"> 
               <div class="products-name">Лето</div>
             </div>
+            <div class="products-banner"> <img class="products-slider-img" src="img/index/summer1.jpg" alt="летнее растение">
+              <div class="products-slider-sale">
+                <p class="products-slider-text">Скидки на все летние растения</p>
+                <p class="products-slider-value"><small>До</small> 20%</p>
+              </div>
+            </div>
             <div class="products-slider js-productsSlider">
-              <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer1.jpg" alt="летнее растение">
+              <div class="products-slider-item card card-banner"><img class="products-slider-img" src="img/index/summer1.jpg" alt="летнее растение">
                 <div class="products-slider-sale">
-                  <p class="products-slider-text">Скидки на все летние расстений</p>
+                  <p class="products-slider-text">Скидки на все летние растения</p>
                   <p class="products-slider-value"><small>До</small> 20%</p>
                 </div>
               </div>
@@ -280,6 +331,12 @@
           <div class="products-item"> 
             <div class="products-header"> 
               <div class="products-name">Кустарники</div>
+              <ul class="products-nav">
+                <li class="products-nav-item"> <a href="#" target="_blank">Распродажа</a></li>
+                <li class="products-nav-item"> <a href="#" target="_blank">Новинки</a></li>
+                <li class="products-nav-item"> <a href="#" target="_blank">Советуем</a></li>
+                <li class="products-nav-item"> <a href="#" target="_blank">Акция</a></li>
+              </ul>
             </div>
             <div class="products-slider js-productsSlider">
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush1.jpg" alt="кустарник">
@@ -365,6 +422,12 @@
             <div class="products-header"> 
               <div class="products-name">Ягоды</div>
             </div>
+            <div class="products-banner"><img class="products-slider-img" src="img/index/berries3.jpg" alt="ягоды">
+              <div class="products-slider-sale">
+                <p class="products-slider-text">Скидки на все растения из&nbsp;раздела "Ягодные"</p>
+                <p class="products-slider-value products-slider-value-red"><small>До</small> 20%</p>
+              </div>
+            </div>
             <div class="products-slider js-productsSlider">
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries1.jpg" alt="ягоды">
                 <div class="card-inner"> 
@@ -396,7 +459,12 @@
                   </form>
                 </div>
               </div>
-              <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries3.jpg" alt="ягоды"></div>
+              <div class="products-slider-item card card-banner"><img class="products-slider-img" src="img/index/berries3.jpg" alt="ягоды">
+                <div class="products-slider-sale">
+                  <p class="products-slider-text">Скидки на все растения из&nbsp;раздела "Ягодные"</p>
+                  <p class="products-slider-value products-slider-value-red"><small>До</small> 20%</p>
+                </div>
+              </div>
               <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries1.jpg" alt="ягоды">
                 <div class="card-inner"> 
                   <form class="card-form" action="post">
@@ -417,9 +485,9 @@
         </section>
       </div>
       <section class="categories">
-        <div class="container"> 
+        <div class="container container-notablet">
           <h3 class="categories-title">Категории</h3>
-          <ul class="categories-list">
+          <ul class="categories-list js-categoriesSlider">
             <li class="categories-item"><a href="#" target="_blank"> 
                 <div class="categories-img"> <img src="img/index/categories1.svg" alt="Лиственные"></div>
                 <div class="categories-name">Лиственные деревья</div></a></li>
@@ -459,7 +527,7 @@
           </ul>
         </div>
       </section>
-      <div class="container"> 
+      <div class="container container-notablet">
         <section class="viewed">
           <div class="viewed-item"> 
             <div class="products-header"> 

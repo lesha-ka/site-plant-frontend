@@ -84,4 +84,26 @@ main {
     @media #{$w1440} {
         max-width: 1280px;
     }
+    @media #{$w1280} {
+        max-width: calc(100% - 80px);
+    }
+    @media #{$w1024} {
+        max-width: calc(100% - 60px);
+    }
+    @media #{$w768} {
+        max-width: calc(100% - 30px);
+    }
+    @media #{$w360} {
+        max-width: calc(100% - 10px);
+    }
+    &.container-notablet {
+        @media #{$w768} {
+            max-width: 100%;
+        }
+    }
+    &.container-nomobile {
+        @media #{$w360} {
+            max-width: 100%;
+        }
+    }
 }

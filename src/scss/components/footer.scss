@@ -1,9 +1,18 @@
 .footer {
     background-color: $green;
     &-inner {
-        padding: 80px 0;
+        padding: 80px 30px;
         display: flex;
         justify-content: space-between;
+        @media #{$w768} {
+            flex-wrap: wrap;
+            padding: 29px 15px 43px;
+        }
+        @media #{$w360} {
+            flex-wrap: wrap;            
+            padding: 30px 12px 33px;
+        }
+        
     }
     &-social {
         align-self: stretch;
@@ -11,9 +20,23 @@
         flex: 0 0 auto;
         flex-direction: column;
         justify-content: space-between;
+        @media #{$w768} {
+            flex: 1 0 100%;
+            flex-direction: row;
+            align-items: flex-end;
+            margin-bottom: 30px;
+        }
+        @media #{$w360} {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
     }
     &-social-icons {
         display: flex;
+        @media #{$w360} {
+            margin-top: 20px;
+        } 
     }
     &-social-icon {
         transition: all 0.5s ease-in-out;
@@ -22,6 +45,26 @@
         }
         &:not(:last-child) {
             margin-right: 27px;
+        }
+    }
+    &-links-block {
+        &:nth-child(3) {
+            @media #{$w360} {
+                order: 4;
+                margin-top: 24px;
+            }
+        }
+        &:nth-child(5) {
+            @media #{$w360} {
+                order: 6;
+                margin-top: 24px;
+            }
+        }
+        &:nth-child(4) {
+            @media #{$w360} {
+                order: 3;
+                
+            }
         }
     }
     &-links-title {
@@ -76,6 +119,10 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            @media #{$w360} {
+                display: block;
+                padding: 14px 25px 9px;
+            }
         }
         &-text {
             position: absolute;
@@ -88,10 +135,27 @@
             color: #FFFFFF99;
             margin-right: auto;
             margin-left: auto;
+            @media #{$w768} {
+                padding-left: 30px;
+                text-align: left;
+            }
+            @media #{$w360} {
+                margin-left: 0;
+                padding-left: 0;
+                position: relative;
+            }
         }
         &-payment {
             &:not(:last-child) {
                 margin-right: 15px;
+                @media #{$w360} {
+                    margin-right: 11px;
+                }
+            }
+            @media #{$w360} {
+                margin-top: 12px;
+                margin-right: 11px;
+                display: inline-block;
             }
         }
     } 
