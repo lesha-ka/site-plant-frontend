@@ -8,7 +8,7 @@ export const getMoreOffer = () => {
       if (offersBoxHeight > offersBoxMaxHeight) {
           btnMore.classList.add('js-block')
       }
-      function showMoreText() {
+      function showMoreOffer() {
           if (btnMore.classList.contains('js-lessText')) {
               offersBox.classList.remove('offers-cards-open')
               btnMore.innerHTML = 'Показать ещё';
@@ -19,6 +19,6 @@ export const getMoreOffer = () => {
               btnMore.classList.add('js-lessText')
           }
       }
-      btnMore.addEventListener("click", showMoreText);
+      btnMore.addEventListener("click", showMoreOffer);
     }
 }

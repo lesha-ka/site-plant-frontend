@@ -1,6 +1,7 @@
 block variables
-    - var title = 'Главная'
-    - var page = 'index'
+    - var title = 'Мои желания'
+    - var page = 'wishes'
+include html/static/mixins
 doctype html
 html(lang='ru')
     head 
@@ -8,5 +9,5 @@ html(lang='ru')
     body 
         div(class=`wrapper js-wrapper wrapper-${page}`)
             include html/static/header
-            include html/pages/index
+            include html/pages/wishes
             include html/static/footer

@@ -1,4 +1,196 @@
 @font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Light.woff2") format("woff2"), url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-BlackItalic.woff2") format("woff2"), url("../fonts/GothamPro-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-LightItalic.woff2") format("woff2"), url("../fonts/GothamPro-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Black.woff2") format("woff2"), url("../fonts/GothamPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-MediumItalic.woff2") format("woff2"), url("../fonts/GothamPro-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro Narrow";
+  src: url("../fonts/GothamProNarrow-Bold.woff2") format("woff2"), url("../fonts/GothamProNarrow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro Narrow";
+  src: url("../fonts/GothamProNarrow-Medium.woff2") format("woff2"), url("../fonts/GothamProNarrow-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-LightItalic.woff2") format("woff2"), url("../fonts/GothamPro-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-BoldItalic.woff2") format("woff2"), url("../fonts/GothamPro-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Italic.woff2") format("woff2"), url("../fonts/GothamPro-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Black.woff2") format("woff2"), url("../fonts/GothamPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Medium.woff2") format("woff2"), url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-BlackItalic.woff2") format("woff2"), url("../fonts/GothamPro-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro Narrow";
+  src: url("../fonts/GothamProNarrow-Bold.woff2") format("woff2"), url("../fonts/GothamProNarrow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Medium.woff2") format("woff2"), url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-MediumItalic.woff2") format("woff2"), url("../fonts/GothamPro-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Italic.woff2") format("woff2"), url("../fonts/GothamPro-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-BoldItalic.woff2") format("woff2"), url("../fonts/GothamPro-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro Narrow";
+  src: url("../fonts/GothamProNarrow-Medium.woff2") format("woff2"), url("../fonts/GothamProNarrow-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Light.woff2") format("woff2"), url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-LightItalic.woff2") format("woff2"), url("../fonts/Gilroy-LightItalic.woff") format("woff");
   font-weight: 300;
@@ -1017,6 +1209,54 @@ main {
   margin: 0 auto;
 }
 
+.breadcrumb {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.breadcrumb__list {
+  list-style: none;
+  padding: 20px 50px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.breadcrumb__item {
+  display: block;
+  position: relative;
+}
+
+.breadcrumb__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 9px;
+  right: -18.5px;
+  top: calc(50% - 4.5px);
+}
+
+.breadcrumb__link,
+.breadcrumb__link-current {
+  font-weight: normal;
+  line-height: 17px;
+  color: #67AF28;
+  text-decoration: none;
+}
+
 .scroll-top {
   cursor: pointer;
   display: table;
@@ -1051,6 +1291,352 @@ main {
 
 .scroll-top-icon img {
   margin: 0 auto;
+}
+
+.popup {
+  display: none;
+}
+
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 4.5%;
+  background: rgba(103, 175, 40, 0.5019607843);
+  z-index: 10000;
+}
+
+.popup-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100%;
+}
+
+.login-inner {
+  width: 722px;
+  text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(103, 175, 40, 0.25);
+          box-shadow: 0px 4px 4px rgba(103, 175, 40, 0.25);
+  border-radius: 22px;
+  border: 1px solid #E2E2E2;
+}
+
+.login-forget {
+  padding: 70px 146px 60px;
+}
+
+.login-tabs {
+  overflow: hidden;
+  font-size: 0;
+}
+
+.login-tabs > input[type=radio] {
+  display: none;
+}
+
+.login-tabs > input[type=radio]:checked + .login-tabs-label {
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  color: #372C2C;
+}
+
+.login-tabs > input[type=radio]:checked + .login-tabs-label:nth-of-type(even) {
+  border-left: 1px solid #e1e1e1;
+}
+
+.login-tabs > input[type=radio]:checked + .login-tabs-label:nth-of-type(odd) {
+  border-right: 1px solid #e1e1e1;
+}
+
+.login-tabs > .login-tabs-item {
+  display: none;
+}
+
+.login-tabs > .login-tabs-label {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 25px;
+  font-family: "Gotham Pro", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #FBFFF7;
+  font-size: 16px;
+  line-height: 15px;
+  color: #ABC0CE;
+  -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.login-tabs-item {
+  max-width: 430px;
+  padding: 40px 0 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-tabs-title {
+  font-size: 26px;
+  line-height: 1;
+  text-align: center;
+  font-family: "Gotham Pro", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #372C2C;
+  margin-bottom: 30px;
+}
+
+.login-tabs-way {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  background-color: #f5f6f5;
+  padding: 18px 35px 17px;
+  border-radius: 5px;
+}
+
+.login-tabs-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.login-tabs-radio + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.login-tabs-radio + label::before {
+  content: "";
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #636363;
+  border-radius: 50%;
+  outline: none;
+  width: 19px;
+  height: 19px;
+  margin-right: 30px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.login-tabs-radio:checked + label::before {
+  background: -o-linear-gradient(357.66deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  border: 3px solid #a2e16b;
+  border-radius: 50%;
+}
+
+.login-tabs-radio:not(:disabled):active + label::before {
+  background: #7DCB39;
+  border: 1px solid #99D764;
+}
+
+.login-tabs-radio:not(:disabled):hover + label::before {
+  background: #7DCB39;
+  border: 1px solid #99D764;
+}
+
+.login-tabs-icon {
+  margin-right: 20px;
+}
+
+.login-tabs-text {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #3D4F3C;
+}
+
+.login-tabs-btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+  background: -o-linear-gradient(357.66deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  width: 90%;
+  padding: 15px;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(103, 175, 40, 0.5));
+          filter: drop-shadow(0px 0px 10px rgba(103, 175, 40, 0.5));
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-tabs-btn::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 20px;
+  bottom: -3px;
+  left: 0;
+  background: -o-linear-gradient(357.66deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  opacity: 0.6;
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-tabs-btn:focus-visible {
+  outline: none;
+}
+
+.login-tabs-btn:focus-visible::after {
+  bottom: -8px;
+}
+
+.login-tabs-btn:hover::after {
+  bottom: -8px;
+}
+
+.login-tabs-btn:active {
+  background: -o-linear-gradient(357.66deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+  -webkit-box-shadow: inset 2px 4px 3px #4B940C;
+          box-shadow: inset 2px 4px 3px #4B940C;
+  border-radius: 5px;
+}
+
+.login-tabs-btn:active::after {
+  bottom: -8px;
+}
+
+.login-tabs-close {
+  margin-top: 22px;
+  font-family: "Gotham Pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1;
+  color: #372C2C;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-tabs-forget {
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #7184C8;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-tabs-input-active {
+  position: relative;
+  display: none;
+}
+
+.login-tabs-input-active::before {
+  z-index: 1;
+  position: absolute;
+  top: -29px;
+  left: 12px;
+  content: " ";
+  width: 1px;
+  height: 16px;
+  background: #67AF28;
+}
+
+.login-tabs-input {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #7184c8;
+  background: #ffffff;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3D4F3C;
+  padding: 12px 20px;
+}
+
+.login-tabs-input:first-child {
+  margin-top: 40px;
+}
+
+.login-tabs-input:hover {
+  border: 1px solid #7184c8;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(113, 132, 200, 0.15)), to(rgba(113, 132, 200, 0.15))), #FFFFFF;
+  background: -o-linear-gradient(bottom, rgba(113, 132, 200, 0.15), rgba(113, 132, 200, 0.15)), #FFFFFF;
+  background: linear-gradient(0deg, rgba(113, 132, 200, 0.15), rgba(113, 132, 200, 0.15)), #FFFFFF;
+  outline: none;
+}
+
+.login-tabs-input:focus-visible {
+  border: 1px solid #67AF28;
+  background: #ffffff;
+  outline: none;
+}
+
+.login-tabs-input:focus-visible + span {
+  display: block;
+}
+
+.login-tabs-input:active {
+  border: 1px solid #67AF28;
+  background: #ffffff;
+}
+
+#tab-registration:checked ~ .tab-registration {
+  display: block;
+}
+
+#tab-login:checked ~ .tab-login {
+  display: block;
 }
 
 .header {
@@ -1682,6 +2268,7 @@ main {
 }
 
 .wrapper-index {
+  overflow-y: hidden;
   position: relative;
   background: url(../img/index-bg.png);
 }
@@ -2394,7 +2981,7 @@ main {
 .products-slider .slick-dots .slick-active {
   background: -o-linear-gradient(357.66deg, #67AF28 -28.45%, #6CDA0D 101.05%);
   background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
-  border: 2px solid #6CDA0D;
+  border: 3px solid #a2e16b;
   border-radius: 50%;
 }
 
@@ -2479,6 +3066,8 @@ main {
 }
 
 .categories .slick-dots {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2512,7 +3101,7 @@ main {
 .categories .slick-dots .slick-active {
   background: -o-linear-gradient(357.66deg, #67AF28 -28.45%, #6CDA0D 101.05%);
   background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
-  border: 2px solid #6CDA0D;
+  border: 3px solid #a2e16b;
   border-radius: 50%;
 }
 
@@ -2764,6 +3353,14 @@ main {
 
   .scroll-top {
     display: none;
+  }
+
+  .login-inner {
+    width: calc(100% - 46px);
+  }
+
+  .login-tabs-btn {
+    width: calc(100% - 10px);
   }
 
   .header {
@@ -3099,6 +3696,18 @@ main {
 
   .container.container-nomobile {
     max-width: 100%;
+  }
+
+  .login-inner {
+    width: 100%;
+  }
+
+  .login-forget {
+    padding: 107px 15px 119px;
+  }
+
+  .login-tabs-item {
+    padding: 40px 15px 30px;
   }
 
   .header {
