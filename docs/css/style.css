@@ -3211,7 +3211,7 @@ main {
     display: -ms-flexbox;
     display: flex;
     margin: 5px auto 0 0;
-    max-width: 117px;
+    width: 117px;
   }
 
   .indicators-inner::after {
@@ -3333,7 +3333,7 @@ main {
     display: -ms-flexbox;
     display: flex;
     margin: 5px auto 0;
-    max-width: 117px;
+    width: 117px;
   }
 
   .categories-list {
@@ -3572,7 +3572,7 @@ main {
 
   .card-basket {
     margin: 15px auto 0 0;
-    max-width: 148px;
+    width: 148px;
     padding-left: 13px;
   }
 
