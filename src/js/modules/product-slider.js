@@ -22,7 +22,7 @@ export function getProductSlider() {
             }
           },
           {
-            breakpoint: 575,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
               dots: false,
