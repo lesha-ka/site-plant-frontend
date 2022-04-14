@@ -448,6 +448,7 @@
         }
     }
     &-minus {
+        max-width: 12px;
         cursor: pointer;
         border: none;
         background-color: transparent;
@@ -457,6 +458,7 @@
         background-position: center;
     }
     &-plus {
+        max-width: 12px;
         cursor: pointer;
         border: none;
         background-color: transparent;
