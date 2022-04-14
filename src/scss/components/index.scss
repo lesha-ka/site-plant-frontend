@@ -487,12 +487,13 @@
     }
     &-add {     
         display: block;
+        position: relative;
         margin-left: 12px;       
         cursor: pointer;
         border: none;
         background-color: transparent;
         width: 37px;
-        height: 100%;
+        height: 38px;
         outline: none;
         background-image: url(../img/icons/basket-g.svg);
         background-repeat: no-repeat;
@@ -818,6 +819,7 @@
         &-item {
             border-radius: 12px;
             position: relative;
+            outline: none;
             @media #{$w768} {
                 margin: 0;
                 padding-right: 30px;
