@@ -30,8 +30,11 @@
         overflow: hidden;
         margin-right: 30px;
         margin-bottom: 30px;
-        border-radius: 12px;
+        border-radius: 12px 12px 4px 4px;
         background-color: $d-green;
+        @media #{$w1440} {
+            border-radius: 12px;
+        }
         @media #{$w768} {
             width: calc(33.33%  - 20px);
             flex-wrap: wrap;
@@ -71,10 +74,10 @@
                 object-fit: cover;
                 width: 100%;
                 max-height: 274px;
-                max-width: 115px;
                 border-radius: 12px 0px 0px 12px;
             }
             @media #{$w360} {
+                max-width: 115px;
                 max-height: 146px;
             }
         }
@@ -86,7 +89,10 @@
         left: 0;
         top: 0;
         background-color: $d-green;
-        padding: 11px 8px 6px;
+        padding: 25px 6px 11px 18px;
+        @media #{$w1024} {
+            padding: 11px 8px 6px;
+        }
         @media #{$w768} {
             border-radius: 12px 12px 0px 0px;
         }
@@ -100,6 +106,9 @@
         & .card-favorite+label {
             top: 26px;
             right: 9px;
+            @media #{$w1024} {
+                top: 15px;
+            }
             @media #{$w768} {
                 bottom: 18px;
                 right: 26px;
@@ -130,11 +139,21 @@
             margin-top: 11px;
         }
         & .card-price {
-            margin-top: 32px;
-            font-size: 16px;
+            margin-top: 11px;
+            font-size: 24px;
+            @media #{$w768} {
+                margin-top: 16px;
+            }
+            @media #{$w360} {
+                margin-top: 32px;
+                font-size: 16px;
+            }
         }
         & .card-price del{
-            font-size: 12px;
+            font-size: 16px;
+            @media #{$w360} {
+                font-size: 12px;
+            }
         }
 
         & .card-basket {
