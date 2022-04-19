@@ -1,0 +1,37 @@
+.stars-result {
+    & span {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        margin-right: 8px;
+        line-height: 1;
+        width: 20px;
+        height: 20px;
+        background: url('../img/icons/star-w.svg') center no-repeat;
+        background-size: cover;
+    }
+    & > span.active {
+        background: url('../img/icons/star-g.svg') center no-repeat;
+        background-size: cover;
+    }
+    & > span.active:first-child {
+        background: url('../img/icons/star-g.svg') center no-repeat;
+        background-size: cover;
+    }
+    & > span.active:nth-child(2) {
+        background: url('../img/icons/star-g2.svg') center no-repeat;
+        background-size: cover;
+    }
+    & > span.active:nth-child(3) {
+        background: url('../img/icons/star-g3.svg') center no-repeat;
+        background-size: cover;
+    }
+    & > span.active:nth-child(4) {
+        background: url('../img/icons/star-g4.svg') center no-repeat;
+        background-size: cover;
+    }
+    & > span.active:last-child {
+        background: url('../img/icons/star-g5.svg') center no-repeat;
+        background-size: cover;
+    }
+}

@@ -97,6 +97,16 @@ main {
     @media #{$w360} {
         max-width: calc(100% - 10px);
     }
+    &-narrow {
+        max-width: 1350px;
+        margin: 0 auto; 
+        @media #{$w768} {
+            max-width: calc(100% - 60px);
+        }
+        @media #{$w360} {
+            max-width: calc(100% - 30px);
+        }
+    }
     &.container-notablet {
         @media #{$w768} {
             max-width: 100%;

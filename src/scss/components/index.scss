@@ -1,5 +1,4 @@
 .wrapper-index {
-    overflow-y: hidden;
     position: relative;
     &::before {
         position: absolute;
@@ -161,7 +160,7 @@
     &-timer {
         font-family: $oswald;
         font-weight: 500;
-        margin-top: 16px;
+        margin-top: 18px;
         color: $gray;
         @media #{$w768} {
             margin-top: 20px;
@@ -176,7 +175,7 @@
         position: relative;
         background-color: $white;
         @include fz-14;
-        padding: 10px;
+        padding: 1px 8px 3px;
         color: $blue;
         border-radius: 3px;
         margin: 0 5px;
@@ -217,7 +216,7 @@
         @media #{$w360} {
             max-height: initial;
         }
-        &.offers-cards-open {
+        &.offers-open {
             max-height: initial;
         }
         & .slick-list {
@@ -272,7 +271,7 @@
         &:nth-child(4n) {
             margin-right: 0;
             @media #{$w768} {
-                margin-right: inherit;
+                margin-right: 30px;
             }
             @media #{$w360} {
                 margin-right: 30px;
@@ -354,6 +353,8 @@
         }
     }
     &-text {
+        font-family: $open-sans;
+        font-size: 14px;
         margin-top: 9px;
         @media #{$w768} {
             font-size: 12px;
@@ -384,7 +385,7 @@
             display: inline-flex;
             align-items: center;
             user-select: none;
-            top: 12px;
+            top: 13px;
             right: 13px;
             width: 17px;
             height: 17px;
@@ -401,8 +402,8 @@
             display: inline-block;
             flex-shrink: 0;
             flex-grow: 0;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 17px;
             border: none;
             background: url(../img/icons/favorite-w.svg) center no-repeat;
             background-size: cover;

@@ -11,9 +11,9 @@ header.header
             .header-logo
                 img(src="img/icons/logo.svg" alt="Лого")
             nav.header-nav
-                a.header-nav-item(href="#" target="_blank")  О нас
-                a.header-nav-item(href="#" target="_blank")  Контакты
-                a.header-nav-item(href="#" target="_blank")  Доставка и оплата
+                a.header-nav-item(href="#" )  О нас
+                a.header-nav-item(href="#" )  Контакты
+                a.header-nav-item(href="#" )  Доставка и оплата
             form.header-search.js-SearchForm(action="#")
                 .header-categories.js-categories Категории
                 .header-categories-inner.js-categoryList
@@ -123,7 +123,7 @@ header.header
                                         .login-tabs-icon 
                                             img(src="img/icons/telephone.svg" alt="телефон")
                                         p.login-tabs-text Регистрация по телефону
-                                button.login-tabs-btn.js-registrationWay(type="button") Продолжить
+                                button.green-btn.login-tabs-btn.js-registrationWay(type="button") Продолжить
                                 p.login-tabs-close.js-popupClose Отмена
                                 .login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
                             .js-hide.js-registrationMail
@@ -132,7 +132,7 @@ header.header
                                     span.login-tabs-input-active
                                     input.login-tabs-input(type="password" name="password" placeholder="Пароль" autocomplete="off")
                                     span.login-tabs-input-active
-                                    button.login-tabs-btn(type="submit") Продолжить
+                                    button.green-btn.login-tabs-btn(type="submit") Продолжить
                                 p.login-tabs-close.js-popupClose Отмена
                                 p.login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
                             .js-hide.js-registrationPhone
@@ -141,7 +141,7 @@ header.header
                                     span.login-tabs-input-active
                                     input.login-tabs-input(type="password" name="password" placeholder="Пароль" autocomplete="off")
                                     span.login-tabs-input-active
-                                    button.login-tabs-btn(type="submit") Продолжить
+                                    button.green-btn.login-tabs-btn(type="submit") Продолжить
                                 p.login-tabs-close.js-popupClose Отмена
                                 p.login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
                         .login-tabs-item.tab-login
@@ -151,7 +151,7 @@ header.header
                                 span.login-tabs-input-active
                                 input.login-tabs-input(type="password" name="password" placeholder="Пароль" autocomplete="off")
                                 span.login-tabs-input-active
-                                button.login-tabs-btn(type="submit") Войти
+                                button.green-btn.login-tabs-btn(type="submit") Войти
                             p.login-tabs-close.js-popupClose Отмена
                             p.login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
         .popup.js-popup(id="forget") 
@@ -162,6 +162,6 @@ header.header
                         form(action="post")
                                 input.login-tabs-input(type="text" name="login" placeholder="Код с почты или телефона" autocomplete="off")
                                 span.login-tabs-input-active
-                                button.login-tabs-btn(type="submit") Продолжить
+                                button.green-btn.login-tabs-btn(type="submit") Продолжить
                         p.login-tabs-close.js-popupClose Отмена
 

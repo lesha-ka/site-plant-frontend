@@ -10,11 +10,11 @@ export const getMoreOffer = () => {
       }
       function showMoreOffer() {
           if (btnMore.classList.contains('js-lessText')) {
-              offersBox.classList.remove('offers-cards-open')
+              offersBox.classList.remove('offers-open')
               btnMore.innerHTML = 'Показать ещё';
               btnMore.classList.remove('js-lessText')
           } else {
-              offersBox.classList.add('offers-cards-open')
+              offersBox.classList.add('offers-open')
               btnMore.innerHTML = 'Скрыть';
               btnMore.classList.add('js-lessText')
           }
