@@ -164,6 +164,7 @@
         position: absolute;
         border-radius: 0px 0px 4px 4px;
         padding: 10px 30px 10px 0;
+        z-index: 15;
         @media #{$w768} {
             top: 35px;
         }

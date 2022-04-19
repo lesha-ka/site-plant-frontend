@@ -326,16 +326,16 @@
                   <div class="info-content info-content-third"> 
                     <div class="info-reviews-result"> 
                       <div class="info-reviews-col">
-                        <svg class="info-circle" viewBox="0 0 100 100">
+                        <svg class="info-circle" width="140" height="140" viewBox="0 0 140 140">
                           <linearGradient id="fillGtadient"> 
                             <stop offset="-28.45%" stop-color="#67AF28"></stop>
                             <stop offset="101.5%" stop-color="#6CDA0D"></stop>
                           </linearGradient>
                           <circle cx="70" cy="70" r="70" fill="transparent"></circle>
-                          <path class="info-circle-line" fill="none" stroke-linecap="round" stroke-width="5" stroke="url(#fillGtadient)" stroke-dasharray="226" d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"></path>
-                          <text class="info-circle-number" x="50" y="50" text-anchor="middle" dy="5">4.5</text>
-                          <text class="info-circle-count" x="50" y="50" text-anchor="middle" dy="15">125 отзывов</text>
-                        </svg><a class="green-btn" href="#">Оставить отзыв </a>
+                          <path class="info-circle-line js-reviewsCircle" fill="none" stroke-linecap="round" stroke-width="8.23615" stroke="url(#fillGtadient)" stroke-dasharray="410" d="m 70.09723,3.8761649 a 65.897909,65.880344 0 0 1 0,131.7606851 65.897908,65.880344 0 0 1 0,-131.7606851" id="path9" style="stroke:url(#fillGtadient)"></path>
+                          <text class="info-circle-number js-reviewsNumber" x="70" y="65" text-anchor="middle" dy="5">4.75</text>
+                          <text class="info-circle-count" x="70" y="80" text-anchor="middle" dy="15">125 отзывов</text>
+                        </svg><a class="green-btn info-reviews-btn" href="#">Оставить отзыв </a>
                       </div>
                       <div class="info-reviews-col"> 
                         <ul class="info-stat">
@@ -406,7 +406,110 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="info-reviews-items"> </div>
+                    <div class="info-reviews-items"> 
+                      <h3 class="info-title">Отзывы</h3>
+                      <p class="info-reviews-subtitle">Фотографии пользователей:</p>
+                      <div class="info-reviews-gallary">
+                        <div class="info-reviews-slider js-reviewsSlider">
+                          <div class="info-reviews-slide"><img src="img/card/similar4.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review2.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review3.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review4.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review5.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review6.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review7.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review8.jpg" alt="Товар"/></div>
+                          <div class="info-reviews-slide"><img src="img/card/review1.jpg" alt="Товар"/></div>
+                        </div>
+                      </div>
+                      <article class="info-review">
+                        <div class="info-review-photo"><img src="img/icons/avatar.svg" alt="Фото"/></div>
+                        <div class="info-review-inner">
+                          <div class="info-review-head"> 
+                            <p class="info-review-name">Александр Баранов
+                              <time class="info-review-date">3 декабря 2019</time>
+                            </p>
+                            <div class="info-review-rating js-starsWrap">
+                              <div class="info-review-stars stars js-stars" data-stars="3">
+                                <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="info-review-product">Вариант товара: <span>Псевдотсуга Мензиса</span></div>
+                          <div class="js-textWrap">
+                            <div class="info-review-comment js-textBox">Комментарий:
+                              <p>Ну вот я решил наконец то обновиться со своего 7+ спустя три года использования. Честно скажу, 7+ очень нравился, один из лучших смартфонов который у меня был, но уже немного устарел. Олед экран мне не зашёл, не в Х, не в XS. Когда вышел Xr, уже задумался об его покупке, но почему то смущало отсутствие 3D Touch (к которому уже Ну вот я решил наконец то обновиться со своего 7+ спустя три года использования. Честно скажу, 7+ очень нравился, один из лучших смартфонов который у меня был, но уже немного устарел. Олед экран мне не зашёл, не в Х, не в XS. Когда вышел Xr, уже задумался об его покупке, но почему то смущало отсутствие 3D Touch (к которому уже</p>
+                            </div>
+                            <button class="info-more js-moreText" type="button">Читать полностью</button>
+                          </div>
+                          <div class="info-review-images"> 
+                            <div class="info-review-image"><img src="img/card/review1.jpg" alt="Товар"/></div>
+                            <div class="info-review-image"><img src="img/card/similar4.jpg" alt="Товар"/></div>
+                            <div class="info-review-image"><img src="img/card/review3.jpg" alt="Товар"/></div>
+                            <div class="info-review-image"><img src="img/card/review4.jpg" alt="Товар"/></div>
+                          </div>
+                          <form class="info-review-response" method="post">
+                            <p class="info-review-question">Этот отзыв был полезен? </p>
+                            <button class="info-review-icon" type="button"><img src="img/icons/like.svg" alt="Нравится"/></button>
+                            <button class="info-review-icon" type="button"><img src="img/icons/dislike.svg" alt="Не нравится"/></button>
+                            <button class="info-review-icon" type="button"><img src="img/icons/report.svg" alt="Пожаловаться"/></button>
+                            <p class="info-review-reply">Ответить</p>
+                          </form>
+                        </div>
+                      </article>
+                      <article class="info-review">
+                        <div class="info-review-photo"><img src="img/icons/avatar2.svg" alt="Фото"/></div>
+                        <div class="info-review-inner">
+                          <div class="info-review-head"> 
+                            <p class="info-review-name">Лев Панфилов
+                              <time class="info-review-date">29 ноября 2019</time>
+                            </p>
+                            <div class="info-review-rating js-starsWrap">
+                              <div class="info-review-stars stars js-stars" data-stars="5">
+                                <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="info-review-product">Вариант товара: <span>Встроенная память: 128 ГБ, Цвет: черный</span></div>
+                          <form class="info-review-response" method="post">
+                            <p class="info-review-question">Этот отзыв был полезен? </p>
+                            <button class="info-review-icon" type="button"><img src="img/icons/like.svg" alt="Нравится"/></button>
+                            <button class="info-review-icon" type="button"><img src="img/icons/dislike.svg" alt="Не нравится"/></button>
+                            <button class="info-review-icon" type="button"><img src="img/icons/report.svg" alt="Пожаловаться"/></button>
+                            <p class="info-review-reply">Ответить</p>
+                          </form>
+                        </div>
+                      </article>
+                      <article class="info-review">
+                        <div class="info-review-photo"><img src="img/icons/avatar3.svg" alt="Фото"/></div>
+                        <div class="info-review-inner">
+                          <div class="info-review-head"> 
+                            <p class="info-review-name">Роман Большаков
+                              <time class="info-review-date">28 ноября 2019</time>
+                            </p>
+                            <div class="info-review-rating js-starsWrap">
+                              <div class="info-review-stars stars js-stars" data-stars="5">
+                                <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="info-review-product">Вариант товара: <span>Встроенная память: 64 ГБ, Цвет: черный</span></div>
+                          <div class="js-textWrap">
+                            <div class="info-review-comment js-textBox">Комментарий:
+                              <p>Пушка труба. Четыре года носил 6S . А теперь кайфую. Всем кому нужен надёжный , качественный , современный аппарат . Рекомендую</p>
+                            </div>
+                            <button class="info-more js-moreText" type="button">Читать полностью</button>
+                          </div>
+                          <form class="info-review-response" method="post">
+                            <p class="info-review-question">Этот отзыв был полезен? </p>
+                            <button class="info-review-icon" type="button"><img src="img/icons/like.svg" alt="Нравится"/></button>
+                            <button class="info-review-icon" type="button"><img src="img/icons/dislike.svg" alt="Не нравится"/></button>
+                            <button class="info-review-icon" type="button"><img src="img/icons/report.svg" alt="Пожаловаться"/></button>
+                            <p class="info-review-reply">Ответить</p>
+                          </form>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                   <div class="info-content info-content-fourth"> 
                     <h3 class="info-title">Доставка</h3>
@@ -453,6 +556,15 @@
                     <div class="info-products">
                       <div class="info-products-head"> 
                         <p class="info-products-title">Расходные материалы</p>
+                        <div class="info-products-categories js-categoriesMenu">Категория
+                          <ul class="info-categories-list js-categoriesList">
+                            <li class="info-categories-item">Категория 1</li>
+                            <li class="info-categories-item">Категория 2</li>
+                            <li class="info-categories-item">Категория 3</li>
+                            <li class="info-categories-item">Категория 4</li>
+                            <li class="info-categories-item">Категория 5</li>
+                          </ul>
+                        </div>
                       </div>
                       <ul class="info-products-list js-offersBox">
                         <li class="info-products-item">
@@ -461,7 +573,7 @@
                           <div class="info-products-availability">Отсутствует</div>
                           <div class="info-products-price">180&nbsp;₽ <del>380&nbsp;₽</del></div>
                           <form method="post"> 
-                            <button class="info-products-basket"></button>
+                            <button class="info-products-basket" type="button"></button>
                           </form>
                         </li>
                         <li class="info-products-item">
@@ -470,7 +582,7 @@
                           <div class="info-products-availability info-products-availability-true">В наличии</div>
                           <div class="info-products-price">180&nbsp;₽ <del>380&nbsp;₽</del></div>
                           <form method="post"> 
-                            <button class="info-products-basket"></button>
+                            <button class="info-products-basket" type="button"></button>
                           </form>
                         </li>
                         <li class="info-products-item">
@@ -479,7 +591,7 @@
                           <div class="info-products-availability info-products-availability-true">В наличии</div>
                           <div class="info-products-price">180&nbsp;₽ <del>380&nbsp;₽</del></div>
                           <form method="post"> 
-                            <button class="info-products-basket"></button>
+                            <button class="info-products-basket" type="button"></button>
                           </form>
                         </li>
                         <li class="info-products-item">
@@ -488,7 +600,16 @@
                           <div class="info-products-availability info-products-availability-true">В наличии</div>
                           <div class="info-products-price">180&nbsp;₽ <del>380&nbsp;₽</del></div>
                           <form method="post"> 
-                            <button class="info-products-basket"></button>
+                            <button class="info-products-basket" type="button"></button>
+                          </form>
+                        </li>
+                        <li class="info-products-item">
+                          <div class="info-products-img"> <img src="img/icons/empty.png" alt=""/></div>
+                          <div class="info-products-name">Стекло YUME для Apple IPhone 11, черное, матовое</div>
+                          <div class="info-products-availability info-products-availability-true">В наличии</div>
+                          <div class="info-products-price">180&nbsp;₽ <del>380&nbsp;₽</del></div>
+                          <form method="post"> 
+                            <button class="info-products-basket" type="button"></button>
                           </form>
                         </li>
                       </ul>

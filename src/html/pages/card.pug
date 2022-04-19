@@ -125,15 +125,15 @@ main(class=`main main-${page}`)
                         .info-content.info-content-third 
                             .info-reviews-result 
                                 .info-reviews-col
-                                    svg.info-circle(viewBox='0 0 100 100')
+                                    svg.info-circle(width="140" height="140" viewBox="0 0 140 140")
                                         linearGradient#fillGtadient 
                                             stop(offset="-28.45%" stop-color="#67AF28")
                                             stop(offset="101.5%" stop-color="#6CDA0D")
                                         circle(cx='70', cy='70', r='70', fill='transparent')
-                                        path.info-circle-line(fill='none', stroke-linecap='round', stroke-width='5', stroke='url(#fillGtadient)', stroke-dasharray='226', d='M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80')
-                                        text.info-circle-number(x='50', y='50', text-anchor='middle', dy='5') 4.5
-                                        text.info-circle-count(x='50', y='50', text-anchor='middle', dy='15') 125 отзывов
-                                    a.green-btn(href="#") Оставить отзыв 
+                                        path.info-circle-line.js-reviewsCircle(fill="none" stroke-linecap="round" stroke-width="8.23615" stroke="url(#fillGtadient)" stroke-dasharray="410" d="m 70.09723,3.8761649 a 65.897909,65.880344 0 0 1 0,131.7606851 65.897908,65.880344 0 0 1 0,-131.7606851" id="path9" style="stroke:url(#fillGtadient)")
+                                        text.info-circle-number.js-reviewsNumber(x='70', y='65', text-anchor='middle', dy='5') 4.75
+                                        text.info-circle-count(x='70', y='80', text-anchor='middle', dy='15') 125 отзывов
+                                    a.green-btn.info-reviews-btn(href="#") Оставить отзыв 
                                 .info-reviews-col 
                                     ul.info-stat
                                         li.info-stat-item 
@@ -179,6 +179,120 @@ main(class=`main main-${page}`)
                                             .info-stat-value
                                                 progress.info-stat-line(value="4.9" max="5")
                             .info-reviews-items 
+                                h3.info-title Отзывы
+                                p.info-reviews-subtitle Фотографии пользователей:
+                                .info-reviews-gallary
+                                    .info-reviews-slider.js-reviewsSlider
+                                        .info-reviews-slide
+                                            img(src="img/card/similar4.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review2.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review3.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review4.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review5.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review6.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review7.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review8.jpg", alt="Товар")
+                                        .info-reviews-slide
+                                            img(src="img/card/review1.jpg", alt="Товар")
+                                article.info-review
+                                    .info-review-photo
+                                        img(src="img/icons/avatar.svg", alt="Фото")
+                                    .info-review-inner
+                                        .info-review-head 
+                                            p.info-review-name Александр Баранов
+                                                time.info-review-date 3 декабря 2019
+                                            .info-review-rating.js-starsWrap
+                                                .info-review-stars.stars.js-stars(data-stars="3")
+                                                    .stars-result
+                                                        span
+                                                        span
+                                                        span
+                                                        span
+                                                        span
+                                        .info-review-product Вариант товара: <span>Псевдотсуга Мензиса</span>
+                                        .js-textWrap
+                                            .info-review-comment.js-textBox Комментарий:
+                                                p Ну вот я решил наконец то обновиться со своего 7+ спустя три года использования. Честно скажу, 7+ очень нравился, один из лучших смартфонов который у меня был, но уже немного устарел. Олед экран мне не зашёл, не в Х, не в XS. Когда вышел Xr, уже задумался об его покупке, но почему то смущало отсутствие 3D Touch (к которому уже Ну вот я решил наконец то обновиться со своего 7+ спустя три года использования. Честно скажу, 7+ очень нравился, один из лучших смартфонов который у меня был, но уже немного устарел. Олед экран мне не зашёл, не в Х, не в XS. Когда вышел Xr, уже задумался об его покупке, но почему то смущало отсутствие 3D Touch (к которому уже
+                                            button.info-more.js-moreText(type="button") Читать полностью
+                                        .info-review-images 
+                                            .info-review-image
+                                                img(src="img/card/review1.jpg", alt="Товар")
+                                            .info-review-image
+                                                img(src="img/card/similar4.jpg", alt="Товар")
+                                            .info-review-image
+                                                img(src="img/card/review3.jpg", alt="Товар")
+                                            .info-review-image
+                                                img(src="img/card/review4.jpg", alt="Товар")
+                                        form.info-review-response(method="post")
+                                            p.info-review-question Этот отзыв был полезен? 
+                                            button.info-review-icon(type="button")
+                                                img(src="img/icons/like.svg", alt="Нравится")
+                                            button.info-review-icon(type="button")
+                                                img(src="img/icons/dislike.svg", alt="Не нравится")
+                                            button.info-review-icon(type="button")
+                                                    img(src="img/icons/report.svg", alt="Пожаловаться")
+                                            p.info-review-reply Ответить
+                                article.info-review
+                                    .info-review-photo
+                                        img(src="img/icons/avatar2.svg", alt="Фото")
+                                    .info-review-inner
+                                        .info-review-head 
+                                            p.info-review-name Лев Панфилов
+                                                time.info-review-date 29 ноября 2019
+                                            .info-review-rating.js-starsWrap
+                                                .info-review-stars.stars.js-stars(data-stars="5")
+                                                    .stars-result
+                                                        span
+                                                        span
+                                                        span
+                                                        span
+                                                        span
+                                        .info-review-product Вариант товара: <span>Встроенная память: 128 ГБ, Цвет: черный</span>
+                                        form.info-review-response(method="post")
+                                            p.info-review-question Этот отзыв был полезен? 
+                                            button.info-review-icon(type="button")
+                                                img(src="img/icons/like.svg", alt="Нравится")
+                                            button.info-review-icon(type="button")
+                                                img(src="img/icons/dislike.svg", alt="Не нравится")
+                                            button.info-review-icon(type="button")
+                                                    img(src="img/icons/report.svg", alt="Пожаловаться")
+                                            p.info-review-reply Ответить
+                                article.info-review
+                                    .info-review-photo
+                                        img(src="img/icons/avatar3.svg", alt="Фото")
+                                    .info-review-inner
+                                        .info-review-head 
+                                            p.info-review-name Роман Большаков
+                                                time.info-review-date 28 ноября 2019
+                                            .info-review-rating.js-starsWrap
+                                                .info-review-stars.stars.js-stars(data-stars="5")
+                                                    .stars-result
+                                                        span
+                                                        span
+                                                        span
+                                                        span
+                                                        span
+                                        .info-review-product Вариант товара: <span>Встроенная память: 64 ГБ, Цвет: черный</span>
+                                        .js-textWrap
+                                            .info-review-comment.js-textBox Комментарий:
+                                                p Пушка труба. Четыре года носил 6S . А теперь кайфую. Всем кому нужен надёжный , качественный , современный аппарат . Рекомендую
+                                            button.info-more.js-moreText(type="button") Читать полностью
+                                        form.info-review-response(method="post")
+                                            p.info-review-question Этот отзыв был полезен? 
+                                            button.info-review-icon(type="button")
+                                                img(src="img/icons/like.svg", alt="Нравится")
+                                            button.info-review-icon(type="button")
+                                                img(src="img/icons/dislike.svg", alt="Не нравится")
+                                            button.info-review-icon(type="button")
+                                                    img(src="img/icons/report.svg", alt="Пожаловаться")
+                                            p.info-review-reply Ответить
                         .info-content.info-content-fourth 
                             h3.info-title Доставка
                             p.info-subtitle Интернет-магазин “SHOPNAME” выполняет доставку любого товара во все регионы России.
@@ -218,6 +332,13 @@ main(class=`main main-${page}`)
                             .info-products
                                 .info-products-head 
                                     p.info-products-title Расходные материалы
+                                    .info-products-categories.js-categoriesMenu Категория
+                                        ul.info-categories-list.js-categoriesList
+                                            li.info-categories-item Категория 1
+                                            li.info-categories-item Категория 2
+                                            li.info-categories-item Категория 3
+                                            li.info-categories-item Категория 4
+                                            li.info-categories-item Категория 5
                                 ul.info-products-list.js-offersBox
                                     li.info-products-item
                                         .info-products-img 
@@ -226,7 +347,7 @@ main(class=`main main-${page}`)
                                         .info-products-availability Отсутствует
                                         .info-products-price 180&nbsp;₽ <del>380&nbsp;₽</del>
                                         form(method="post") 
-                                            button.info-products-basket
+                                            button.info-products-basket(type="button")
                                     li.info-products-item
                                         .info-products-img 
                                             img(src="img/icons/empty.png", alt="")
@@ -234,7 +355,7 @@ main(class=`main main-${page}`)
                                         .info-products-availability.info-products-availability-true В наличии
                                         .info-products-price 180&nbsp;₽ <del>380&nbsp;₽</del>
                                         form(method="post") 
-                                            button.info-products-basket
+                                            button.info-products-basket(type="button")
                                     li.info-products-item
                                         .info-products-img 
                                             img(src="img/icons/empty.png", alt="")
@@ -242,7 +363,7 @@ main(class=`main main-${page}`)
                                         .info-products-availability.info-products-availability-true В наличии
                                         .info-products-price 180&nbsp;₽ <del>380&nbsp;₽</del>
                                         form(method="post") 
-                                            button.info-products-basket
+                                            button.info-products-basket(type="button")
                                     li.info-products-item
                                         .info-products-img 
                                             img(src="img/icons/empty.png", alt="")
@@ -250,7 +371,15 @@ main(class=`main main-${page}`)
                                         .info-products-availability.info-products-availability-true В наличии
                                         .info-products-price 180&nbsp;₽ <del>380&nbsp;₽</del>
                                         form(method="post") 
-                                            button.info-products-basket
+                                            button.info-products-basket(type="button")
+                                    li.info-products-item
+                                        .info-products-img 
+                                            img(src="img/icons/empty.png", alt="")
+                                        .info-products-name Стекло YUME для Apple IPhone 11, черное, матовое
+                                        .info-products-availability.info-products-availability-true В наличии
+                                        .info-products-price 180&nbsp;₽ <del>380&nbsp;₽</del>
+                                        form(method="post") 
+                                            button.info-products-basket(type="button")
                                 button.offers-cards-more.js-moreOffer(type="button") Показать еще
     section.card-offers
         .container.container-notablet

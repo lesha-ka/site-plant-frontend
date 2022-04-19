@@ -6,9 +6,9 @@ import { getMoreText} from './modules/more-text.js';
 import { getHeader } from './modules/header.js';
 import { getPopup } from './modules/popup.js';
 import { getRegistration } from './modules/registration.js';
-import { getCardSlider } from './modules/card-slider.js';
 import { getStars } from './modules/stars.js';
 import { getReviewsResult } from './modules/reviews-result.js';
+import { getCategoriesList } from './modules/categories-list.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	getVendor();
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	getMoreText();
 	getHeader();
 	getRegistration();
-	getCardSlider();
 	getStars();
 	getReviewsResult();
+	getCategoriesList();
 });
