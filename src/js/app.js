@@ -9,6 +9,8 @@ import { getRegistration } from './modules/registration.js';
 import { getStars } from './modules/stars.js';
 import { getReviewsResult } from './modules/reviews-result.js';
 import { getCategoriesList } from './modules/categories-list.js';
+import { getBuyOptions }from './modules/buy-options.js';
+import { getTabs }from './modules/tabs.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	getVendor();
@@ -22,4 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	getStars();
 	getReviewsResult();
 	getCategoriesList();
+	getBuyOptions();
+	getTabs();
 });

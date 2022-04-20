@@ -3,7 +3,7 @@ export function getProductSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipe: false,
-        asNavFor: '.js-cardSlider',
+        asNavFor: '.js-gallary-nav',
         arrows: false,
         dots: false,
         infinite: true,
@@ -11,8 +11,7 @@ export function getProductSlider() {
         variableHeight: true,
         fade: true        
     });
-    $('.js-cardSlider').slick({
-        slidesToShow: 3,
+    $('.js-gallary-nav').slick({
         slidesToScroll: 1,
         arrows: true,
         vertical: false,
@@ -21,7 +20,17 @@ export function getProductSlider() {
         asNavFor: '.js-gallary',
         focusOnSelect: true,
         centerMode: false,
-        variableWidth: true
+        variableWidth: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToScroll: 1,
+              dots: false,
+              arrows: false
+            }
+          }
+        ]
     });
     $('.js-reviewsSlider').slick({
         slidesToShow: 8,

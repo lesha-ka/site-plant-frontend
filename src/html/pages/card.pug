@@ -2,7 +2,7 @@ main(class=`main main-${page}`)
     .container.container-narrow 
         +breadcrumb(['Главная', 'Плодово-ягодные'], 'Саженцы малины в ассортименте ')
     section.card
-        .container.container-narrow 
+        .container.container-narrow.container-notablet 
             .card-wrapper
                 .card-gallary 
                     .gallary-slider.js-gallary 
@@ -14,7 +14,7 @@ main(class=`main main-${page}`)
                             img(src="img/card/offers2.jpg", alt="Товар")
                         .gallary-slide
                             img(src="img/card/offers3.jpg", alt="Товар")
-                    .gallary-slider-nav.js-cardSlider
+                    .gallary-slider-nav.js-gallary-nav
                         .gallary-slide-nav
                             img(src="img/card/card.jpg", alt="Товар")
                         .gallary-slide-nav
@@ -34,8 +34,8 @@ main(class=`main main-${page}`)
                     h2.product-title Саженцы малины в ассортименте
                     .product-info
                         .product-article Артикул: 773521
-                        form(method="post") 
-                            input.product-favorite.card-favorite(type="checkbox" id="favorite")
+                        form.product-favorite(method="post") 
+                            input.product-favorite-input.card-favorite(type="checkbox" id="favorite")
                             label(for="favorite") В список желаемого
                         .product-rating.js-starsWrap
                             .product-stars.stars.js-stars(data-stars="4")
@@ -53,31 +53,40 @@ main(class=`main main-${page}`)
                         img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                     .buy-options 
                         input.buy-option(type="radio" name="option" id="option1" checked)  
-                        label(for="option1") Вариант товара <span>250&nbsp;₽</span>
+                        label(for="option1") Вариант товара <span>250₽</span>
                         input.buy-option(type="radio" name="option" id="option2" checked)  
-                        label(for="option2") Вариант товара <span>350&nbsp;₽</span>
+                        label(for="option2") Вариант товара <span>350₽</span>
                         input.buy-option(type="radio" name="option" id="option3" checked)  
-                        label(for="option3") Вариант товара <span>400&nbsp;₽</span>
+                        label(for="option3") Вариант товара <span>400₽</span>                    
+                    .buy-options-mobile.js-buyOptions Вариант товара
+                        ul.buy-options-list.js-buyOptionsList
+                            li.buy-options-item Вариант 1
+                            li.buy-options-item Вариант 2
+                            li.buy-options-item Вариант 3
+                            li.buy-options-item Вариант 4
+                            li.buy-options-item Вариант 5
+                    p.buy-missing Товар временно отсутствует                   
                 .card-info
-                    .info-tabs 
-                        input.info-input(type="radio" name="card-tab" id="card-tab-1" value="")
+                    .info-tabs.js-tabMenu
+                        input.info-input(type="radio" name="card-tab" id="card-tab-1" class="js-tabItem" value="" checked)
                         label(for="card-tab-1") Описание
-                        input.info-input(type="radio" name="card-tab" id="card-tab-2" value="")
+                        input.info-input(type="radio" name="card-tab" id="card-tab-2" class="js-tabItem" value="")
                         label(for="card-tab-2") Характеристики
-                        input.info-input(type="radio" name="card-tab" id="card-tab-3" value="")
+                        input.info-input(type="radio" name="card-tab" id="card-tab-3" class="js-tabItem" value="")
                         label(for="card-tab-3") Отзывы
-                        input.info-input(type="radio" name="card-tab" id="card-tab-4" value="")
+                        input.info-input(type="radio" name="card-tab" id="card-tab-4" class="js-tabItem" value="")
                         label(for="card-tab-4") Оплата и доставка
-                        input.info-input(type="radio" name="card-tab" id="card-tab-5" value="" checked)
+                        input.info-input(type="radio" name="card-tab" id="card-tab-5" class="js-tabItem" value="")
                         label(for="card-tab-5") Варианты товара
-                        .info-content.info-content-first.js-textWrap
+                    .js-tab-content
+                        .info-content.info-content-first.is-show.js-textWrap(data-tab="card-tab-1")
                             h3.info-title Описание
                             .info-text.js-textBox
                                 p iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.
                                 h4 Тщательно продуманный дизайн и дисплей
-                                p iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.
+                                p iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.
                             button.info-more.js-moreText(type="button") Читать полностью
-                        .info-content.info-content-second 
+                        .info-content.info-content-second(data-tab="card-tab-2") 
                             h3.info-title Характеристики
                             .info-characteristics
                                 .info-characteristics-col
@@ -122,7 +131,7 @@ main(class=`main main-${page}`)
                                         dt.info-term 
                                             span Разрешение основной тыловой камеры, Мпикс
                                         dd.info-definition 12
-                        .info-content.info-content-third 
+                        .info-content.info-content-third(data-tab="card-tab-3") 
                             .info-reviews-result 
                                 .info-reviews-col
                                     svg.info-circle(width="140" height="140" viewBox="0 0 140 140")
@@ -293,7 +302,7 @@ main(class=`main main-${page}`)
                                             button.info-review-icon(type="button")
                                                     img(src="img/icons/report.svg", alt="Пожаловаться")
                                             p.info-review-reply Ответить
-                        .info-content.info-content-fourth 
+                        .info-content.info-content-fourth(data-tab="card-tab-4") 
                             h3.info-title Доставка
                             p.info-subtitle Интернет-магазин “SHOPNAME” выполняет доставку любого товара во все регионы России.
                             .info-delivery
@@ -328,7 +337,7 @@ main(class=`main main-${page}`)
                                     .info-payment-text
                                         .info-payment-title Яндекс.Деньги
                                         .info-payment-subtitle При оформлении заказа
-                        .info-content.info-content-fifth 
+                        .info-content.info-content-fifth(data-tab="card-tab-5") 
                             .info-products
                                 .info-products-head 
                                     p.info-products-title Расходные материалы
@@ -581,7 +590,3 @@ main(class=`main main-${page}`)
                                 input.card-count(type="text" value="1")
                                 input.card-plus(type="button")
                                 button.card-add(type="button")                 
-
-
-            
-            

@@ -20,6 +20,8 @@ export const getMoreText = () => {
                     btnMore.classList.add('js-lessText')
                 }
             }
+            console.log(infoTextHeight)
+            console.log(infoTextMaxHeight)
             btnMore.addEventListener("click", showMoreText);
         })
     }

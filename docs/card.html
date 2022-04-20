@@ -203,7 +203,7 @@
           </div>
         </div>
         <section class="card">
-          <div class="container container-narrow"> 
+          <div class="container container-narrow container-notablet"> 
             <div class="card-wrapper">
               <div class="card-gallary"> 
                 <div class="gallary-slider js-gallary"> 
@@ -212,7 +212,7 @@
                   <div class="gallary-slide"><img src="img/card/offers2.jpg" alt="Товар"/></div>
                   <div class="gallary-slide"><img src="img/card/offers3.jpg" alt="Товар"/></div>
                 </div>
-                <div class="gallary-slider-nav js-cardSlider">
+                <div class="gallary-slider-nav js-gallary-nav">
                   <div class="gallary-slide-nav"><img src="img/card/card.jpg" alt="Товар"/></div>
                   <div class="gallary-slide-nav"><img src="img/card/offers1.jpg" alt="Товар"/></div>
                   <div class="gallary-slide-nav"><img src="img/card/offers2.jpg" alt="Товар"/></div>
@@ -229,8 +229,8 @@
                 <h2 class="product-title">Саженцы малины в ассортименте</h2>
                 <div class="product-info">
                   <div class="product-article">Артикул: 773521</div>
-                  <form method="post"> 
-                    <input class="product-favorite card-favorite" type="checkbox" id="favorite"/>
+                  <form class="product-favorite" method="post"> 
+                    <input class="product-favorite-input card-favorite" type="checkbox" id="favorite"/>
                     <label for="favorite">В список желаемого</label>
                   </form>
                   <div class="product-rating js-starsWrap">
@@ -246,35 +246,47 @@
                 <button class="green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                 <div class="buy-options"> 
                   <input class="buy-option" type="radio" name="option" id="option1" checked="checked"/>
-                  <label for="option1">Вариант товара <span>250&nbsp;₽</span></label>
+                  <label for="option1">Вариант товара <span>250₽</span></label>
                   <input class="buy-option" type="radio" name="option" id="option2" checked="checked"/>
-                  <label for="option2">Вариант товара <span>350&nbsp;₽</span></label>
+                  <label for="option2">Вариант товара <span>350₽</span></label>
                   <input class="buy-option" type="radio" name="option" id="option3" checked="checked"/>
-                  <label for="option3">Вариант товара <span>400&nbsp;₽</span></label>
+                  <label for="option3">Вариант товара <span>400₽</span>                    </label>
                 </div>
+                <div class="buy-options-mobile js-buyOptions">Вариант товара
+                  <ul class="buy-options-list js-buyOptionsList">
+                    <li class="buy-options-item">Вариант 1</li>
+                    <li class="buy-options-item">Вариант 2</li>
+                    <li class="buy-options-item">Вариант 3</li>
+                    <li class="buy-options-item">Вариант 4</li>
+                    <li class="buy-options-item">Вариант 5</li>
+                  </ul>
+                </div>
+                <p class="buy-missing">Товар временно отсутствует                   </p>
               </div>
               <div class="card-info">
-                <div class="info-tabs"> 
-                  <input class="info-input" type="radio" name="card-tab" id="card-tab-1" value=""/>
+                <div class="info-tabs js-tabMenu">
+                  <input class="info-input js-tabItem" type="radio" name="card-tab" id="card-tab-1" value="" checked="checked"/>
                   <label for="card-tab-1">Описание</label>
-                  <input class="info-input" type="radio" name="card-tab" id="card-tab-2" value=""/>
+                  <input class="info-input js-tabItem" type="radio" name="card-tab" id="card-tab-2" value=""/>
                   <label for="card-tab-2">Характеристики</label>
-                  <input class="info-input" type="radio" name="card-tab" id="card-tab-3" value=""/>
+                  <input class="info-input js-tabItem" type="radio" name="card-tab" id="card-tab-3" value=""/>
                   <label for="card-tab-3">Отзывы</label>
-                  <input class="info-input" type="radio" name="card-tab" id="card-tab-4" value=""/>
+                  <input class="info-input js-tabItem" type="radio" name="card-tab" id="card-tab-4" value=""/>
                   <label for="card-tab-4">Оплата и доставка</label>
-                  <input class="info-input" type="radio" name="card-tab" id="card-tab-5" value="" checked="checked"/>
+                  <input class="info-input js-tabItem" type="radio" name="card-tab" id="card-tab-5" value=""/>
                   <label for="card-tab-5">Варианты товара</label>
-                  <div class="info-content info-content-first js-textWrap">
+                </div>
+                <div class="js-tab-content">
+                  <div class="info-content info-content-first is-show js-textWrap" data-tab="card-tab-1">
                     <h3 class="info-title">Описание</h3>
                     <div class="info-text js-textBox">
                       <p>iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.</p>
                       <h4>Тщательно продуманный дизайн и дисплей</h4>
-                      <p>iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.</p>
+                      <p>iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.</p>
                     </div>
                     <button class="info-more js-moreText" type="button">Читать полностью</button>
                   </div>
-                  <div class="info-content info-content-second"> 
+                  <div class="info-content info-content-second" data-tab="card-tab-2"> 
                     <h3 class="info-title">Характеристики</h3>
                     <div class="info-characteristics">
                       <div class="info-characteristics-col">
@@ -323,7 +335,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="info-content info-content-third"> 
+                  <div class="info-content info-content-third" data-tab="card-tab-3"> 
                     <div class="info-reviews-result"> 
                       <div class="info-reviews-col">
                         <svg class="info-circle" width="140" height="140" viewBox="0 0 140 140">
@@ -511,7 +523,7 @@
                       </article>
                     </div>
                   </div>
-                  <div class="info-content info-content-fourth"> 
+                  <div class="info-content info-content-fourth" data-tab="card-tab-4"> 
                     <h3 class="info-title">Доставка</h3>
                     <p class="info-subtitle">Интернет-магазин “SHOPNAME” выполняет доставку любого товара во все регионы России.</p>
                     <div class="info-delivery">
@@ -552,7 +564,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="info-content info-content-fifth"> 
+                  <div class="info-content info-content-fifth" data-tab="card-tab-5"> 
                     <div class="info-products">
                       <div class="info-products-head"> 
                         <p class="info-products-title">Расходные материалы</p>
