@@ -39,7 +39,17 @@ export function getProductSlider() {
         dots: false,
         infinite: false,
         focusOnSelect: true,
-        variableHeight: false
+        variableHeight: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3,
+              dots: false,
+              arrows: false
+            }
+          }
+        ]
     });
     $('.js-productsSlider').slick({
         infinite: false,

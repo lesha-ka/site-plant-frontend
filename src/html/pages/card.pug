@@ -79,7 +79,7 @@ main(class=`main main-${page}`)
                         input.info-input(type="radio" name="card-tab" id="card-tab-5" class="js-tabItem" value="")
                         label(for="card-tab-5") Варианты товара
                     .js-tab-content
-                        .info-content.info-content-first.is-show.js-textWrap(data-tab="card-tab-1")
+                        .info-content.info-content-first.js-textWrap(data-tab="card-tab-1")
                             h3.info-title Описание
                             .info-text.js-textBox
                                 p iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.
@@ -140,8 +140,8 @@ main(class=`main main-${page}`)
                                             stop(offset="101.5%" stop-color="#6CDA0D")
                                         circle(cx='70', cy='70', r='70', fill='transparent')
                                         path.info-circle-line.js-reviewsCircle(fill="none" stroke-linecap="round" stroke-width="8.23615" stroke="url(#fillGtadient)" stroke-dasharray="410" d="m 70.09723,3.8761649 a 65.897909,65.880344 0 0 1 0,131.7606851 65.897908,65.880344 0 0 1 0,-131.7606851" id="path9" style="stroke:url(#fillGtadient)")
-                                        text.info-circle-number.js-reviewsNumber(x='70', y='65', text-anchor='middle', dy='5') 4.75
-                                        text.info-circle-count(x='70', y='80', text-anchor='middle', dy='15') 125 отзывов
+                                        text.info-circle-number.js-reviewsNumber(x='70', y='67', text-anchor='middle', dy='5') 4.5
+                                        text.info-circle-count(x='70', y='82', text-anchor='middle', dy='15') 125 отзывов
                                     a.green-btn.info-reviews-btn(href="#") Оставить отзыв 
                                 .info-reviews-col 
                                     ul.info-stat
@@ -165,7 +165,7 @@ main(class=`main main-${page}`)
                                             .info-stat-parameter 1 звезда
                                             .info-stat-value
                                                 progress.info-stat-line(value="0" max="10")
-                                .info-reviews-col 
+                                .info-reviews-col.info-reviews-col-details 
                                     ul.info-stat
                                         li.info-stat-item 
                                             .info-stat-parameter Критерии <span>4.9</span>
@@ -187,9 +187,10 @@ main(class=`main main-${page}`)
                                             .info-stat-parameter Критерии <span>4.9</span>
                                             .info-stat-value
                                                 progress.info-stat-line(value="4.9" max="5")
+                                a.green-btn.info-reviews-btn.info-reviews-btn-mobile(href="#") Оставить отзыв 
                             .info-reviews-items 
                                 h3.info-title Отзывы
-                                p.info-reviews-subtitle Фотографии пользователей:
+                                p.info-reviews-subtitle Фотографии покупателей:
                                 .info-reviews-gallary
                                     .info-reviews-slider.js-reviewsSlider
                                         .info-reviews-slide
@@ -337,7 +338,7 @@ main(class=`main main-${page}`)
                                     .info-payment-text
                                         .info-payment-title Яндекс.Деньги
                                         .info-payment-subtitle При оформлении заказа
-                        .info-content.info-content-fifth(data-tab="card-tab-5") 
+                        .info-content.info-content-fifth.is-show(data-tab="card-tab-5") 
                             .info-products
                                 .info-products-head 
                                     p.info-products-title Расходные материалы
