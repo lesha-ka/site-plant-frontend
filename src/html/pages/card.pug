@@ -68,11 +68,11 @@ main(class=`main main-${page}`)
                     p.buy-missing Товар временно отсутствует                   
                 .card-info
                     .info-tabs.js-tabMenu
-                        input.info-input(type="radio" name="card-tab" id="card-tab-1" class="js-tabItem" value="" checked)
+                        input.info-input(type="radio" name="card-tab" id="card-tab-1" class="js-tabItem" value="")
                         label(for="card-tab-1") Описание
                         input.info-input(type="radio" name="card-tab" id="card-tab-2" class="js-tabItem" value="")
                         label(for="card-tab-2") Характеристики
-                        input.info-input(type="radio" name="card-tab" id="card-tab-3" class="js-tabItem" value="")
+                        input.info-input(type="radio" name="card-tab" id="card-tab-3" class="js-tabItem" value="" checked)
                         label(for="card-tab-3") Отзывы
                         input.info-input(type="radio" name="card-tab" id="card-tab-4" class="js-tabItem" value="")
                         label(for="card-tab-4") Оплата и доставка
@@ -131,7 +131,7 @@ main(class=`main main-${page}`)
                                         dt.info-term 
                                             span Разрешение основной тыловой камеры, Мпикс
                                         dd.info-definition 12
-                        .info-content.info-content-third(data-tab="card-tab-3") 
+                        .info-content.info-content-third.is-show(data-tab="card-tab-3") 
                             .info-reviews-result 
                                 .info-reviews-col
                                     svg.info-circle(width="140" height="140" viewBox="0 0 140 140")
@@ -338,7 +338,7 @@ main(class=`main main-${page}`)
                                     .info-payment-text
                                         .info-payment-title Яндекс.Деньги
                                         .info-payment-subtitle При оформлении заказа
-                        .info-content.info-content-fifth.is-show(data-tab="card-tab-5") 
+                        .info-content.info-content-fifth(data-tab="card-tab-5") 
                             .info-products
                                 .info-products-head 
                                     p.info-products-title Расходные материалы
