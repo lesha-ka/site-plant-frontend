@@ -11,6 +11,9 @@ import { getReviewsResult } from './modules/reviews-result.js';
 import { getCategoriesList } from './modules/categories-list.js';
 import { getBuyOptions }from './modules/buy-options.js';
 import { getTabs }from './modules/tabs.js';
+import { getSelect }from './modules/select.js';
+import { getFilter }from './modules/filter.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 	getVendor();
@@ -26,4 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	getCategoriesList();
 	getBuyOptions();
 	getTabs();
+	getSelect();
+	getFilter();
 });

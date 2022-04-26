@@ -1,10 +1,26 @@
 mixin breadcrumb(items, last)
-	.breadcrumb(class=`${page}-breadcrumb`)
-		ul.breadcrumb-list&attributes(attributes)
-			each item in items
-				li.breadcrumb-item
-					a(href="#" title=item).breadcrumb-link=item
+	.breadcrumb(class=`breadcrumb-${page}`)
+		if (page != 'catalog')
+			ul.breadcrumb-list&attributes(attributes)
+				each item in items
+					li.breadcrumb-item
+						a(href="#" title=item).breadcrumb-link=item
 
-			if last
-				li.breadcrumb-item
-					span.breadcrumb-link-current=last
+				if last
+					li.breadcrumb-item
+						span.breadcrumb-link-current=last
+		if (page == 'catalog')
+			.breadcrumb-block
+				ul.breadcrumb-list&attributes(attributes)
+					each item in items
+						li.breadcrumb-item
+							a(href="#" title=item).breadcrumb-link=item
+
+					if last
+						li.breadcrumb-item
+							span.breadcrumb-link-current=last
+				.catalog-show
+					span.show-text Показывать по:
+					button.show-button.show-button-active(type="button") 16
+					button.show-button(type="button") 32
+					button.show-button(type="button") 64

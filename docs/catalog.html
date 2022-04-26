@@ -8,12 +8,12 @@
       <meta name="format-detection" content="telephone=no"/>
       <meta name="description" content="Plant"/>
       <meta name="keywords" content="Plant"/>
-      <title>Мои желания</title>
+      <title>Каталог</title>
       <link href="css/style.min.css" type="text/css" rel="stylesheet"/>
     </head>
   </head>
   <body> 
-    <div class="wrapper js-wrapper wrapper-wishes">
+    <div class="wrapper js-wrapper wrapper-catalog">
       <header class="header"> 
         <div class="container"> 
           <div class="header-row">
@@ -192,177 +192,120 @@
           </div>
         </div>
       </header>
-      <main class="main main-wishes">
-        <div class="container container-narrow"> 
-          <div class="breadcrumb breadcrumb-wishes">
-            <ul class="breadcrumb-list">
-              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#" title="Главная">Главная</a></li>
-              <li class="breadcrumb-item"><span class="breadcrumb-link-current">Мои желания</span></li>
-            </ul>
+      <main class="main main-catalog">
+        <div class="container">
+          <div class="breadcrumb breadcrumb-catalog">
+            <div class="breadcrumb-block">
+              <ul class="breadcrumb-list">
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="#" title="Главная">Главная</a></li>
+                <li class="breadcrumb-item"><span class="breadcrumb-link-current">Плодово-ягодные</span></li>
+              </ul>
+              <div class="catalog-show"><span class="show-text">Показывать по:</span>
+                <button class="show-button show-button-active" type="button">16</button>
+                <button class="show-button" type="button">32</button>
+                <button class="show-button" type="button">64</button>
+              </div>
+            </div>
           </div>
-          <h2 class="wishes-title">Мои желания</h2>
-          <ul class="wishes-cards">
-            <li class="wishes-card"> <img src="img/wishes/wishes1.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes1" name="offer1"/>
-                  <label for="wishes1"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
+          <section class="catalog">
+            <div class="catalog-control"> <span class="control-number">783 товара</span>
+              <div class="select control-select" id="js-selectGroup">
+                <p class="select-name">Группировать:&nbsp;</p>
+                <button class="select-toggle" type="button" name="grouping" value="Без группировки" data-select="toggle" data-index="0">Без группировки</button>
+                <div class="select-dropdown">
+                  <ul class="select-options">
+                    <li class="select-option" data-select="option" data-value="Без группировки" data-index="0">Без группировки</li>
+                    <li class="select-option" data-select="option" data-value="Группировка 1" data-index="1">Группировка 1</li>
+                    <li class="select-option" data-select="option" data-value="Группировка 2" data-index="2">Группировка 2</li>
+                    <li class="select-option" data-select="option" data-value="Группировка 3" data-index="3">Группировка 3</li>
+                  </ul>
+                </div>
               </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes2.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes2" name="offer1"/>
-                  <label for="wishes2"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
+              <div class="select control-select" id="js-selectSort">
+                <p class="select-name">Сортировать:&nbsp;</p>
+                <button class="select-toggle" type="button" name="sort" value="По популярности" data-select="toggle" data-index="2">По популярности</button>
+                <div class="select-dropdown">
+                  <ul class="select-options">
+                    <li class="select-option" data-select="option" data-value="По дате" data-index="0">По дате</li>
+                    <li class="select-option" data-select="option" data-value="По популярности" data-index="1">По популярности</li>
+                    <li class="select-option" data-select="option" data-value="По рейтингу" data-index="2">По рейтингу</li>
+                    <li class="select-option" data-select="option" data-value="По цене" data-index="3">По цене</li>
+                    <li class="select-option" data-select="option" data-value="Скидке" data-index="4">Скидке</li>
+                  </ul>
+                </div>
               </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes3.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes3" name="offer1"/>
-                  <label for="wishes3"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
+              <div class="control-btn"> 
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_b_50_1170)">
+                    <rect width="36" height="36" rx="5" fill="#67AF28"></rect>
+                    <rect x="5" y="7" width="26" height="4" rx="2" fill="white"></rect>
+                    <rect x="5" y="16" width="26" height="4" rx="2" fill="white"></rect>
+                    <rect x="5" y="25" width="26" height="4" rx="2" fill="white"></rect>
+                  </g>
+                  <defs>
+                    <filter id="filter0_b_50_1170" x="-27" y="-27" width="90" height="90" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feGaussianBlur in="BackgroundImage" stdDeviation="13.5"></feGaussianBlur>
+                      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_50_1170"></feComposite>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_50_1170" result="shape"></feBlend>
+                    </filter>
+                  </defs>
+                </svg>
               </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes1.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes4" name="offer1"/>
-                  <label for="wishes4"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
+              <div class="control-btn control-btn-inactive">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_b_93_3183)">
+                    <rect width="36" height="36" rx="5" fill="#67AF28"></rect>
+                  </g>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4C4.89543 4 4 4.89543 4 6V14C4 15.1046 4.89543 16 6 16H14C15.1046 16 16 15.1046 16 14V6C16 4.89543 15.1046 4 14 4H6ZM22 4C20.8954 4 20 4.89543 20 6V14C20 15.1046 20.8954 16 22 16H30C31.1046 16 32 15.1046 32 14V6C32 4.89543 31.1046 4 30 4H22ZM4 22C4 20.8954 4.89543 20 6 20H14C15.1046 20 16 20.8954 16 22V30C16 31.1046 15.1046 32 14 32H6C4.89543 32 4 31.1046 4 30V22ZM22 20C20.8954 20 20 20.8954 20 22V30C20 31.1046 20.8954 32 22 32H30C31.1046 32 32 31.1046 32 30V22C32 20.8954 31.1046 20 30 20H22Z" fill="white"></path>
+                  <defs>
+                    <filter id="filter0_b_93_3183" x="-27" y="-27" width="90" height="90" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feGaussianBlur in="BackgroundImage" stdDeviation="13.5"></feGaussianBlur>
+                      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_93_3183"></feComposite>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_93_3183" result="shape"></feBlend>
+                    </filter>
+                  </defs>
+                </svg>
               </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes2.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes5" name="offer1"/>
-                  <label for="wishes5"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
-              </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes3.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes6" name="offer1"/>
-                  <label for="wishes6"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
-              </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes1.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes7" name="offer1"/>
-                  <label for="wishes7"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
-              </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes2.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes8" name="offer1"/>
-                  <label for="wishes8"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
-              </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes3.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes9" name="offer1"/>
-                  <label for="wishes9"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
-              </div>
-            </li>
-            <li class="wishes-card"> <img src="img/wishes/wishes1.jpg" alt="Кустарник"/>
-              <div class="card-inner"> 
-                <form class="card-form" method="post">
-                  <input class="card-favorite" type="checkbox" id="wishes10" name="offer1"/>
-                  <label for="wishes10"></label>
-                </form>
-                <p class="card-name">Кустарники</p>
-                <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                <form class="card-basket">
-                  <input class="card-minus" type="button"/>
-                  <input class="card-count" type="text" value="1"/>
-                  <input class="card-plus" type="button"/>
-                  <button class="card-add" type="button"></button>
-                </form>
-              </div>
-            </li>
-          </ul>
+            </div>
+            <div class="catalog-filter">
+              <p class="filter-title">Фильтр</p>
+              <ul class="filter-active">
+                <li class="filter-active-item"> <span class="filter-active-text">г. прирост 30-40 см</span>
+                  <button class="filter-active-delete" type="button"></button>
+                </li>
+                <li class="filter-active-item"> <span class="filter-active-text">макс. рост 10 м</span>
+                  <button class="filter-active-delete" type="button"></button>
+                </li>
+              </ul>
+              <form method="post"> 
+                <div class="filter-item"> 
+                  <div class="filter-item-title">Максимальный рост
+                    <input class="filter-item-radio" type="radio" id="max-grow-1" name="max-grow" value="5m"/>
+                    <label class="filter-item-label" for="max-grow-1">максимальный рост 5 м</label>
+                    <input class="filter-item-radio" type="radio" id="max-grow-2" name="max-grow" value="10m"/>
+                    <label class="filter-item-label" for="max-grow-2">максимальный рост 10 м</label>
+                    <input class="filter-item-radio" type="radio" id="max-grow-3" name="max-grow" value="15m"/>
+                    <label class="filter-item-label" for="max-grow-3">максимальный рост 15 м</label>
+                    <input class="filter-item-radio" type="radio" id="max-grow-4" name="max-grow" value="20m"/>
+                    <label class="filter-item-label" for="max-grow-4">максимальный рост 20 м</label>
+                    <input class="filter-item-radio" type="radio" id="max-grow-5" name="max-grow" value="25m"/>
+                    <label class="filter-item-label" for="max-grow-5">максимальный рост 25 м</label>
+                    <input class="filter-item-radio" type="radio" id="max-grow-6" name="max-grow" value="30m"/>
+                    <label class="filter-item-label" for="max-grow-6">максимальный рост 30 м</label>
+                  </div>
+                </div>
+                <div class="filter-item"> 
+                  <div class="filter-item-title">Цена</div>
+                  <input class="js-rangeSlider" type="text" name="price" value=""/>
+                  <input class="filter-item-price" type="text" name="price-min" placeholder="0"/>
+                  <input class="filter-item-price" type="text" name="price-max" placeholder="3000000"/>
+                </div>
+              </form>
+            </div>
+            <div class="catalog-wrapper"></div>
+          </section>
         </div>
       </main>
       <div class="scroll-top js-scrollTop">
