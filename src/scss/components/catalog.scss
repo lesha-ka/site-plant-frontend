@@ -56,7 +56,7 @@
         border-radius: 10px;
     }
     &-cards {
-        width: 100%;
+        width: calc(100% - 345px);
         margin-top: 50px;
     }
 }
@@ -452,7 +452,7 @@
 }
 .catalog-card {
     display: flex;
-    max-width: 100%;
+    max-width: calc(50% - 8.5px);
     max-height: 183px;
     &:nth-child(odd) {
         margin-right: 17px;
@@ -480,11 +480,7 @@
         padding: 25px 15px 12px;
     }
     & .card-name {
-        @include fz-22;
-    }
-    & .card-add {
-        background-color: #000;
-        z-index: 15;
+        @include fz-18;
     }
     & .card-text {
         margin-top: 35px;
@@ -500,7 +496,5 @@
     & .card-basket {
         align-self: center;
         margin-left: auto;
-        z-index: 1;
-        position: relative;
     }
 }
