@@ -483,7 +483,8 @@
         @include fz-22;
     }
     & .card-add {
-        background-color: #fff;
+        background-color: #000;
+        z-index: 15;
     }
     & .card-text {
         margin-top: 35px;
@@ -499,5 +500,7 @@
     & .card-basket {
         align-self: center;
         margin-left: auto;
+        z-index: 1;
+        position: relative;
     }
 }

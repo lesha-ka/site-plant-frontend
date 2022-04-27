@@ -4700,7 +4700,8 @@ main {
 }
 
 .catalog-card .card-add {
-  background-color: #fff;
+  background-color: #000;
+  z-index: 15;
 }
 
 .catalog-card .card-text {
@@ -4722,6 +4723,8 @@ main {
       -ms-grid-row-align: center;
       align-self: center;
   margin-left: auto;
+  z-index: 1;
+  position: relative;
 }
 
 .main-product {
