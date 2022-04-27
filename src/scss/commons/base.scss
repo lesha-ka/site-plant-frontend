@@ -84,7 +84,7 @@ main {
     max-width: 1410px;
     margin: 0 auto;
     @media #{$w1440} {
-        max-width: 1280px;
+        max-width: 1380px;
     }
     @media #{$w1280} {
         max-width: calc(100% - 80px);

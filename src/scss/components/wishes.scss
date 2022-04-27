@@ -84,7 +84,8 @@
     }
     &-cards {
         & .card-inner {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
         left: 0;
         top: 0;
@@ -98,7 +99,7 @@
         }
         @media #{$w360} {
             max-width: 215px;
-            max-height: 146px;
+            max-height: 147px;
             padding: 15px;
             border-radius: 0;
             }
@@ -153,6 +154,7 @@
             font-size: 16px;
             @media #{$w360} {
                 font-size: 12px;
+                top: 1px;
             }
         }
 

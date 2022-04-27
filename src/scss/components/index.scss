@@ -124,7 +124,7 @@
     }
     @media #{$w360} {
         margin-top: 50px;
-        padding: 30px 0 30px 15px;
+        padding: 30px 0 30px 0;
     }
     &-title {
         font-family: $open-sans;
@@ -209,7 +209,7 @@
             max-height: 259px;
         }
         @media #{$w768} {
-            margin: 32px 0 0;
+            margin: 32px 0 0 15px;
             max-height: 459px;
             flex-wrap: wrap;
         }
@@ -313,7 +313,8 @@
             }
         }
         &:hover .card-inner {
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 }
@@ -324,7 +325,8 @@
         }
     }
     &:hover .card-inner {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
     }
     &-inner {
         display: none;
@@ -373,8 +375,16 @@
         @include fz-24;
         line-height: 1.5;
         & del {
-            font-weight: 400;
+            position: relative;
+            top: 2px;
+            font-weight: 300;
             @include fz-16;
+            @media #{$w360} {
+                top: 1px;
+            }
+        }
+        @media #{$w1440} {
+            width: 100%;
         }
         @media #{$w768} {
             margin-top: 16px;
@@ -386,8 +396,6 @@
         opacity: 0;
         & + label {
             position: absolute;
-            display: inline-flex;
-            align-items: center;
             user-select: none;
             top: 13px;
             right: 13px;
@@ -395,6 +403,8 @@
             height: 17px;
             cursor: pointer;
             @media #{$w768} {
+                display: inline-flex;
+                align-items: center;
                 bottom: 18px;
                 right: 26px;
                 top: auto;
@@ -432,10 +442,15 @@
     }
     &-basket {
         display: inline-flex;
+        box-sizing: border-box;
         align-items: center;
-        height: 40px;
-        margin-left: 18px;
+        align-self: flex-end;
+        margin-bottom: -2px;
+        height: 38px;
+        max-width: 120px;
+        margin-left: auto;
         padding: 0 0 0 10px;
+        vertical-align: bottom;
         border: 1px solid $white;
         box-sizing: border-box;
         border-radius: 5px;
@@ -455,12 +470,13 @@
             max-width: 148px;
             width: 148px;
             padding-left: 13px;
+            padding-top: 4px;
         }
     }
     &-minus {
         width: 12px;
         height: 100%;
-        padding: 0 12px;
+        padding: 0 6px;
         cursor: pointer;
         border: none;
         background-color: transparent;
@@ -472,7 +488,8 @@
     &-plus {
         width: 12px;
         height: 100%;
-        padding: 0 12px;
+        padding: 0 6px;
+        margin-right: 9px;
         cursor: pointer;
         border: none;
         background-color: transparent;
@@ -480,6 +497,9 @@
         background-image: url(../img/icons/plus.svg);
         background-repeat: no-repeat;
         background-position: center;
+        @media #{$w768} {
+            margin-right: 12px;
+        }
     }
     &-count {
         font-weight: 600;
@@ -492,17 +512,14 @@
         width: 32px;
         @media #{$w768} {
             @include fz-12;
-            width: 45px;
+            width: 54;
         }
     }
     &-add {     
+        display: block;
+        padding-left: 5px;
         cursor: pointer;   
-        border: none;
-        outline: none; 
-        width: 100%;
-        height: 100%;
         background: url(../img/icons/basket-g.svg) center no-repeat;     
-        margin-left: 12px;       
         cursor: pointer;
         border: none;
         width: 37px;
@@ -510,6 +527,7 @@
         outline: none;
         border-left: 1px solid #3d4f3c4d;
         border-radius: 5px;
+        margin-left: 5px;
         @media #{$w768} {
             margin-left: 3px;   
         }
@@ -815,7 +833,8 @@
             overflow: hidden;
         }
         @media #{$w360} {
-            padding: 30px 0 30px 15px;
+            padding: 30px 0 30px 0;
+            margin-left: 15px;
         }
         & .slick-list { 
             @media #{$w768} {

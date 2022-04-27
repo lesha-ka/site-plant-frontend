@@ -1290,6 +1290,9 @@
         padding: 20px;
         border: 1px solid #67AF28;
         border-radius: 5px;
+        @media #{$w1280} {
+            max-width: 48%;
+        }
         @media #{$w768} {
             max-width: 48%;
         }
@@ -1298,7 +1301,9 @@
             padding: 15px;
         }
         &:not(:first-child) {
-            margin-top: 15px;
+            @media #{$w360} {
+                margin-top: 15px;
+            }
         }
     }
     &-delivery-title {
@@ -1362,6 +1367,7 @@
     }
     &-payment-item {
         width: 265px;
+        max-width: 32%;
         display: flex;
         align-items: center;
         padding: 25px 10px;
@@ -1369,6 +1375,7 @@
         border: 1px solid $d-green;
         @media #{$w768} {
             width: 48%;
+            max-width: initial;
         }
         @media #{$w360} {
             width: 100%;
