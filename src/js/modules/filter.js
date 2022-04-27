@@ -26,6 +26,5 @@ export const getFilter = () => {
         var changedInput = event.target;
         var top = $(changedInput).position().top;
         $(".js-filterCount").css('top', top - 40);
-        console.log(top)
     });
 }

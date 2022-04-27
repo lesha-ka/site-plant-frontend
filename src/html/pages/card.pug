@@ -79,7 +79,7 @@ main(class=`main main-${page}`)
                         input.info-input(type="radio" name="card-tab" id="card-tab-5" class="js-tabItem" value="")
                         label(for="card-tab-5") Варианты товара
                     .js-tab-content
-                        .info-content.info-content-first.js-textWrap(data-tab="card-tab-1")
+                        .info-content.info-content-first.js-textWrap.is-show(data-tab="card-tab-1")
                             h3.info-title Описание
                             .info-text.js-textBox
                                 p iPhone 11 - усовершенствованная версию самого популярного смартфона Apple с новыми технологиями, значительно улучшающими функции, которые используются каждый день. iPhone 11 оснащён новой двойной камерой, позволяющей легко снимать видео превосходного качества и использовать при фотосъёмке Ночной режим. Благодаря процессору A13 Bionic на iPhone 11 можно выполнять самые ресурсоёмкие задачи. При этом смартфон может работать целый день без подзарядки и ещё лучше защищён от воды.
@@ -131,7 +131,7 @@ main(class=`main main-${page}`)
                                         dt.info-term 
                                             span Разрешение основной тыловой камеры, Мпикс
                                         dd.info-definition 12
-                        .info-content.info-content-third.is-show(data-tab="card-tab-3") 
+                        .info-content.info-content-third(data-tab="card-tab-3") 
                             .info-reviews-result 
                                 .info-reviews-col
                                     svg.info-circle(width="140" height="140" viewBox="0 0 140 140")

@@ -8,3 +8,8 @@
 .js-hide{ 
     display: none;
 }
+.js-lessText {
+    &::after {
+        display: none;
+    }
+}

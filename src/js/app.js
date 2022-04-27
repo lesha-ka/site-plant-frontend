@@ -13,6 +13,7 @@ import { getBuyOptions }from './modules/buy-options.js';
 import { getTabs }from './modules/tabs.js';
 import { getSelect }from './modules/select.js';
 import { getFilter }from './modules/filter.js';
+import { getCatalogView } from './modules/catalog-view.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	getTabs();
 	getSelect();
 	getFilter();
+	getCatalogView();
 });

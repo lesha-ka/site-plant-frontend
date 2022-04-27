@@ -50,6 +50,7 @@
         z-index: 1;
         margin-top: 50px;
         width: 315px;
+        height: fit-content;
         margin-right: 30px;
         background: $d-white;
         padding: 20px 20px 0;
@@ -441,13 +442,134 @@
     }
 }
 .catalog-cards {
+    &-main {
+        position: relative;
+    }
     &-wrapper {
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
+        max-height: 1583px;
+        overflow: hidden;
+    }
+    &-more {
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -73px;
+        margin: 0 auto;
+        width: max-content;
+        text-align: center;
+        font-family: $oswald;
+        font-style: normal;
+        font-weight: 500;
+        @include fz-22;
+        text-align: center;
+        color: $green;
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+        @media #{$w768} {
+            display: none;
+        }
+        &:hover {
+            transform: scale(1.04);
+        }
+        &:active {
+            color: #658945;
+        }
+    }
+    &-pagination {
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        position: relative;
+        z-index: 1;
+    }
+    &-pagination-item {
+        cursor: pointer;
+        font-family: $oswald;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        min-width: 25px;
+        text-align: center;
+        padding: 2px;
+        color: $d-green;
+        border-radius: 5px;
+        margin-right: 10px;
+        &.pagination-active {
+            color: $white;
+            background: $green;
+            &:hover {
+                background-color: $green;
+            }
+        }
+        &:hover {
+            background-color: #c7d5ba;
+        }
+    }
+    &-pagination-arrow {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        background-color: rgba(61, 79, 60, 0.05);
+        background-image: url(../img/icons/pagination-prev.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        margin-right: 10px;
+        &:hover {
+            background-color: rgba(61, 79, 60, 0.2);
+        }
+        &:active {
+            background-color: rgba(61, 79, 60, 0.2);
+        }
+    }
+    &-pagination-next {
+        background-image: url(../img/icons/pagination-next.svg);
     }
     &-description {
         margin-top: 50px;
+        padding: 30px;
+        background-color: $d-white;
+        border-radius: 10px;
+    }
+    &-title {
+        font-family: $oswald;
+        font-size: 30px;
+        line-height: 44px;
+        color: $d-green;
+    }
+    &-open {
+        position: relative;
+        text-decoration: underline;
+        color: $green;
+        font-size: 14px;
+        line-height: 19px;
+        padding-top: 20px;
+        &::after {
+            position: absolute;
+            content: "";
+            top: -60px;
+            left: -30px;
+            width: calc(100% + 60px);
+            height: 60px;
+            background: linear-gradient(180deg, rgba(247, 255, 236, 0) 0%, #F7FFEC 100%);
+        }
+    }
+    &-text {
+        max-height: 133px;
+        overflow: hidden;
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 19px;
+        color:rgba(77, 79, 60, 0.8);
+        &.info-text-open {
+            max-height: initial;
+        }
     }
 }
 .catalog-card {
@@ -482,6 +604,38 @@
     & .card-name {
         @include fz-18;
     }
+    & .card-favorite+label {
+        top: 59px;
+        right: 17px;
+        @media #{$w1024} {
+            top: 15px;
+        }
+        @media #{$w768} {
+            bottom: 18px;
+            right: 26px;
+            top: auto;
+        }
+        @media #{$w360} {
+            bottom: auto;
+            right: 25px;
+            top: 17px;
+        }
+    }
+    & .card-favorite+label::before {
+        @media #{$w360} {
+            width: 19px;
+            background-size: contain;
+        }
+    }
+    & .card-favorite:not(:disabled):not(:checked)+label:hover::before {
+        background-size: contain;
+    }
+    & .card-favorite:not(:disabled):active+label::before {
+        background-size: contain;
+    }
+    & .card-favorite:checked+label::before {
+        background-size: contain;
+    }
     & .card-text {
         margin-top: 35px;
         margin-bottom: 8px;
@@ -496,5 +650,87 @@
     & .card-basket {
         align-self: center;
         margin-left: auto;
+        background-color: transparent;
+        @media #{$w768} {
+            background-color: #fff;
+        }
+        @media #{$w360} {
+            position: absolute;
+            border: 1px solid #3d4f3c;
+            bottom: 14px;
+            width: auto;
+            right: 13px;
+            padding-left: 0;
+            margin-top: 0;
+            height: 38px;
+        }
+    }
+    & .card-count {
+        color: $white;
+    }
+    & .card-minus {
+        background-image: url(../img/icons/minus-w.svg);
+        @media #{$w768} {
+            background-image: url(../img/icons/minus.svg);
+        }
+    }
+    & .card-plus {
+        background-image: url(../img/icons/plus-w.svg);
+        @media #{$w768} {
+            background-image: url(../img/icons/plus.svg);
+        }
+    }
+    & .card-add {
+        background-image: url(../img/icons/basket-w.svg);
+        border-left: 1px solid #7d8a7c;
+        @media #{$w768} {
+            border-left: 1px solid #c5cbc5;
+            background-image: url(../img/icons/basket-g.svg);
+        }
+        @media #{$w360} {
+            width: 38px;
+            border-left: none;
+            margin-left: 0;
+        }
+    }
+}
+
+.catalog-cards-grid {
+    max-height: 2880px;
+    .catalog-card {
+        width: calc(33.33% - 20px);
+        max-height: initial;
+        margin: 0;
+        margin-right: 30px;
+        border-radius: 12px 12px 0 0;
+        display: block;
+        background: $d-green;
+        &:nth-child(n + 4) {
+            margin-top: 30px;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        & .card-img {
+            max-height: 400px;
+            height: 400px;
+            max-width: 100%;
+        }
+        & .card-img img{
+            height: 100%;
+            object-fit: cover;
+        }
+        & .card-inner {
+            height: auto;
+            padding: 26px 17px 12px;
+        }
+        & .card-text {
+            margin-top: 10px;
+            margin-bottom: 9px;
+        }
+    }
+    & .card-favorite+label {
+        top: 29px;
+        right: 17px;
     }
 }
