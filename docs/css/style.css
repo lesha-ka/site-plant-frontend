@@ -3284,6 +3284,10 @@ main {
   border-radius: 12px;
 }
 
+.offers-card:focus-visible {
+  outline: none;
+}
+
 .offers-card:nth-child(4n) {
   margin-right: 0;
 }
@@ -6619,6 +6623,7 @@ main {
   }
 
   .offers-card {
+    max-height: initial;
     height: auto;
   }
 

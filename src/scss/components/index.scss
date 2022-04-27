@@ -250,6 +250,9 @@
         overflow: hidden;
         margin-right: 30px;
         border-radius: 12px;
+        &:focus-visible {
+            outline: none;
+        }
         @media #{$w1440} {
             max-height: 359px;
             height: 359px;
@@ -266,6 +269,7 @@
             border-radius: 0px 0px 4px 4px;
         }
         @media #{$w768} {
+            max-height: initial;
             height: auto;
         }
         &:nth-child(4n) {
