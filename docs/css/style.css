@@ -4695,8 +4695,12 @@ main {
 }
 
 .catalog-card .card-name {
-  font-size: 18px;
-  line-height: 1.3;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.catalog-card .card-add {
+  background-color: #fff;
 }
 
 .catalog-card .card-text {
