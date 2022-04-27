@@ -5,7 +5,7 @@ export const getMoreText = () => {
             let infoTextMaxHeight = getComputedStyle(elem).maxHeight;
             infoTextMaxHeight = parseInt(infoTextMaxHeight, 10);
             let infoTextHeight = elem.scrollHeight;
-            let btnMore = elem.closest('.js-textWrap').querySelector('.js-moreText');
+            let btnMore = elem.closest('.js-textWrap').querySelector('.js-moreBoxText');
             if (infoTextHeight > infoTextMaxHeight) {
                 btnMore.classList.add('js-block')
             }
@@ -20,8 +20,6 @@ export const getMoreText = () => {
                     btnMore.classList.add('js-lessText')
                 }
             }
-            console.log(infoTextHeight)
-            console.log(infoTextMaxHeight)
             btnMore.addEventListener("click", showMoreText);
         })
     }

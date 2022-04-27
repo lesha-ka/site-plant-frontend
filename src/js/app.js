@@ -1,7 +1,7 @@
 import { getVendor} from './vendor.js';
 import { getProductSlider } from './modules/product-slider.js';
 import { getScrollTop } from './modules/scroll-top.js';
-import { getMoreOffer} from './modules/more-offer.js';
+import { getMore} from './modules/more.js';
 import { getMoreText} from './modules/more-text.js';
 import { getHeader } from './modules/header.js';
 import { getPopup } from './modules/popup.js';
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	getPopup();
 	getProductSlider();
 	getScrollTop();
-	getMoreOffer();
+	getMore();
 	getMoreText();
 	getHeader();
 	getRegistration();

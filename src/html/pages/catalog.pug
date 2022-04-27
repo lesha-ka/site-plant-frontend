@@ -48,32 +48,494 @@ main(class=`main main-${page}`)
                                 feComposite(in2='SourceAlpha', operator='in', result='effect1_backgroundBlur_93_3183')
                                 feBlend(mode='normal', in='SourceGraphic', in2='effect1_backgroundBlur_93_3183', result='shape')
             .catalog-filter
+                .filter-count.js-filterCount
+                    span.filter-count-text 125 товаров
+                    button.green-btn.filter-btn(type="submit") Показать
                 p.filter-title Фильтр
                 ul.filter-active
                     li.filter-active-item 
                         span.filter-active-text г. прирост 30-40 см
                         button.filter-active-delete(type="button")
                     li.filter-active-item 
+                        span.filter-active-text семя
+                        button.filter-active-delete(type="button")
+                    li.filter-active-item 
                         span.filter-active-text макс. рост 10 м
                         button.filter-active-delete(type="button")
-                form(method="post") 
-                    .filter-item 
-                        .filter-item-title Максимальный рост
-                            input.filter-item-radio(type="radio" id="max-grow-1" name="max-grow" value="5m")
-                            label.filter-item-label(for="max-grow-1") максимальный рост 5 м
-                            input.filter-item-radio(type="radio" id="max-grow-2" name="max-grow" value="10m")
-                            label.filter-item-label(for="max-grow-2") максимальный рост 10 м
-                            input.filter-item-radio(type="radio" id="max-grow-3" name="max-grow" value="15m")
-                            label.filter-item-label(for="max-grow-3") максимальный рост 15 м
-                            input.filter-item-radio(type="radio" id="max-grow-4" name="max-grow" value="20m")
-                            label.filter-item-label(for="max-grow-4") максимальный рост 20 м
-                            input.filter-item-radio(type="radio" id="max-grow-5" name="max-grow" value="25m")
-                            label.filter-item-label(for="max-grow-5") максимальный рост 25 м
-                            input.filter-item-radio(type="radio" id="max-grow-6" name="max-grow" value="30m")
-                            label.filter-item-label(for="max-grow-6") максимальный рост 30 м
-                    .filter-item 
-                        .filter-item-title Цена
-                        input.js-rangeSlider(type="text" name="price" value="")
-                        input.filter-item-price(type="text" name="price-min" placeholder="0")
-                        input.filter-item-price(type="text" name="price-max" placeholder="3000000")
-            .catalog-wrapper
+                .filter-items.js-moreBox
+                    form.js-filterForm(method="post") 
+                        .filter-item
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="max-grow-1" name="max-grow" value="5m")
+                                label.filter-item-label(for="max-grow-1") максимальный рост 5 м
+                                input.filter-item-radio(type="radio" id="max-grow-2" name="max-grow" value="10m")
+                                label.filter-item-label(for="max-grow-2") максимальный рост 10 м
+                                input.filter-item-radio(type="radio" id="max-grow-3" name="max-grow" value="15m")
+                                label.filter-item-label(for="max-grow-3") максимальный рост 15 м
+                                input.filter-item-radio(type="radio" id="max-grow-4" name="max-grow" value="20m")
+                                label.filter-item-label(for="max-grow-4") максимальный рост 20 м
+                                input.filter-item-radio(type="radio" id="max-grow-5" name="max-grow" value="25m")
+                                label.filter-item-label(for="max-grow-5") максимальный рост 25 м
+                                input.filter-item-radio(type="radio" id="max-grow-6" name="max-grow" value="30m")
+                                label.filter-item-label(for="max-grow-6") максимальный рост 30 м
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Цена
+                            input.js-rangeSlider(type="text" name="price" value="")
+                            .filter-item-wrapper
+                                input.filter-item-price.js-priceMin(type="text" name="price-min" value="0 ₽")
+                                span.filter-input-active
+                            .filter-item-dash -
+                            .filter-item-wrapper
+                                input.filter-item-price.js-priceMax(type="text" name="price-max" value="300 000 ₽")
+                                span.filter-input-active
+                        .filter-item 
+                            .filter-item-title Годовой прирост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="year-1" name="year" value="10m")
+                                label.filter-item-label(for="year-1") годовой прирост 5-10 см
+                                input.filter-item-radio(type="radio" id="year-2" name="year" value="15m")
+                                label.filter-item-label(for="year-2") годовой прирост 10-15 см
+                                input.filter-item-radio(type="radio" id="year-4" name="year" value="20m")
+                                label.filter-item-label(for="year-4") годовой прирост 15-20 см
+                                input.filter-item-radio(type="radio" id="year-5" name="year" value="25m")
+                                label.filter-item-label(for="year-5") годовой прирост 30-40 см
+                                input.filter-item-radio(type="radio" id="year-6" name="year" value="30m")
+                                label.filter-item-label(for="year-6") годовой прирост 50-100 см
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="criteriy-1" name="criteriy" value="5m")
+                                label.filter-item-label(for="criteriy-1") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-2" name="criteriy" value="10m")
+                                label.filter-item-label(for="criteriy-2") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-3" name="criteriy" value="15m")
+                                label.filter-item-label(for="criteriy-3") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-4" name="criteriy" value="20m")
+                                label.filter-item-label(for="criteriy-4") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-5" name="criteriy" value="25m")
+                                label.filter-item-label(for="criteriy-5") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-6" name="criteriy" value="30m")
+                                label.filter-item-label(for="criteriy-6") критерий
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="criteriy-11" name="criteriy2" value="5m")
+                                label.filter-item-label(for="max-criteriy-11") критерий
+                                input.filter-item-radio(type="radio" id="max-criteriy-12" name="criteriy2" value="10m")
+                                label.filter-item-label(for="max-criteriy-12") критерий
+                                input.filter-item-radio(type="radio" id="max-criteriy-13" name="criteriy2" value="15m")
+                                label.filter-item-label(for="max-criteriy-13") критерий
+                                input.filter-item-radio(type="radio" id="max-criteriy-14" name="criteriy2" value="20m")
+                                label.filter-item-label(for="max-criteriy-14") критерий
+                                input.filter-item-radio(type="radio" id="max-criteriy-15" name="criteriy2" value="25m")
+                                label.filter-item-label(for="max-criteriy-15") критерий
+                                input.filter-item-radio(type="radio" id="max-criteriy-16" name="criteriy2" value="30m")
+                                label.filter-item-label(for="max-criteriy-16") критерий
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="criteriy-21" name="criteriy3" value="5m")
+                                label.filter-item-label(for="criteriy-21") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-22" name="criteriy3" value="10m")
+                                label.filter-item-label(for="criteriy-22") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-23" name="criteriy3" value="15m")
+                                label.filter-item-label(for="criteriy-23") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-24" name="criteriy3" value="20m")
+                                label.filter-item-label(for="criteriy-24") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-25" name="criteriy3" value="25m")
+                                label.filter-item-label(for="criteriy-25") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-26" name="criteriy3" value="30m")
+                                label.filter-item-label(for="criteriy-26") критерий
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="criteriy-31" name="criteriy4" value="5m")
+                                label.filter-item-label(for="criteriy-31") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-32" name="criteriy4" value="10m")
+                                label.filter-item-label(for="criteriy-32") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-33" name="criteriy4" value="15m")
+                                label.filter-item-label(for="criteriy-33") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-34" name="criteriy4" value="20m")
+                                label.filter-item-label(for="criteriy-34") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-35" name="criteriy4" value="25m")
+                                label.filter-item-label(for="criteriy-35") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-36" name="criteriy4" value="30m")
+                                label.filter-item-label(for="criteriy-36") критерий
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="criteriy-41" name="criteriy5" value="5m")
+                                label.filter-item-label(for="criteriy-41") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-42" name="criteriy5" value="10m")
+                                label.filter-item-label(for="criteriy-42") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-43" name="criteriy5" value="15m")
+                                label.filter-item-label(for="criteriy-43") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-44" name="criteriy5" value="20m")
+                                label.filter-item-label(for="criteriy-44") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-45" name="criteriy5" value="25m")
+                                label.filter-item-label(for="criteriy-45") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-46" name="criteriy5" value="30m")
+                                label.filter-item-label(for="criteriy-46") критерий
+                            p.filter-inputs-more.js-more Показать ещё
+                        .filter-item 
+                            .filter-item-title Максимальный рост
+                            .filter-inputs.js-moreBox
+                                input.filter-item-radio(type="radio" id="criteriy-51" name="criteriy5" value="5m")
+                                label.filter-item-label(for="criteriy-51") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-52" name="criteriy5" value="10m")
+                                label.filter-item-label(for="criteriy-52") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-53" name="criteriy5" value="15m")
+                                label.filter-item-label(for="criteriy-53") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-54" name="criteriy5" value="20m")
+                                label.filter-item-label(for="criteriy-54") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-55" name="criteriy5" value="25m")
+                                label.filter-item-label(for="criteriy-55") критерий
+                                input.filter-item-radio(type="radio" id="criteriy-56" name="criteriy5" value="30m")
+                                label.filter-item-label(for="criteriy-56") критерий
+                            p.filter-inputs-more.js-more Показать ещё
+                p.filter-more.js-more Показать ещё
+            .catalog-cards 
+                .catalog-cards-wrapper
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card1" name="card1")
+                                label(for="card1")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card2" name="card2")
+                                label(for="card2")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card3" name="card3")
+                                label(for="card3")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card4" name="card4")
+                                label(for="card4")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card5" name="card5")
+                                label(for="card5")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card6" name="card6")
+                                label(for="card6")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card7" name="card7")
+                                label(for="card7")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card8" name="card8")
+                                label(for="card8")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card9" name="card9")
+                                label(for="card9")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card10" name="card10")
+                                label(for="card10")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card11" name="card11")
+                                label(for="card11")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    li.catalog-card 
+                        .card-img
+                            img(src="img/card/card.jpg" alt="Кустарник")
+                        form(method="post")
+                            .card-inner 
+                                input.card-favorite(type="checkbox" id="card12" name="card12")
+                                label(for="card12")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                .card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")                    
+                .catalog-cards-description 
+                    h2.catalog-cards-title Ноутбуки
+                    p.catalog-cards-text В настоящее время ноутбуки всерьез конкурируют со стационарными компьютерами. Это неудивительно, ведь уровень производительности большинства портативных компьютеров достаточен для решения любых типовых задач. Мобильные компьютеры используются не только деловыми людьми, которые часто перемещаются с места на место, но и обычными пользователями. Практически любой ноутбук может исполнять роль домашнего компьютера, используемого для работы, учебы, развлечений и интернет-серфинга. Компактность ноутбуков позволяет сэкономить пространство. Особенно данное преимущество актуально в городских квартирах, зачастую перенасыщенных мебелью и разнообразной техникой. При выборе ноутбуков нужно отталкиваться от того, какие задачи должен решать ваш компьютер. Если вы планируете использовать игры, то стоит отдать предпочтение игровым В настоящее время ноутбуки всерьез конкурируют со стационарными компьютерами. Это неудивительно, ведь уровень производительности большинства портативных компьютеров достаточен для решения любых типовых задач. Мобильные компьютеры используются не только деловыми людьми, которые часто перемещаются с места на место, но и обычными пользователями. Практически любой ноутбук может исполнять роль домашнего компьютера, используемого для работы, учебы, развлечений и интернет-серфинга. Компактность ноутбуков позволяет сэкономить пространство. Особенно данное преимущество актуально в городских квартирах, зачастую перенасыщенных мебелью и разнообразной техникой. При выборе ноутбуков нужно отталкиваться от того, какие задачи должен решать ваш компьютер. 
+                    p.catalog-cards-more Читать полностью
+    section.card-offers
+        .container.container-notablet
+            .products-item 
+                    .products-header 
+                        .products-name Популярные товары в категории
+                    .products-slider.js-productsSlider
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/offers1.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="recom1" name="recom1")
+                                    label(for="recom1")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/offers2.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="recom2" name="recom2")
+                                    label(for="recom2")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/offers3.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="recom3" name="recom3")
+                                    label(for="recom3")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/offers4.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="recom4" name="recom4")
+                                    label(for="recom4")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/offers1.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="recom5" name="recom5")
+                                    label(for="recom5")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    a.products-more(href="#" ) Все товары категории
+            .products-item 
+                    .products-header 
+                        .products-name Популярные товары в категории
+                    .products-slider.js-productsSlider
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/similar1.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="similar1" name="similar")
+                                    label(for="similar1")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/similar2.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="similar2" name="similar")
+                                    label(for="similar2")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/similar3.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="similar3" name="similar")
+                                    label(for="similar3")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/similar4.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="similar4" name="similar")
+                                    label(for="similar4")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                        .products-slider-item.card
+                            img.products-slider-img(src="img/card/similar1.jpg", alt="кустарник")
+                            .card-inner 
+                                form.card-form(method="post")
+                                    input.card-favorite(type="checkbox" id="similar18" name="similar")
+                                    label(for="similar5")
+                                p.card-name Кустарники
+                                p.card-text Гортензия метельчатая в ассортименте (саженцы)
+                                span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
+                                form.card-basket
+                                    input.card-minus(type="button")
+                                    input.card-count(type="text" value="1")
+                                    input.card-plus(type="button")
+                                    button.card-add(type="button")
+                    a.products-more(href="#" ) Все товары категории
