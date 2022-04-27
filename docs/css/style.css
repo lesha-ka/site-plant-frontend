@@ -3457,8 +3457,6 @@ main {
 
 .card-add {
   cursor: pointer;
-  display: block;
-  position: relative;
   margin-left: 12px;
   cursor: pointer;
   border: none;
@@ -6679,6 +6677,7 @@ main {
 
   .card-basket {
     margin: 15px auto 0 0;
+    max-width: 148px;
     width: 148px;
     padding-left: 13px;
   }
