@@ -3421,6 +3421,12 @@ main {
   background: #ffffff;
 }
 
+.card-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .card-minus {
   max-width: 12px;
   cursor: pointer;
@@ -3456,7 +3462,6 @@ main {
 }
 
 .card-add {
-  cursor: pointer;
   margin-left: 12px;
   cursor: pointer;
   border: none;
@@ -6611,6 +6616,10 @@ main {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     border-radius: 0px 0px 4px 4px;
+  }
+
+  .offers-card {
+    height: auto;
   }
 
   .offers-card:nth-child(4n) {

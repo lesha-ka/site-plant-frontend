@@ -265,6 +265,9 @@
             flex-wrap: wrap;
             border-radius: 0px 0px 4px 4px;
         }
+        @media #{$w768} {
+            height: auto;
+        }
         &:nth-child(4n) {
             margin-right: 0;
             @media #{$w768} {
@@ -450,6 +453,9 @@
             padding-left: 13px;
         }
     }
+    &-input {
+        display: flex;
+    }
     &-minus {
         max-width: 12px;
         cursor: pointer;
@@ -485,7 +491,6 @@
         }
     }
     &-add {     
-        cursor: pointer;
         margin-left: 12px;       
         cursor: pointer;
         border: none;
