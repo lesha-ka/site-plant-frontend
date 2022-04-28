@@ -193,7 +193,7 @@
         </div>
       </header>
       <main class="main main-catalog">
-        <div class="container container-narrow">
+        <div class="container container-narrow container-notablet">
           <div class="breadcrumb breadcrumb-catalog">
             <div class="breadcrumb-block">
               <ul class="breadcrumb-list">
@@ -209,7 +209,7 @@
           </div>
           <section class="catalog">
             <div class="catalog-control"> <span class="control-number">783 товара</span>
-              <div class="select control-select" id="js-selectGroup">
+              <div class="select control-select control-select-group" id="js-selectGroup">
                 <p class="select-name">Группировать:&nbsp;</p>
                 <button class="select-toggle" type="button" name="grouping" value="Без группировки" data-select="toggle" data-index="0">Без группировки</button>
                 <div class="select-dropdown">
@@ -234,7 +234,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="control-btn js-catalogTable">
+              <div class="control-btn control-btn-table js-catalogTable">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_b_50_1170)">
                     <rect width="36" height="36" rx="5" fill="#67AF28"></rect>
@@ -252,7 +252,7 @@
                   </defs>
                 </svg>
               </div>
-              <div class="control-btn control-btn-inactive js-catalogGrid">
+              <div class="control-btn control-btn-grid control-btn-inactive js-catalogGrid">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_b_93_3183)">
                     <rect width="36" height="36" rx="5" fill="#67AF28"></rect>
@@ -268,8 +268,30 @@
                   </defs>
                 </svg>
               </div>
+              <div class="control-btn control-btn-filter js-catalogFilterBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <g filter="url(#filter0_b_117_5245)">
+                    <rect width="34" height="34" rx="5" fill="white" fill-opacity="0.2"></rect>
+                    <rect x="0.5" y="0.5" width="33" height="33" rx="4.5" stroke="#3D4F3C" stroke-opacity="0.2"></rect>
+                  </g>
+                  <g opacity="0.2" clip-path="url(#clip0_117_5245)">
+                    <path d="M14.8563 16.5057C15.0452 16.7113 15.1489 16.9798 15.1489 17.2576V25.4429C15.1489 25.9355 15.7434 26.1855 16.0952 25.8392L18.3786 23.2225C18.6842 22.8558 18.8527 22.6743 18.8527 22.3113V17.2594C18.8527 16.9816 18.9582 16.7131 19.1453 16.5075L25.6972 9.39817C26.1879 8.86483 25.8102 8 25.0842 8H8.91733C8.19139 8 7.81176 8.86298 8.30436 9.39817L14.8563 16.5057Z" fill="#3D4F3C"></path>
+                  </g>
+                  <defs>
+                    <filter id="filter0_b_117_5245" x="-27" y="-27" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feGaussianBlur in="BackgroundImage" stdDeviation="13.5"></feGaussianBlur>
+                      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_117_5245"></feComposite>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_117_5245" result="shape"></feBlend>
+                    </filter>
+                    <clipPath id="clip0_117_5245">
+                      <rect width="18" height="18" fill="white" transform="translate(8 8)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
             </div>
-            <div class="catalog-filter">
+            <div class="catalog-filter js-catalogFilter">
               <div class="filter-count js-filterCount"><span class="filter-count-text">125 товаров</span>
                 <button class="green-btn filter-btn" type="submit">Показать</button>
               </div>
@@ -288,7 +310,7 @@
               <div class="filter-items js-moreBox">
                 <form class="js-filterForm" method="post"> 
                   <div class="filter-item">
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост </div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="max-grow-1" name="max-grow" value="5m"/>
                       <label class="filter-item-label" for="max-grow-1">максимальный рост 5 м</label>
@@ -306,18 +328,20 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Цена</div>
-                    <input class="js-rangeSlider" type="text" name="price" value=""/>
-                    <div class="filter-item-wrapper">
-                      <input class="filter-item-price js-priceMin" type="text" name="price-min" value="0 ₽"/><span class="filter-input-active"></span>
-                    </div>
-                    <div class="filter-item-dash">-</div>
-                    <div class="filter-item-wrapper">
-                      <input class="filter-item-price js-priceMax" type="text" name="price-max" value="300 000 ₽"/><span class="filter-input-active"></span>
+                    <div class="filter-item-title js-filterShow">Цена</div>
+                    <div class="filter-item-scroll">
+                      <input class="js-rangeSlider" type="text" name="price" value=""/>
+                      <div class="filter-item-wrapper">
+                        <input class="filter-item-price js-priceMin" type="text" name="price-min" value="0 ₽"/><span class="filter-input-active"></span>
+                      </div>
+                      <div class="filter-item-dash">-</div>
+                      <div class="filter-item-wrapper">
+                        <input class="filter-item-price js-priceMax" type="text" name="price-max" value="300 000 ₽"/><span class="filter-input-active"></span>
+                      </div>
                     </div>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Годовой прирост</div>
+                    <div class="filter-item-title js-filterShow">Годовой прирост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="year-1" name="year" value="10m"/>
                       <label class="filter-item-label" for="year-1">годовой прирост 5-10 см</label>
@@ -333,7 +357,7 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="criteriy-1" name="criteriy" value="5m"/>
                       <label class="filter-item-label" for="criteriy-1">критерий</label>
@@ -351,7 +375,7 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="criteriy-11" name="criteriy2" value="5m"/>
                       <label class="filter-item-label" for="max-criteriy-11">критерий</label>
@@ -369,7 +393,7 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="criteriy-21" name="criteriy3" value="5m"/>
                       <label class="filter-item-label" for="criteriy-21">критерий</label>
@@ -387,7 +411,7 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="criteriy-31" name="criteriy4" value="5m"/>
                       <label class="filter-item-label" for="criteriy-31">критерий</label>
@@ -405,7 +429,7 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="criteriy-41" name="criteriy5" value="5m"/>
                       <label class="filter-item-label" for="criteriy-41">критерий</label>
@@ -423,7 +447,7 @@
                     <p class="filter-inputs-more js-more">Показать ещё</p>
                   </div>
                   <div class="filter-item"> 
-                    <div class="filter-item-title">Максимальный рост</div>
+                    <div class="filter-item-title js-filterShow">Максимальный рост</div>
                     <div class="filter-inputs js-moreBox">
                       <input class="filter-item-radio" type="radio" id="criteriy-51" name="criteriy5" value="5m"/>
                       <label class="filter-item-label" for="criteriy-51">критерий</label>
@@ -443,6 +467,10 @@
                 </form>
               </div>
               <p class="filter-more js-more">Показать ещё</p>
+              <div class="filter-control"> 
+                <button class="green-btn filter-control-btn" type="submit">Показать</button><span class="filter-control-text">125 товаров</span>
+                <button class="filter-control-close js-filterClose" type="button">Закрыть</button>
+              </div>
             </div>
             <div class="catalog-cards"> 
               <div class="catalog-cards-main">
@@ -454,6 +482,12 @@
                         <input class="card-favorite" type="checkbox" id="card1" name="card1"/>
                         <label for="card1"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -461,6 +495,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -471,6 +506,12 @@
                         <input class="card-favorite" type="checkbox" id="card2" name="card2"/>
                         <label for="card2"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -478,6 +519,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -488,6 +530,12 @@
                         <input class="card-favorite" type="checkbox" id="card3" name="card3"/>
                         <label for="card3"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -495,6 +543,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -505,6 +554,12 @@
                         <input class="card-favorite" type="checkbox" id="card4" name="card4"/>
                         <label for="card4"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -512,6 +567,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -522,6 +578,12 @@
                         <input class="card-favorite" type="checkbox" id="card5" name="card5"/>
                         <label for="card5"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -529,6 +591,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -539,6 +602,12 @@
                         <input class="card-favorite" type="checkbox" id="card6" name="card6"/>
                         <label for="card6"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -546,6 +615,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -556,6 +626,12 @@
                         <input class="card-favorite" type="checkbox" id="card7" name="card7"/>
                         <label for="card7"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -563,6 +639,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -573,6 +650,12 @@
                         <input class="card-favorite" type="checkbox" id="card8" name="card8"/>
                         <label for="card8"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -580,6 +663,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -590,6 +674,12 @@
                         <input class="card-favorite" type="checkbox" id="card9" name="card9"/>
                         <label for="card9"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -597,6 +687,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -607,6 +698,12 @@
                         <input class="card-favorite" type="checkbox" id="card10" name="card10"/>
                         <label for="card10"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -614,6 +711,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -624,6 +722,12 @@
                         <input class="card-favorite" type="checkbox" id="card11" name="card11"/>
                         <label for="card11"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -631,6 +735,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -641,13 +746,20 @@
                         <input class="card-favorite" type="checkbox" id="card12" name="card12"/>
                         <label for="card12"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
                           <input class="card-count" type="text" value="1"/>
                           <input class="card-plus" type="button"/>
-                          <button class="card-add" type="button"> </button>
+                          <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -658,6 +770,12 @@
                         <input class="card-favorite" type="checkbox" id="card13" name="card13"/>
                         <label for="card13"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -665,6 +783,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -675,6 +794,12 @@
                         <input class="card-favorite" type="checkbox" id="card14" name="card14"/>
                         <label for="card14"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -682,6 +807,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -692,6 +818,12 @@
                         <input class="card-favorite" type="checkbox" id="card15" name="card15"/>
                         <label for="card15"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -699,6 +831,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -709,6 +842,12 @@
                         <input class="card-favorite" type="checkbox" id="card16" name="card16"/>
                         <label for="card16"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -716,6 +855,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -726,6 +866,12 @@
                         <input class="card-favorite" type="checkbox" id="card17" name="card17"/>
                         <label for="card17"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
@@ -733,6 +879,7 @@
                           <input class="card-plus" type="button"/>
                           <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>
@@ -743,13 +890,20 @@
                         <input class="card-favorite" type="checkbox" id="card18" name="card18"/>
                         <label for="card18"></label>
                         <p class="card-name">Кустарники</p>
+                        <div class="card-review-rating js-starsWrap">
+                          <div class="card-review-stars stars js-stars" data-stars="5">
+                            <div class="stars-result"><span></span><span></span><span></span><span></span><span></span></div>
+                          </div>
+                          <p class="card-reviews">(125 отзывов)</p>
+                        </div>
                         <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
                         <div class="card-basket">
                           <input class="card-minus" type="button"/>
                           <input class="card-count" type="text" value="1"/>
                           <input class="card-plus" type="button"/>
-                          <button class="card-add" type="button">                                      </button>
+                          <button class="card-add" type="button"></button>
                         </div>
+                        <button class="card-add-tablet green-btn buy-btn">Добавить в корзину<img src="img/icons/basket-w.svg" alt="Рейтинг"/></button>
                       </div>
                     </form>
                   </li>

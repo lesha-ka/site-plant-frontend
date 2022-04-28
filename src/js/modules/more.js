@@ -8,6 +8,8 @@ export const getMore = () => {
         let btnMore = elem.nextElementSibling ; 
         if (moreBoxHeight > moreBoxMaxHeight) {
             btnMore.classList.add('js-block')
+        } else {
+            btnMore.classList.add('js-hide')
         }
         function showMore() {
             if (btnMore.classList.contains('js-lessText')) {

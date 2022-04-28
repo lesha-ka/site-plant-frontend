@@ -12,8 +12,8 @@ import { getCategoriesList } from './modules/categories-list.js';
 import { getBuyOptions }from './modules/buy-options.js';
 import { getTabs }from './modules/tabs.js';
 import { getSelect }from './modules/select.js';
-import { getFilter }from './modules/filter.js';
-import { getCatalogView } from './modules/catalog-view.js';
+import { getRangeFilter }from './modules/range-filter.js';
+import { getCatalogControl } from './modules/catalog-control.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	getBuyOptions();
 	getTabs();
 	getSelect();
-	getFilter();
-	getCatalogView();
+	getRangeFilter();
+	getCatalogControl();
 });

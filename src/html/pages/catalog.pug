@@ -1,10 +1,10 @@
 main(class=`main main-${page}`)
-    .container.container-narrow
+    .container.container-narrow.container-notablet
         +breadcrumb(['Главная'], 'Плодово-ягодные')
         section.catalog
             .catalog-control 
                 span.control-number 783 товара
-                .select.control-select#js-selectGroup
+                .select.control-select.control-select-group#js-selectGroup
                     p.select-name Группировать:&nbsp;
                     button.select-toggle(type='button', name='grouping', value="Без группировки", data-select='toggle', data-index='0') Без группировки
                     .select-dropdown
@@ -23,7 +23,7 @@ main(class=`main main-${page}`)
                             li.select-option(data-select='option', data-value='По рейтингу', data-index='2') По рейтингу
                             li.select-option(data-select='option', data-value='По цене', data-index='3') По цене
                             li.select-option(data-select='option', data-value='Скидке', data-index='4') Скидке
-                .control-btn.js-catalogTable
+                .control-btn.control-btn-table.js-catalogTable
                     svg(width='36', height='36', viewBox='0 0 36 36', fill='none', xmlns='http://www.w3.org/2000/svg')
                         g(filter='url(#filter0_b_50_1170)')
                             rect(width='36', height='36', rx='5', fill='#67AF28')
@@ -36,7 +36,7 @@ main(class=`main main-${page}`)
                                 feGaussianBlur(in='BackgroundImage', stdDeviation='13.5')
                                 feComposite(in2='SourceAlpha', operator='in', result='effect1_backgroundBlur_50_1170')
                                 feBlend(mode='normal', in='SourceGraphic', in2='effect1_backgroundBlur_50_1170', result='shape')
-                .control-btn.control-btn-inactive.js-catalogGrid
+                .control-btn.control-btn-grid.control-btn-inactive.js-catalogGrid
                     svg(width='36', height='36', viewBox='0 0 36 36', fill='none', xmlns='http://www.w3.org/2000/svg')
                         g(filter='url(#filter0_b_93_3183)')
                             rect(width='36', height='36', rx='5', fill='#67AF28')
@@ -47,7 +47,22 @@ main(class=`main main-${page}`)
                                 feGaussianBlur(in='BackgroundImage', stdDeviation='13.5')
                                 feComposite(in2='SourceAlpha', operator='in', result='effect1_backgroundBlur_93_3183')
                                 feBlend(mode='normal', in='SourceGraphic', in2='effect1_backgroundBlur_93_3183', result='shape')
-            .catalog-filter
+                .control-btn.control-btn-filter.js-catalogFilterBtn
+                    svg(xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none")
+                        g(filter="url(#filter0_b_117_5245)")
+                            rect(width="34" height="34" rx="5" fill="white" fill-opacity="0.2")
+                            rect(x="0.5" y="0.5" width="33" height="33" rx="4.5" stroke="#3D4F3C" stroke-opacity="0.2")
+                        g(opacity="0.2" clip-path="url(#clip0_117_5245)")
+                            path(d="M14.8563 16.5057C15.0452 16.7113 15.1489 16.9798 15.1489 17.2576V25.4429C15.1489 25.9355 15.7434 26.1855 16.0952 25.8392L18.3786 23.2225C18.6842 22.8558 18.8527 22.6743 18.8527 22.3113V17.2594C18.8527 16.9816 18.9582 16.7131 19.1453 16.5075L25.6972 9.39817C26.1879 8.86483 25.8102 8 25.0842 8H8.91733C8.19139 8 7.81176 8.86298 8.30436 9.39817L14.8563 16.5057Z" fill="#3D4F3C")
+                        defs
+                            filter(id="filter0_b_117_5245" x="-27" y="-27" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB")
+                                feFlood(flood-opacity="0" result="BackgroundImageFix")
+                                feGaussianBlur(in="BackgroundImage" stdDeviation="13.5")
+                                feComposite(in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_117_5245")
+                                feBlend(mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_117_5245" result="shape")
+                            clipPath(id="clip0_117_5245")
+                                rect(width="18" height="18" fill="white" transform="translate(8 8)")
+            .catalog-filter.js-catalogFilter
                 .filter-count.js-filterCount
                     span.filter-count-text 125 товаров
                     button.green-btn.filter-btn(type="submit") Показать
@@ -65,7 +80,7 @@ main(class=`main main-${page}`)
                 .filter-items.js-moreBox
                     form.js-filterForm(method="post") 
                         .filter-item
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост 
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="max-grow-1" name="max-grow" value="5m")
                                 label.filter-item-label(for="max-grow-1") максимальный рост 5 м
@@ -81,17 +96,18 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="max-grow-6") максимальный рост 30 м
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Цена
-                            input.js-rangeSlider(type="text" name="price" value="")
-                            .filter-item-wrapper
-                                input.filter-item-price.js-priceMin(type="text" name="price-min" value="0 ₽")
-                                span.filter-input-active
-                            .filter-item-dash -
-                            .filter-item-wrapper
-                                input.filter-item-price.js-priceMax(type="text" name="price-max" value="300 000 ₽")
-                                span.filter-input-active
+                            .filter-item-title.js-filterShow Цена
+                            .filter-item-scroll
+                                input.js-rangeSlider(type="text" name="price" value="")
+                                .filter-item-wrapper
+                                    input.filter-item-price.js-priceMin(type="text" name="price-min" value="0 ₽")
+                                    span.filter-input-active
+                                .filter-item-dash -
+                                .filter-item-wrapper
+                                    input.filter-item-price.js-priceMax(type="text" name="price-max" value="300 000 ₽")
+                                    span.filter-input-active
                         .filter-item 
-                            .filter-item-title Годовой прирост
+                            .filter-item-title.js-filterShow Годовой прирост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="year-1" name="year" value="10m")
                                 label.filter-item-label(for="year-1") годовой прирост 5-10 см
@@ -105,7 +121,7 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="year-6") годовой прирост 50-100 см
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="criteriy-1" name="criteriy" value="5m")
                                 label.filter-item-label(for="criteriy-1") критерий
@@ -121,7 +137,7 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="criteriy-6") критерий
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="criteriy-11" name="criteriy2" value="5m")
                                 label.filter-item-label(for="max-criteriy-11") критерий
@@ -137,7 +153,7 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="max-criteriy-16") критерий
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="criteriy-21" name="criteriy3" value="5m")
                                 label.filter-item-label(for="criteriy-21") критерий
@@ -153,7 +169,7 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="criteriy-26") критерий
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="criteriy-31" name="criteriy4" value="5m")
                                 label.filter-item-label(for="criteriy-31") критерий
@@ -169,7 +185,7 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="criteriy-36") критерий
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="criteriy-41" name="criteriy5" value="5m")
                                 label.filter-item-label(for="criteriy-41") критерий
@@ -185,7 +201,7 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="criteriy-46") критерий
                             p.filter-inputs-more.js-more Показать ещё
                         .filter-item 
-                            .filter-item-title Максимальный рост
+                            .filter-item-title.js-filterShow Максимальный рост
                             .filter-inputs.js-moreBox
                                 input.filter-item-radio(type="radio" id="criteriy-51" name="criteriy5" value="5m")
                                 label.filter-item-label(for="criteriy-51") критерий
@@ -201,6 +217,10 @@ main(class=`main main-${page}`)
                                 label.filter-item-label(for="criteriy-56") критерий
                             p.filter-inputs-more.js-more Показать ещё
                 p.filter-more.js-more Показать ещё
+                .filter-control 
+                    button.green-btn.filter-control-btn(type="submit") Показать
+                    span.filter-control-text 125 товаров
+                    button.filter-control-close.js-filterClose(type="button") Закрыть
             .catalog-cards 
                 .catalog-cards-main
                     ul.catalog-cards-wrapper.js-moreBox.js-catalogWrapper
@@ -212,6 +232,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card1" name="card1")
                                         label(for="card1")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -219,6 +248,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -227,6 +258,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card2" name="card2")
                                         label(for="card2")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -234,6 +274,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -242,6 +284,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card3" name="card3")
                                         label(for="card3")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -249,6 +300,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -257,6 +310,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card4" name="card4")
                                         label(for="card4")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -264,6 +326,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -272,6 +336,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card5" name="card5")
                                         label(for="card5")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -279,6 +352,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -287,6 +362,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card6" name="card6")
                                         label(for="card6")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -294,6 +378,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -302,6 +388,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card7" name="card7")
                                         label(for="card7")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -309,6 +404,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -317,6 +414,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card8" name="card8")
                                         label(for="card8")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -324,6 +430,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -332,6 +440,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card9" name="card9")
                                         label(for="card9")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -339,6 +456,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -347,6 +466,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card10" name="card10")
                                         label(for="card10")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -354,6 +482,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -362,6 +492,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card11" name="card11")
                                         label(for="card11")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -369,6 +508,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -377,13 +518,24 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card12" name="card12")
                                         label(for="card12")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
                                             input.card-minus(type="button")
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
-                                            button.card-add(type="button")  
+                                            button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг")   
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -392,6 +544,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card13" name="card13")
                                         label(for="card13")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -399,6 +560,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -407,6 +570,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card14" name="card14")
                                         label(for="card14")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -414,6 +586,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -422,6 +596,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card15" name="card15")
                                         label(for="card15")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -429,6 +612,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -437,6 +622,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card16" name="card16")
                                         label(for="card16")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -444,6 +638,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -452,6 +648,15 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card17" name="card17")
                                         label(for="card17")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
@@ -459,6 +664,8 @@ main(class=`main main-${page}`)
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
                                             button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг") 
                             li.catalog-card 
                                 .card-img
                                     img(src="img/card/card.jpg" alt="Кустарник")
@@ -467,13 +674,24 @@ main(class=`main main-${page}`)
                                         input.card-favorite(type="checkbox" id="card18" name="card18")
                                         label(for="card18")
                                         p.card-name Кустарники
+                                        .card-review-rating.js-starsWrap
+                                            .card-review-stars.stars.js-stars(data-stars="5")
+                                                .stars-result
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                                    span
+                                            p.card-reviews (125 отзывов)
                                         p.card-text Гортензия метельчатая в ассортименте (саженцы)
                                         span.card-price 22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del>
                                         .card-basket
                                             input.card-minus(type="button")
                                             input.card-count(type="text" value="1")
                                             input.card-plus(type="button")
-                                            button.card-add(type="button")                                       
+                                            button.card-add(type="button")
+                                        button.card-add-tablet.green-btn.buy-btn Добавить в корзину
+                                            img(src="img/icons/basket-w.svg", alt="Рейтинг")                                        
                     p.catalog-cards-more.js-more Показать ещё
                 ul.catalog-cards-pagination     
                     li.catalog-cards-pagination-arrow   

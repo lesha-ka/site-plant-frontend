@@ -4,6 +4,9 @@
 }
 .js-block{ 
     display: block;
+    @media #{$w360} {
+        display: block;
+    }
 }
 .js-hide{ 
     display: none;

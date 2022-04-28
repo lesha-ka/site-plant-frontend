@@ -868,6 +868,11 @@
                 }
             }
         }
+        &-item img{
+            @media #{$w768} {
+                border-radius: 12px 12px 0 0;
+            }
+        }
         &-sale {
             width: 341px;
             position: absolute;

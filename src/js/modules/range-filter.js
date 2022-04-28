@@ -1,4 +1,4 @@
-export const getFilter = () => {
+export const getRangeFilter = () => {
     $(".js-rangeSlider").ionRangeSlider({
         type: "double",
         min: 0,
