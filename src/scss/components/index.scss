@@ -512,7 +512,7 @@
         width: 32px;
         @media #{$w768} {
             @include fz-12;
-            width: 54;
+            width: 54px;
         }
     }
     &-add {     

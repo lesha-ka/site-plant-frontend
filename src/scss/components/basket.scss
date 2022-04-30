@@ -1,0 +1,326 @@
+.basket {
+    padding: 30px 0 120px;
+    &-title {
+        font-family: $oswald;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1.4;
+        color: $d-green;
+    }
+    &-wrapper {
+        display: flex;
+        margin-top: 20px;
+    }
+    &-info {
+        flex: 1 0 auto;
+    }
+    &-control {
+        background: $d-white;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        & + label {
+            cursor: pointer;
+            position: relative;
+            color: $d-green;
+            @include fz-14;
+            align-self: center;
+            font-weight: 600;
+            padding-left: 30px;
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: "";
+                width: 19px;
+                height: 19px;
+                border: 1px solid $gray;
+                border-radius: 50%;
+            }
+        }
+        &:not(:disabled):not(:checked)+label:hover::after {
+            background: #7DCB39;
+            border: 1px solid #99D764;
+        }
+        &:not(:disabled):not(:checked)+label:active::after {
+            background: #7DCB39;
+            border: 1px solid #99D764;
+        }
+        &:checked + label::after {
+            background: linear-gradient(92.34deg,#67af28 -28.45%,#6cda0d 101.05%);
+            border: 3px solid #a2e16b;
+        }
+    }
+    &-delete {
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        outline: 0;
+        @include fz-14;
+        font-weight: 600;
+        color: $green;
+    }
+    &-products {
+        margin-top: 20px;
+        background: $d-white;
+        border-radius: 10px;
+        padding: 0 15px; 
+        &-item {
+            display: flex;
+            align-items: stretch;
+            padding: 15px 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid #e8eee4;
+            }
+        }
+        &-img {
+            margin-left: 5px;
+        }
+        &-text {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 17px 0;
+            margin-left: 15px;
+        }
+        &-name {
+            font-family: $oswald;
+            @include fz-14;
+            font-weight: 500;
+            color: $d-green;
+        }
+        &-btn {
+            font-weight: 600;
+            @include fz-12;
+            color: #899586;
+            border: none;
+            outline: none;
+            background: transparent;
+            &:not(:last-child) {
+                margin-right: 8px;
+                padding-right: 10px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #899586;
+                }
+            }
+        }
+        &-price {
+            flex: 1 1 auto;
+            margin-left: 10px;
+            align-self: center;
+            text-align: center;
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-20;
+            color: $d-green;
+        }
+        &-price-del {
+            text-decoration: line-through;
+            margin-top: 5px;
+            @include fz-14;
+            opacity: 0.6;
+        }
+        &-price-sale {
+            font-family: $open-sans;
+            color: $green;
+            margin-top: 4px;
+            @include fz-12;
+            font-weight: 600;
+        }
+        &-control {
+            align-self: center;
+            display: flex;
+            height: 40px;
+            border: 1px solid #c2cbbf;
+            border-radius: 5px;
+        }
+        &-minus {
+            width: 12px;
+            height: 100%;
+            padding: 0 15px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            background-image: url(../img/icons/minus.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover, &:active {
+                background: url(../img/icons/minus-g.svg) center no-repeat;
+            }
+        }
+        &-plus {
+            width: 12px;
+            height: 100%;
+            padding: 0 6px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            background-image: url(../img/icons/plus.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 0 15px;
+            &:hover, &:active {
+                background: url(../img/icons/plus-g.svg) center no-repeat;
+            }
+        }
+        &-count {
+            font-weight: 600;
+            text-align: center;
+            background: none;
+            outline: 0;
+            border: none;
+            color: $d-green;
+            @include fz-14;
+            width: 38px;
+        }
+        &-delete {
+            cursor: pointer;
+            margin-left: 20px;
+            padding: 10px 0;
+            border: none;
+            outline: none;
+            background-color: none;
+            align-self: center;
+            width: 20px;
+            height: 20px;
+            background: url(../img/icons/delete-dgreen.svg) center no-repeat;
+            transition: all 0.5s ease-in;
+            &:hover, &:active {
+                background: url(../img/icons/delete-green.svg) center no-repeat;
+            }
+        }
+    }
+    &-banner {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background-color: $d-white;
+        padding: 0 45px 0 35px;
+        &-text {
+            max-width: 210px;
+            text-align: center;
+        }
+        &-title {
+            font-family: $oswald;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 31px;
+            color: $d-green;
+        }
+        &-info {
+            margin-top: 15px;
+            font-family: $open-sans;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            color: $d-green;
+            opacity: 0.6;
+        }
+        &-img {
+            flex: 1 0 auto;
+            & img {
+                margin: 0 auto;
+            }
+        }
+        &-delivery img {
+            margin: 0 auto 9px;
+        }
+    }
+    &-result {
+        align-self: flex-start;
+        max-width: 430px;
+        margin-left: 30px;
+        border-radius: 10px;
+        background-color: $d-white;
+        padding: 20px;
+        text-align: center;
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.5px solid #404452;
+            padding-bottom: 20px;
+        }
+        &-title {
+            font-family: $oswald;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 35px;
+            color: $d-green;
+        }
+        &-weight {
+            font-family: $open-sans;
+            font-weight: 600;
+            align-self: flex-end;
+            font-size: 14px;
+            line-height: 19px;
+            color: #858790;
+        }
+        &-details {
+            padding: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-bottom: 1.5px solid #404452;
+        }
+        &-term {
+            min-width: 50%;
+            text-align: left;
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 600;
+            color: #899586;
+        }
+        &-price {
+            margin-top: 15px;
+            font-weight: 700;
+            @include fz-16;
+            color: $d-green;
+        }
+        &-price-sale {
+            color: $green;
+        }
+        &-total {
+            padding: 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            font-family: $oswald;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: $d-green;
+        }
+        &-btn {
+            width: 297px;
+            margin: 30px auto;
+        }
+        &-disclaimer {
+            margin: 0 auto;
+            max-width: 297px;
+            font-weight: 600;
+            @include fz-12;
+            color: #899586;
+        }
+    }
+}

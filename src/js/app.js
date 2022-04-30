@@ -14,6 +14,7 @@ import { getTabs }from './modules/tabs.js';
 import { getSelect }from './modules/select.js';
 import { getRangeFilter }from './modules/range-filter.js';
 import { getCatalogControl } from './modules/catalog-control.js';
+import { getFormCount } from './modules/form-count.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	getSelect();
 	getRangeFilter();
 	getCatalogControl();
+	getFormCount();
 });

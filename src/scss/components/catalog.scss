@@ -1155,18 +1155,19 @@
             }
         }
         @media #{$w768} {
-            width: calc(33.33% - 30px);
+            width: calc(33.33% - 20px);
             margin-right: 30px;
             margin-top: 0;
+            border-radius: 12px 12px 4px 4px;
+            &:nth-child(2n) {
+                margin-right: 30px;
+            }
             &:nth-child(3n) {
                 margin-right: 0;
                 margin-top: 0;
             }
             &:nth-child(n + 4) {
                 margin-top: 30px;
-            }
-            &:nth-child(2n) {
-                margin-right: 30px;
             }
         }
         &:nth-child(n + 4) {
@@ -1180,6 +1181,10 @@
             height: 400px;
             width: 100%;
             max-width: 100%;
+            @media #{$w768} {
+                max-height: 274px;
+                border-radius: 12px 12px 0px 0px;
+            }
         }
         & .card-img img{
             height: 100%;
@@ -1190,7 +1195,23 @@
             padding: 26px 17px 12px;
             @media #{$w768} {
                 padding: 11px 8px 7px;
-                border-radius: 12px 12px 0px 0px;
+            }
+        }
+        & .card-name {
+            @media #{$w768} {
+                @include fz-14;
+            }
+        }
+        & .card-text {
+            @media #{$w768} {
+                margin-top: 9px;
+                margin-bottom: 0;
+                @include fz-12;
+            }
+        }
+        & .card-price {
+            @media #{$w768} {
+                margin-top: 16px;
             }
         }
         & .card-favorite+label {
@@ -1202,11 +1223,18 @@
                 top: auto;
             }
         }
+        & .card-favorite+label::before {
+            @media #{$w768} {
+                width: 25px;
+                height: 24px;
+            }
+        }
         & .card-review-rating {
             display: none;
         }
         & .card-basket {
             @media #{$w768} {
+                padding-top: 0;
                 margin-left: 0;
                 margin-top: 16px;
                 display: flex;
