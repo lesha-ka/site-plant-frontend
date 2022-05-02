@@ -10,6 +10,9 @@
     &-wrapper {
         display: flex;
         margin-top: 20px;
+        @media #{$w1024} {
+            display: block;
+        }
     }
     &-info {
         flex: 1 0 auto;
@@ -21,6 +24,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media #{$w1024} {
+            padding: 15px 30px;
+        }
     }
     &-input {
         position: absolute;
@@ -216,6 +222,9 @@
         border-radius: 5px;
         background-color: $d-white;
         padding: 0 45px 0 35px;
+        @media #{$w1024} {
+            display: none;  
+        }
         &-text {
             max-width: 210px;
             text-align: center;
@@ -254,6 +263,12 @@
         background-color: $d-white;
         padding: 20px;
         text-align: center;
+        @media #{$w1024} {
+            max-width: 100%;
+            padding: 20px 30px;
+            margin-left: 0;
+            margin-top: 15px;
+        }
         &-head {
             display: flex;
             justify-content: space-between;
@@ -291,12 +306,18 @@
             line-height: 22px;
             font-weight: 600;
             color: #899586;
+            &:first-child {
+                margin-top: 0;
+            }
         }
         &-price {
             margin-top: 15px;
             font-weight: 700;
             @include fz-16;
             color: $d-green;
+            &:first-child {
+                margin-top: 0;
+            }
         }
         &-price-sale {
             color: $green;
@@ -310,10 +331,16 @@
             font-size: 20px;
             line-height: 30px;
             color: $d-green;
+            @media #{$w1024} {
+                padding: 10px 0 0;
+            }
         }
         &-btn {
             width: 297px;
             margin: 30px auto;
+            @media #{$w1024} {
+                margin: 20px auto;
+            }
         }
         &-disclaimer {
             margin: 0 auto;
@@ -321,6 +348,9 @@
             font-weight: 600;
             @include fz-12;
             color: #899586;
+            @media #{$w1024} {
+                max-width: 100%;
+            }
         }
     }
 }
