@@ -9814,6 +9814,378 @@ main {
   background-size: cover;
 }
 
+.profile-title {
+  margin-top: 30px;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 44px;
+  color: #3D4F3C;
+}
+
+.profile-wrapper {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile-menu {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 315px;
+          flex: 0 0 315px;
+}
+
+.profile-menu-links {
+  border-radius: 10px;
+  background: #FBFFF7;
+  padding: 20px;
+}
+
+.profile-menu-title {
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #7184C8;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #7184C8;
+}
+
+.profile-menu-link {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #3D4F3C;
+  margin-top: 20px;
+}
+
+.profile-menu-link:first-child {
+  margin-top: 30px;
+}
+
+.profile-menu-link:hover,
+.profile-menu-link:active {
+  color: #67AF28;
+}
+
+.profile-menu-link-active {
+  color: #67AF28;
+}
+
+.profile-menu-exit {
+  cursor: pointer;
+  padding: 15px 0 14px;
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 10px;
+  background: #FBFFF7;
+  border: none;
+  outline: none;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3D4F3C;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-menu-exit:hover {
+  background: #BEEC95;
+}
+
+.profile-menu-exit:active {
+  background: #67AF28;
+  -webkit-box-shadow: inset 2px 4px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 2px 4px 2px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.profile-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 74%;
+          flex: 1 0 74%;
+  padding: 30px;
+  margin-left: 30px;
+  background: #FBFFF7;
+  border-radius: 10px;
+}
+
+.profile-info-title {
+  margin-top: 60px;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #3D4F3C;
+  width: 100%;
+}
+
+.profile-info-title:first-child {
+  margin-top: 0;
+}
+
+.profile-info-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-info-personal {
+  max-width: 63%;
+}
+
+.profile-info-input-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.profile-info-input-wrapper:nth-of-type(even) {
+  margin-left: 20px;
+}
+
+.profile-info-input-wrapper .ui-datepicker-trigger {
+  position: absolute;
+  right: 11px;
+  top: 32px;
+}
+
+.profile-info-input-title {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #3D4F3C;
+  margin-bottom: 5px;
+}
+
+.profile-info-input {
+  max-height: 47px;
+  padding: 14px 15px;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #3D4F3C;
+  width: 285px;
+  background: rgba(61, 79, 60, 0.1);
+  border: 2px solid rgba(61, 79, 60, 0.05);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.profile-info-input::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.profile-info-input::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.profile-info-input:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.profile-info-input::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+.profile-info-input::placeholder {
+  opacity: 0.6;
+}
+
+.profile-info-input:hover {
+  background: rgba(61, 79, 60, 0.1);
+  border: 2px solid rgba(103, 175, 40, 0.6);
+}
+
+.profile-info-input:focus-visible {
+  background: #FFFFFF;
+  border: 2px solid rgba(103, 175, 40, 0.6);
+  outline: none;
+}
+
+.profile-info-select {
+  max-height: 47px;
+  width: 285px;
+  margin-right: 0;
+  padding-right: 0;
+  border-radius: 5px;
+  background: #e8eee4;
+  padding: 14px 15px;
+  border: 2px solid rgba(61, 79, 60, 0.05);
+}
+
+.profile-info-select::after {
+  display: none;
+}
+
+.profile-info-select .select-toggle {
+  text-transform: none;
+}
+
+.profile-info-select .select-dropdown {
+  width: calc(100% + 4px);
+  left: -2px;
+  top: 100%;
+  background: #e8eee4;
+  border-radius: 0 0 5px 5px;
+  border: 2px solid rgba(61, 79, 60, 0.05);
+}
+
+.profile-info-date.ui-datepicker {
+  width: 285px;
+  background: #f1f6ed;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+}
+
+.profile-info-date.ui-datepicker .ui-datepicker-header {
+  padding: 0;
+  background: transparent;
+  border: none;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dfe6db;
+}
+
+.profile-info-date.ui-datepicker .ui-datepicker-next {
+  background-image: url(../img/icons/pagination-next.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 100%;
+  right: 15px;
+  top: 4px;
+}
+
+.profile-info-date.ui-datepicker .ui-datepicker-next:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.profile-info-date.ui-datepicker .ui-datepicker-prev {
+  background-image: url(../img/icons/pagination-prev.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 100%;
+  left: 15px;
+  top: 4px;
+}
+
+.profile-info-date.ui-datepicker .ui-datepicker-prev:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.profile-info-date.ui-datepicker .ui-datepicker-title {
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #3D4F3C;
+}
+
+.profile-info-date.ui-datepicker th {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #3D4F3C;
+}
+
+.profile-info-date.ui-datepicker td a,
+.profile-info-date.ui-datepicker td span {
+  width: 28px;
+  height: 28px;
+  padding: 6px 7px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #859182;
+  border: none;
+  background: transparent;
+  text-align: center;
+  margin-top: 5px;
+  border: 1px solid transparent;
+}
+
+.profile-info-date.ui-datepicker .ui-state-active {
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #67AF28;
+}
+
+.profile-info-avatar {
+  margin: 0 auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+}
+
+.profile-info-img {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-info-name {
+  margin-top: 10px;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #3D4F3C;
+}
+
+.profile-info-avatar-change {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: center;
+  color: #67AF28;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.profile-info-input-status {
+  display: block;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #67AF28;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.profile-info-input-status:disabled {
+  text-decoration: none;
+  color: #16A085;
+}
+
+.profile-info-submit {
+  margin-top: 120px;
+  width: 210px;
+}
+
+.profile-info-block {
+  margin-top: 30px;
+}
+
 .js-show {
   opacity: 1;
   -webkit-transform: translateY(0);

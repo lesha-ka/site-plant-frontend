@@ -1,0 +1,63 @@
+main(class=`main main-${page}`)
+    .container.container-narrow
+        +breadcrumb(['Главная', 'Личный кабинет'], 'Личная информация')
+    .container.container-narrow.container-notablet
+        section.profile
+            h2.profile-title Морару Валентин
+            .profile-wrapper 
+                aside.profile-menu
+                    nav.profile-menu-links
+                            .profile-menu-title Личный кабинет
+                            a.profile-menu-link.profile-menu-link-active(href="/index.html") Профиль
+                            a.profile-menu-link(href="#") Адреса
+                            a.profile-menu-link(href="#") Мои заказы
+                    button.profile-menu-exit(type="button") Выйти
+                .profile-content
+                    .profile-info
+                        h3.profile-info-title Личная информация
+                        .profile-info-main
+                            .profile-info-personal
+                                .profile-info-input-wrapper
+                                    .profile-info-input-title Имя:
+                                    input.profile-info-input(type="text" placeholder="Вадим")
+                                .profile-info-input-wrapper
+                                    .profile-info-input-title Фамилия:
+                                    input.profile-info-input(type="text" placeholder="Громов")
+                                .profile-info-input-wrapper
+                                    .profile-info-input-title Ваш пол:
+                                    .profile-info-select.select.control-select#js-selectGender 
+                                        button.select-toggle(type='button', name='gender', value="Мужской", data-select='toggle', data-index='0') Мужской
+                                        .select-dropdown
+                                            ul.select-options
+                                                li.select-option.select-option-selected(data-select='option', data-value='Мужской”', data-index='0') Мужской
+                                                li.select-option(data-select='option', data-value='Женский', data-index='1') Женский
+                                .profile-info-input-wrapper
+                                    .profile-info-input-title Дата рождения:
+                                    input.profile-info-input(type="text" placeholder="01.05.1998" id="birthdate")
+                            .profile-info-avatar 
+                                .profile-info-img 
+                                    img(src="img/profile/avatar.jpg", alt="Фото")
+                                .profile-info-name Валентин Морару
+                                button.profile-info-avatar-change(type="button")  Изменить аватар
+                        .profile-info-block
+                            h3.profile-info-title Контактная информация
+                            .profile-info-input-wrapper
+                                .profile-info-input-title Телефон:
+                                input.profile-info-input(type="tel" placeholder="8 (999) 123 45 67")
+                                button.profile-info-input-status(type="button") Подтвердить
+                            .profile-info-input-wrapper
+                                .profile-info-input-title Телефон:
+                                input.profile-info-input(type="email" placeholder="Gromov@mail.ru")
+                                button.profile-info-input-status(type="button" disabled) Подтвержден
+                        .profile-info-block
+                            h3.profile-info-title Изменение пароля
+                            .profile-info-input-wrapper
+                                .profile-info-input-title Старый пароль:
+                                input.profile-info-input(type="password")
+                            .profile-info-input-wrapper
+                                .profile-info-input-title Новый пароль:
+                                input.profile-info-input(type="password")
+                            .profile-info-input-wrapper
+                                .profile-info-input-title Подтвердите пароль:
+                                input.profile-info-input(type="password")
+                    button.green-btn.profile-info-submit(type="submit") Сохранить

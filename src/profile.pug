@@ -1,0 +1,13 @@
+block variables
+    - var title = 'Профиль'
+    - var page = 'profile'
+include html/static/mixins
+
+html(lang='ru')
+    head 
+        include html/static/head
+    body 
+        div(class=`wrapper js-wrapper wrapper-${page}`)
+            include html/static/header
+            include html/pages/profile
+            include html/static/footer

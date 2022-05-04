@@ -151,5 +151,8 @@ export const getSelect = () => {
             const select3 = new CustomSelect('#js-selectAddress');
             const select4 = new CustomSelect('#js-selectAddressTransport');
         }
+        if(document.querySelector('#js-selectGender')) {
+            const select5 = new CustomSelect('#js-selectGender');
+        }
     }
 }
