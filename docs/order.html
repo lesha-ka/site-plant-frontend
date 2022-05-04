@@ -231,15 +231,15 @@
                     <h3 class="order-info-title">Способ получения</h3><a class="order-type-link" href="#">Изменить адрес</a>
                   </div>
                   <div class="order-type-tabs js-tabMenu">
-                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-1" value="" checked="checked"/>
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-1" value=""/>
                     <label for="order-tab-1">Самовывоз</label>
-                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-2" value=""/>
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-2" value="" checked="checked"/>
                     <label for="order-tab-2">Курьерская доставка</label>
                     <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-3" value=""/>
                     <label for="order-tab-3">Транспортная компания</label>
                   </div>
                   <div class="js-tab-content">
-                    <div class="order-type-content is-show" data-tab="order-tab-1">
+                    <div class="order-type-content" data-tab="order-tab-1">
                       <div class="order-type-pickup"> 
                         <input class="order-type-input js-changeMap" type="radio" id="address1" name="address" value="55.753995, 37.614069"/>
                         <label class="order-type-item" for="address1"><span class="order-type-address">ул. Московская, д. 133 кор. 13</span><span class="order-type-info">В наличии 1 шт, забирайте сегодня</span></label>
@@ -250,11 +250,79 @@
                       </div>
                       <div class="order-type-map" id="map"></div>
                     </div>
-                    <div class="order-type-content" data-tab="order-tab-2"> 
-                      <p>456</p>
+                    <div class="order-type-content is-show" data-tab="order-tab-2"> 
+                      <p class="order-type-select-title">Адрес:</p>
+                      <div class="select order-type-select control-select" id="js-selectAddress">
+                        <button class="select-toggle" type="button" name="address" value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”" data-select="toggle" data-index="0">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”</button>
+                        <div class="select-dropdown">
+                          <ul class="select-options">
+                            <li class="select-option select-option-selected" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”" data-index="0">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”" data-index="1">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”" data-index="2">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”" data-index="3">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”" data-index="4">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="order-type-inputs">
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Регион:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Краснодарский край"/>
+                        </div>
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Город:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Краснодар"/>
+                        </div>
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Улица:</p>
+                          <input class="order-type-input-text" type="text" placeholder="ул. Северная"/>
+                        </div>
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Дом/Офис:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Корп “А”"/>
+                        </div>
+                        <div class="order-type-input-wrapper order-type-input-wrapper-long">
+                          <p class="order-type-input-name">Комментарий для курьера:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Уточните детали доставки, если таковые есть"/>
+                        </div>
+                      </div>
                     </div>
                     <div class="order-type-content" data-tab="order-tab-3"> 
-                      <p>123</p>
+                      <p class="order-type-select-title">Адрес:</p>
+                      <div class="select order-type-select control-select" id="js-selectAddressTransport">
+                        <button class="select-toggle" type="button" name="address" value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”" data-select="toggle" data-index="0">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”</button>
+                        <div class="select-dropdown">
+                          <ul class="select-options">
+                            <li class="select-option select-option-selected" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”" data-index="0">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”" data-index="1">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”" data-index="2">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”" data-index="3">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”</li>
+                            <li class="select-option" data-select="option" data-value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”" data-index="4">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="order-type-inputs">
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Регион:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Краснодарский край"/>
+                        </div>
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Город:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Краснодар"/>
+                        </div>
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Улица:</p>
+                          <input class="order-type-input-text" type="text" placeholder="ул. Северная"/>
+                        </div>
+                        <div class="order-type-input-wrapper">
+                          <p class="order-type-input-name">Дом/Офис:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Корп “А”"/>
+                        </div>
+                        <div class="order-type-input-wrapper order-type-input-wrapper-long">
+                          <p class="order-type-input-name">Комментарий для курьера:</p>
+                          <input class="order-type-input-text" type="text" placeholder="Уточните детали доставки, если таковые есть"/>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -357,8 +425,8 @@
                   <dt>Общая стоимость</dt>
                   <dd class="basket-result-summ">3 599 ₽</dd>
                 </dl>
-                <button class="basket-result-btn green-btn">Перейти к оформлению</button>
-                <p class="basket-result-disclaimer">Для оформления кредита необходимо добавить товары на сумму <span> 5 000 </span> ₽</p>
+                <button class="basket-result-btn green-btn">Оплатить онлайн</button>
+                <p class="basket-result-disclaimer">Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями</a>, а также с <a href="#" target="_blank">Условиями продажи</a></p>
               </div>
             </div>
           </section>

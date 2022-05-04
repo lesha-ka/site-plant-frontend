@@ -24,14 +24,14 @@ main(class=`main main-${page}`)
                             h3.order-info-title Способ получения
                             a.order-type-link(href="#") Изменить адрес
                         .order-type-tabs.js-tabMenu
-                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-1" class="js-tabItem" value="" checked)
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-1" class="js-tabItem" value="") 
                             label(for="order-tab-1") Самовывоз
-                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-2" class="js-tabItem" value="")
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-2" class="js-tabItem" value="" checked)
                             label(for="order-tab-2") Курьерская доставка
                             input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-3" class="js-tabItem" value="")
                             label(for="order-tab-3") Транспортная компания
                         .js-tab-content
-                            .order-type-content.is-show(data-tab="order-tab-1")
+                            .order-type-content(data-tab="order-tab-1")
                                 .order-type-pickup 
                                     input.order-type-input.js-changeMap(type="radio" id="address1" name="address" value="55.753995, 37.614069") 
                                     label.order-type-item(for="address1")
@@ -46,10 +46,60 @@ main(class=`main main-${page}`)
                                         span.order-type-address ул. Тургенева, д. 85
                                         span.order-type-info По предзаказу на 14 декабря, после 11:00
                                 .order-type-map#map
-                            .order-type-content(data-tab="order-tab-2") 
-                                p 456
+                            .order-type-content.is-show(data-tab="order-tab-2") 
+                                p.order-type-select-title Адрес:
+                                .select.order-type-select.control-select#js-selectAddress
+                                    button.select-toggle(type='button', name='address', value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”", data-select='toggle', data-index='0') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”
+                                    .select-dropdown
+                                        ul.select-options
+                                            li.select-option.select-option-selected(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”', data-index='0') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”', data-index='1') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”', data-index='2') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”', data-index='3') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”', data-index='4') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”
+                                .order-type-inputs
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Регион:
+                                        input.order-type-input-text(type="text" placeholder="Краснодарский край")
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Город:
+                                        input.order-type-input-text(type="text" placeholder="Краснодар")
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Улица:
+                                        input.order-type-input-text(type="text" placeholder="ул. Северная")
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Дом/Офис:
+                                        input.order-type-input-text(type="text" placeholder="Корп “А”")
+                                    .order-type-input-wrapper.order-type-input-wrapper-long
+                                        p.order-type-input-name Комментарий для курьера:
+                                        input.order-type-input-text(type="text" placeholder="Уточните детали доставки, если таковые есть")
                             .order-type-content(data-tab="order-tab-3") 
-                                p 123
+                                p.order-type-select-title Адрес:
+                                .select.order-type-select.control-select#js-selectAddressTransport
+                                    button.select-toggle(type='button', name='address', value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”", data-select='toggle', data-index='0') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”
+                                    .select-dropdown
+                                        ul.select-options
+                                            li.select-option.select-option-selected(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”', data-index='0') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”', data-index='1') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Б”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”', data-index='2') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “В”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”', data-index='3') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Г”
+                                            li.select-option(data-select='option', data-value='Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”', data-index='4') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “Д”
+                                .order-type-inputs
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Регион:
+                                        input.order-type-input-text(type="text" placeholder="Краснодарский край")
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Город:
+                                        input.order-type-input-text(type="text" placeholder="Краснодар")
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Улица:
+                                        input.order-type-input-text(type="text" placeholder="ул. Северная")
+                                    .order-type-input-wrapper
+                                        p.order-type-input-name Дом/Офис:
+                                        input.order-type-input-text(type="text" placeholder="Корп “А”")
+                                    .order-type-input-wrapper.order-type-input-wrapper-long
+                                        p.order-type-input-name Комментарий для курьера:
+                                        input.order-type-input-text(type="text" placeholder="Уточните детали доставки, если таковые есть")
                     .order-date
                         h3.order-info-title Дата и время
                         .order-date-wrapper 
@@ -126,5 +176,5 @@ main(class=`main main-${page}`)
                     dl.basket-result-total
                         dt Общая стоимость
                         dd.basket-result-summ 3 599 ₽
-                    button.basket-result-btn.green-btn Перейти к оформлению
-                    p.basket-result-disclaimer Для оформления кредита необходимо добавить товары на сумму <span> 5 000 </span> ₽
+                    button.basket-result-btn.green-btn Оплатить онлайн
+                    p.basket-result-disclaimer Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями</a>, а также с <a href="#" target="_blank">Условиями продажи</a>

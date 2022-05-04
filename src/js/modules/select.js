@@ -143,7 +143,13 @@ export const getSelect = () => {
             });
         }
         });
-        const select1 = new CustomSelect('#js-selectGroup');
-        const select2 = new CustomSelect('#js-selectSort');
+        if(document.querySelector('#js-selectGroup')) {
+            const select1 = new CustomSelect('#js-selectGroup');
+            const select2 = new CustomSelect('#js-selectSort');
+        }
+        if(document.querySelector('#js-selectAddress')) {
+            const select3 = new CustomSelect('#js-selectAddress');
+            const select4 = new CustomSelect('#js-selectAddressTransport');
+        }
     }
 }

@@ -11,12 +11,12 @@ import { getReviewsResult } from './modules/reviews-result.js';
 import { getCategoriesList } from './modules/categories-list.js';
 import { getBuyOptions }from './modules/buy-options.js';
 import { getTabs }from './modules/tabs.js';
-import { getSelect }from './modules/select.js';
 import { getRangeFilter }from './modules/range-filter.js';
 import { getCatalogControl } from './modules/catalog-control.js';
 import { getFormCount } from './modules/form-count.js';
 import { getDatepicker } from './modules/datepicker.js';
 import { getMap } from './modules/map.js';
+import { getSelect }from './modules/select.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
