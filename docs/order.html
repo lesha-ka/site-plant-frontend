@@ -8,12 +8,13 @@
       <meta name="format-detection" content="telephone=no"/>
       <meta name="description" content="Plant"/>
       <meta name="keywords" content="Plant"/>
-      <title>Корзина</title>
+      <title>Оформление заказа</title>
       <link href="css/style.min.css" type="text/css" rel="stylesheet"/>
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=2b21f5ff-cb4b-4217-b429-eeeb0e3d88cb&amp;lang=ru_RU" type="text/javascript"></script>
     </head>
   </head>
   <body> 
-    <div class="wrapper js-wrapper wrapper-basket">
+    <div class="wrapper js-wrapper wrapper-order">
       <header class="header"> 
         <div class="container"> 
           <div class="header-row">
@@ -192,82 +193,151 @@
           </div>
         </div>
       </header>
-      <main class="main main-basket">
+      <main class="main main-order">
         <div class="container container-narrow">
-          <div class="breadcrumb breadcrumb-basket">
+          <div class="breadcrumb breadcrumb-order">
             <ul class="breadcrumb-list">
               <li class="breadcrumb-item"><a class="breadcrumb-link" href="#" title="Главная">Главная</a></li>
-              <li class="breadcrumb-item"><span class="breadcrumb-link-current">Корзина</span></li>
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#" title="Корзина">Корзина</a></li>
+              <li class="breadcrumb-item"><span class="breadcrumb-link-current">Оформление заказа</span></li>
             </ul>
           </div>
         </div>
         <div class="container container-narrow container-notablet">
-          <section class="basket">
-            <h2 class="basket-title">Корзина</h2>
-            <div class="basket-wrapper">
-              <div class="basket-info">
-                <div class="basket-control">
-                  <input class="basket-input" type="checkbox" id="all" name="all"/>
-                  <label for="all">Выбрать все</label>
-                  <button class="basket-delete" type="button">Удалить выбранные</button>
-                </div>
-                <div class="basket-products">
-                  <div class="basket-products-item">
-                    <input class="basket-input" type="checkbox" id="product2" name="all"/>
-                    <label for="product2"></label>
-                    <div class="basket-products-img"> <img src="img/basket/product.jpg" alt="товар"/></div>
-                    <div class="basket-products-text"> 
-                      <p class="basket-products-name">Гортензия метельчатая в ассортименте (саженцы)</p>
-                      <div class="basket-products-btns"> 
-                        <button class="basket-products-btn" type="button">В список желаемого<span class="basket-products-btn-less">В желаемое</span><img class="basket-products-btn-img" src="img/icons/heart.svg" alt="В избранное"/></button>
-                        <button class="basket-products-btn basket-products-btn-text" type="button">Отложить</button>
-                      </div>
+          <section class="order">
+            <h2 class="order-title">Оформление заказа</h2>
+            <div class="order-wrapper">
+              <div class="order-info">
+                <div class="order-recipient">
+                  <h3 class="order-info-title">Ваши данные</h3>
+                  <div class="order-recipient-inputs"> 
+                    <div class="order-recipient-inputs-item">
+                      <p class="order-recipient-label">Имя и фамилия   </p>
+                      <input class="order-recipient-input" type="text" name="fio" placeholder="Укажите имя и фамилию"/>
                     </div>
-                    <div class="basket-products-price"> 
-                      <p>18&nbsp;090&nbsp;₽</p>
-                      <p class="basket-products-price-del">19&nbsp;390&nbsp;₽</p>
-                      <p class="basket-products-price-sale">Выгода 1&nbsp;300&nbsp;₽&nbsp;!</p>
+                    <div class="order-recipient-inputs-item">
+                      <p class="order-recipient-label">Телефон   </p>
+                      <input class="order-recipient-input" type="tel" name="tel" placeholder="Укажите телефон"/>
                     </div>
-                    <div class="basket-products-control js-basketCount">
-                      <input class="basket-products-minus js-minus" type="button"/>
-                      <input class="basket-products-count js-count js-countPieces" type="text" value="2"/>
-                      <input class="basket-products-plus js-plus" type="button"/>
+                    <div class="order-recipient-inputs-item">
+                      <p class="order-recipient-label">Email                           </p>
+                      <input class="order-recipient-input" type="email" name="email" placeholder="Укажите email"/>
                     </div>
-                    <button class="basket-products-delete" type="button"></button>
                   </div>
-                  <div class="basket-products-item">
-                    <input class="basket-input" type="checkbox" id="product1" name="all"/>
-                    <label for="product1"></label>
-                    <div class="basket-products-img"> <img src="img/basket/product.jpg" alt="товар"/></div>
-                    <div class="basket-products-text"> 
-                      <p class="basket-products-name">Гортензия метельчатая в ассортименте (саженцы)</p>
-                      <div class="basket-products-btns"> 
-                        <button class="basket-products-btn" type="button">В список желаемого <span class="basket-products-btn-less"> В желаемое</span><img class="basket-products-btn-img" src="img/icons/heart.svg" alt="В избранное"/></button>
-                        <button class="basket-products-btn basket-products-btn-text" type="button">Отложить</button>
+                  <div class="order-recipient-add">Добавить получателя </div>
+                </div>
+                <div class="order-type"> 
+                  <div class="order-type-head">
+                    <h3 class="order-info-title">Способ получения</h3><a class="order-type-link" href="#">Изменить адрес</a>
+                  </div>
+                  <div class="order-type-tabs js-tabMenu">
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-1" value="" checked="checked"/>
+                    <label for="order-tab-1">Самовывоз</label>
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-2" value=""/>
+                    <label for="order-tab-2">Курьерская доставка</label>
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-3" value=""/>
+                    <label for="order-tab-3">Транспортная компания</label>
+                  </div>
+                  <div class="js-tab-content">
+                    <div class="order-type-content is-show" data-tab="order-tab-1">
+                      <div class="order-type-pickup"> 
+                        <input class="order-type-input js-changeMap" type="radio" id="address1" name="address" value="55.753995, 37.614069"/>
+                        <label class="order-type-item" for="address1"><span class="order-type-address">ул. Московская, д. 133 кор. 13</span><span class="order-type-info">В наличии 1 шт, забирайте сегодня</span></label>
+                        <input class="order-type-input js-changeMap" type="radio" id="address2" name="address" value="54.753995, 37.614069"/>
+                        <label class="order-type-item" for="address2"><span class="order-type-address">ул. Новороссийская, д. 240</span><span class="order-type-info">По предзаказу на 15 декабря, после 09:00</span></label>
+                        <input class="order-type-input" type="radio" id="address3" name="address"/>
+                        <label class="order-type-item" for="address3"><span class="order-type-address">ул. Тургенева, д. 85</span><span class="order-type-info">По предзаказу на 14 декабря, после 11:00</span></label>
                       </div>
+                      <div class="order-type-map" id="map"></div>
                     </div>
-                    <div class="basket-products-price"> 
-                      <p>18&nbsp;090&nbsp;₽</p>
-                      <p class="basket-products-price-del">19&nbsp;390&nbsp;₽</p>
-                      <p class="basket-products-price-sale">Выгода 1300&nbsp;₽&nbsp;!</p>
+                    <div class="order-type-content" data-tab="order-tab-2"> 
+                      <p>456</p>
                     </div>
-                    <div class="basket-products-control js-basketCount">
-                      <input class="basket-products-minus js-minus" type="button"/>
-                      <input class="basket-products-count js-count js-countPieces" type="text" value="1"/>
-                      <input class="basket-products-plus js-plus" type="button"/>
+                    <div class="order-type-content" data-tab="order-tab-3"> 
+                      <p>123</p>
                     </div>
-                    <button class="basket-products-delete" type="button"></button>
                   </div>
                 </div>
-                <div class="basket-banner">
-                  <div class="basket-banner-text">
-                    <h3 class="basket-banner-title">Бесплатная доставка в пункты самовывоза!   </h3>
-                    <p class="basket-banner-info">При стоимости заказа выше 500 ₽</p>
+                <div class="order-date">
+                  <h3 class="order-info-title">Дата и время</h3>
+                  <div class="order-date-wrapper"> 
+                    <div class="order-date-calendar"> 
+                      <input class="order-date-input js-datepickerValue" type="text" value=""/>
+                      <div class="order-date-datepicker" id="datepicker"></div>
+                    </div>
+                    <div class="order-date-info"> 
+                      <table class="order-date-table"> 
+                        <thead class="order-date-thead">
+                          <tr class="order-date-tr">
+                            <th class="order-date-th">Часы работы пункта:</th>
+                            <th class="order-date-th">Изменение заказа</th>
+                            <th class="order-date-th">Стоимость доставки</th>
+                          </tr>
+                        </thead>
+                        <tbody class="order-date-tbody">
+                          <tr class="order-date-tr">
+                            <th class="order-date-th">10:00 - 22:00</th>
+                            <th class="order-date-th">Изменение заказа недоступно</th>
+                            <th class="order-date-th">Бесплатно</th>
+                          </tr>
+                          <tr class="order-date-tr">
+                            <th class="order-date-th">10:00 - 22:00</th>
+                            <th class="order-date-th">Изменение заказа недоступно</th>
+                            <th class="order-date-th">Бесплатно</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  <div class="basket-banner-img"><img src="img/basket/banner.png" alt="переработка"/></div>
-                  <div class="basket-banner-delivery"><img src="img/basket/world.svg" alt="доставка"/>
-                    <h3 class="basket-banner-title">Во все регионы страны  </h3>
+                </div>
+                <div class="order-pay">
+                  <h3 class="order-info-title">Оплата</h3>
+                  <p class="order-pay-subtitle">Все способы оплаты</p>
+                  <div class="order-pay-wrapper">
+                    <input class="order-pay-input" type="radio" id="pay1" name="pay"/>
+                    <label class="order-pay-item" for="pay1">
+                      <p class="order-pay-way">Оплата при получении</p>
+                      <p class="order-pay-info">Наличными или картой</p>
+                    </label>
+                    <input class="order-pay-input" type="radio" id="pay2" name="pay"/>
+                    <label class="order-pay-item" for="pay2">
+                      <p class="order-pay-way">Банковской картой</p>
+                      <p class="order-pay-info">Оплата картой онлайн</p>
+                    </label>
+                    <input class="order-pay-input" type="radio" id="pay3" name="pay"/>
+                    <label class="order-pay-item" for="pay3">
+                      <p class="order-pay-way">Яндекс.Деньги</p>
+                      <p class="order-pay-info">Кэшбэк 5%</p>
+                    </label>
                   </div>
+                </div>
+                <div class="order-products"> 
+                  <div class="order-products-head">
+                    <h3 class="order-info-title">Товары</h3>
+                    <div class="order-products-date">Дата доставки 23 декабря</div>
+                  </div>
+                  <div class="order-products-items">
+                    <div class="order-products-item">
+                      <div class="order-products-photo"><img src="img/order/card1.jpg" alt="товар"/></div>
+                      <p class="order-products-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</p>
+                      <p class="order-products-quantity">1 шт.</p>
+                    </div>
+                    <div class="order-products-item">
+                      <div class="order-products-photo"><img src="img/order/card2.jpg" alt="товар"/></div>
+                      <p class="order-products-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</p>
+                      <p class="order-products-quantity">2 шт.</p>
+                    </div>
+                    <div class="order-products-item">
+                      <div class="order-products-photo"><img src="img/order/card3.jpg" alt="товар"/></div>
+                      <p class="order-products-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</p>
+                      <p class="order-products-quantity">3 шт.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-services">
+                  <h3 class="order-info-title">Дополнительные услуги</h3>
+                  <p class="order-services-text">Комментарий</p>
+                  <textarea class="order-services-textarea" placeholder="Укажите какие дополнительные услуги требуются, например поднятие посылки до нужного этажа..."></textarea>
                 </div>
               </div>
               <div class="basket-result">
@@ -289,97 +359,6 @@
                 </dl>
                 <button class="basket-result-btn green-btn">Перейти к оформлению</button>
                 <p class="basket-result-disclaimer">Для оформления кредита необходимо добавить товары на сумму <span> 5 000 </span> ₽</p>
-              </div>
-            </div>
-          </section>
-          <section class="card-offers">
-            <div class="container container-notablet">
-              <div class="products-item"> 
-                <div class="products-header"> 
-                  <div class="products-name">Не забудьте приобрести</div>
-                </div>
-                <div class="products-slider js-productsSlider">
-                  <div class="products-slider-item card"><img class="products-slider-img" src="img/card/offers1.jpg" alt="кустарник"/>
-                    <div class="card-inner"> 
-                      <form class="card-form" method="post">
-                        <input class="card-favorite" type="checkbox" id="recom1" name="recom1"/>
-                        <label for="recom1"></label>
-                      </form>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <form class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="products-slider-item card"><img class="products-slider-img" src="img/card/offers2.jpg" alt="кустарник"/>
-                    <div class="card-inner"> 
-                      <form class="card-form" method="post">
-                        <input class="card-favorite" type="checkbox" id="recom2" name="recom2"/>
-                        <label for="recom2"></label>
-                      </form>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <form class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="products-slider-item card"><img class="products-slider-img" src="img/card/offers3.jpg" alt="кустарник"/>
-                    <div class="card-inner"> 
-                      <form class="card-form" method="post">
-                        <input class="card-favorite" type="checkbox" id="recom3" name="recom3"/>
-                        <label for="recom3"></label>
-                      </form>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <form class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="products-slider-item card"><img class="products-slider-img" src="img/card/offers4.jpg" alt="кустарник"/>
-                    <div class="card-inner"> 
-                      <form class="card-form" method="post">
-                        <input class="card-favorite" type="checkbox" id="recom4" name="recom4"/>
-                        <label for="recom4"></label>
-                      </form>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <form class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="products-slider-item card"><img class="products-slider-img" src="img/card/offers1.jpg" alt="кустарник"/>
-                    <div class="card-inner"> 
-                      <form class="card-form" method="post">
-                        <input class="card-favorite" type="checkbox" id="recom5" name="recom5"/>
-                        <label for="recom5"></label>
-                      </form>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <form class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </form>
-                    </div>
-                  </div>
-                </div><a class="products-more" href="#">Все товары категории </a>
               </div>
             </div>
           </section>

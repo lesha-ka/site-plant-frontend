@@ -7,13 +7,22 @@ export const getFormCount= () => {
             let minus = elem.querySelector('.js-minus');
             let units = count.value.replace(/\d/g, '');
             plus.onclick = function(){
-                count.value = parseInt(count.value)+1+units;
+                if (count.classList.contains('js-countPieces')) {
+                    count.value = parseInt(count.value)+1+units + ' шт'
+                } else {
+                    count.value = parseInt(count.value)+1+units
+                }
             }
             minus.onclick = function(){
-                if(parseInt(count.value) > 1) {
-                    count.value = parseInt(count.value)-1+units;
+                if (count.classList.contains('js-countPieces') & parseInt(count.value) > 1) {
+                    count.value = parseInt(count.value)-1+units + ' шт'
+                } else if (parseInt(count.value) > 1) {
+                    count.value = parseInt(count.value)-1+units
                 }
             };
+            if (count.classList.contains('js-countPieces')) {
+                count.value = count.value + ' шт'
+            }
         })
     }
 }

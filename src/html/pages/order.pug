@@ -1,0 +1,130 @@
+main(class=`main main-${page}`)
+    .container.container-narrow
+        +breadcrumb(['Главная', 'Корзина'], 'Оформление заказа')
+    .container.container-narrow.container-notablet
+        section.order
+            h2.order-title Оформление заказа
+            .order-wrapper
+                .order-info
+                    .order-recipient
+                        h3.order-info-title Ваши данные
+                        .order-recipient-inputs 
+                            .order-recipient-inputs-item
+                                p.order-recipient-label Имя и фамилия   
+                                input.order-recipient-input(type="text" name="fio" placeholder="Укажите имя и фамилию")
+                            .order-recipient-inputs-item
+                                p.order-recipient-label Телефон   
+                                input.order-recipient-input(type="tel" name= "tel" placeholder="Укажите телефон")
+                            .order-recipient-inputs-item
+                                p.order-recipient-label Email                           
+                                input.order-recipient-input(type="email" name="email" placeholder="Укажите email")
+                        .order-recipient-add Добавить получателя 
+                    .order-type 
+                        .order-type-head
+                            h3.order-info-title Способ получения
+                            a.order-type-link(href="#") Изменить адрес
+                        .order-type-tabs.js-tabMenu
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-1" class="js-tabItem" value="" checked)
+                            label(for="order-tab-1") Самовывоз
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-2" class="js-tabItem" value="")
+                            label(for="order-tab-2") Курьерская доставка
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-3" class="js-tabItem" value="")
+                            label(for="order-tab-3") Транспортная компания
+                        .js-tab-content
+                            .order-type-content.is-show(data-tab="order-tab-1")
+                                .order-type-pickup 
+                                    input.order-type-input.js-changeMap(type="radio" id="address1" name="address" value="55.753995, 37.614069") 
+                                    label.order-type-item(for="address1")
+                                        span.order-type-address ул. Московская, д. 133 кор. 13
+                                        span.order-type-info В наличии 1 шт, забирайте сегодня
+                                    input.order-type-input.js-changeMap(type="radio" id="address2" name="address" value="54.753995, 37.614069") 
+                                    label.order-type-item(for="address2")
+                                        span.order-type-address ул. Новороссийская, д. 240
+                                        span.order-type-info По предзаказу на 15 декабря, после 09:00
+                                    input.order-type-input(type="radio" id="address3" name="address") 
+                                    label.order-type-item(for="address3")
+                                        span.order-type-address ул. Тургенева, д. 85
+                                        span.order-type-info По предзаказу на 14 декабря, после 11:00
+                                .order-type-map#map
+                            .order-type-content(data-tab="order-tab-2") 
+                                p 456
+                            .order-type-content(data-tab="order-tab-3") 
+                                p 123
+                    .order-date
+                        h3.order-info-title Дата и время
+                        .order-date-wrapper 
+                            .order-date-calendar 
+                                input.order-date-input.js-datepickerValue(type="text" value="")
+                                .order-date-datepicker#datepicker
+                            .order-date-info 
+                                table.order-date-table 
+                                    thead.order-date-thead
+                                        tr.order-date-tr
+                                            th.order-date-th Часы работы пункта:
+                                            th.order-date-th Изменение заказа
+                                            th.order-date-th Стоимость доставки
+                                    tbody.order-date-tbody
+                                        tr.order-date-tr
+                                            th.order-date-th 10:00 - 22:00
+                                            th.order-date-th Изменение заказа недоступно
+                                            th.order-date-th Бесплатно
+                                        tr.order-date-tr
+                                            th.order-date-th 10:00 - 22:00
+                                            th.order-date-th Изменение заказа недоступно
+                                            th.order-date-th Бесплатно
+                    .order-pay
+                        h3.order-info-title Оплата
+                        p.order-pay-subtitle Все способы оплаты
+                        .order-pay-wrapper
+                            input.order-pay-input(type="radio" id="pay1" name="pay") 
+                            label.order-pay-item(for="pay1")
+                                p.order-pay-way Оплата при получении
+                                p.order-pay-info Наличными или картой
+                            input.order-pay-input(type="radio" id="pay2" name="pay") 
+                            label.order-pay-item(for="pay2")
+                                p.order-pay-way Банковской картой
+                                p.order-pay-info Оплата картой онлайн
+                            input.order-pay-input(type="radio" id="pay3" name="pay") 
+                            label.order-pay-item(for="pay3")
+                                p.order-pay-way Яндекс.Деньги
+                                p.order-pay-info Кэшбэк 5%
+                    .order-products 
+                        .order-products-head
+                            h3.order-info-title Товары
+                            .order-products-date Дата доставки 23 декабря
+                        .order-products-items
+                            .order-products-item
+                                .order-products-photo
+                                    img(src="img/order/card1.jpg", alt="товар")
+                                p.order-products-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                p.order-products-quantity 1 шт.
+                            .order-products-item
+                                .order-products-photo
+                                    img(src="img/order/card2.jpg", alt="товар")
+                                p.order-products-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                p.order-products-quantity 2 шт.
+                            .order-products-item
+                                .order-products-photo
+                                    img(src="img/order/card3.jpg", alt="товар")
+                                p.order-products-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                p.order-products-quantity 3 шт.
+                    .order-services
+                            h3.order-info-title Дополнительные услуги
+                            p.order-services-text Комментарий
+                            textarea.order-services-textarea(placeholder="Укажите какие дополнительные услуги требуются, например поднятие посылки до нужного этажа...")
+                .basket-result
+                    .basket-result-head
+                        .basket-result-title Ваша корзина
+                        .basket-result-weight 1 товар - <span>2.30</span> кг 
+                    dl.basket-result-details
+                        dt.basket-result-term Товары
+                        dd.basket-result-price 5 990 ₽
+                        dt.basket-result-term Скидка
+                        dd.basket-result-price.basket-result-price-sale -2 391 ₽
+                        dt.basket-result-term Доставка
+                        dd.basket-result-price Бесплатно
+                    dl.basket-result-total
+                        dt Общая стоимость
+                        dd.basket-result-summ 3 599 ₽
+                    button.basket-result-btn.green-btn Перейти к оформлению
+                    p.basket-result-disclaimer Для оформления кредита необходимо добавить товары на сумму <span> 5 000 </span> ₽

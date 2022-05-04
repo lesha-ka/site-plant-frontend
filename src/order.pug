@@ -1,0 +1,13 @@
+block variables
+    - var title = 'Оформление заказа'
+    - var page = 'order'
+include html/static/mixins
+
+html(lang='ru')
+    head 
+        include html/static/head
+    body 
+        div(class=`wrapper js-wrapper wrapper-${page}`)
+            include html/static/header
+            include html/pages/order
+            include html/static/footer

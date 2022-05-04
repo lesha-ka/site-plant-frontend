@@ -1,0 +1,478 @@
+.main-basket {
+    padding: 70px 0 120px;
+    @media #{$w768} {
+        padding: 30px 0 100px;
+    }
+    @media #{$w360} {
+        padding: 20px 0 100px;
+    }
+}
+.order {
+    &-title {
+        margin-top: 20px;
+        font-family: $oswald;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 44px;
+        color: $d-green;
+    }
+    &-wrapper {
+        display: flex;
+        margin-top: 20px;
+    }
+    &-info {
+        flex: 1 0 auto;
+        max-width: 890px;
+    }
+    &-info-title {
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-24;
+        color: $blue;
+        padding-bottom: 20px;
+        border-bottom: 1.5px solid $blue;
+    }
+    &-recipient {
+        padding: 20px;
+        background: $d-white;
+        background-repeat: 10px;
+        &-inputs {
+            margin-top: 30px;
+            display: flex;
+        }
+        &-inputs-item {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+        &-label {
+            font-weight: 700;
+            @include fz-12;
+            color: $d-green;
+            margin-bottom: 5px;
+        }
+        &-input {
+            width: 260px;
+            padding: 16px;
+            font-weight: 600;
+            @include fz-14;
+            background: rgba(61, 79, 60, 0.1);
+            border: 2px solid rgba(61, 79, 60, 0.05);
+            box-sizing: border-box;
+            border-radius: 5px;
+            &::placeholder {
+                opacity: 0.6;
+            }
+            &:hover {
+                background: rgba(61, 79, 60, 0.1);
+                border: 2px solid rgba(103, 175, 40, 0.6);
+            }
+            &:focus-visible {
+                background: #FFFFFF;
+                border: 2px solid rgba(103, 175, 40, 0.6);
+                outline: none;
+            }
+        }
+        &-add {
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: $oswald;
+            @include fz-14;
+            font-weight: 500;
+            color: $green;
+        }
+    }
+    &-type {
+        margin-top: 30px;
+        padding: 20px;
+        background: $d-white;
+        border-radius: 10px 10px 0 0 ;
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.5px solid $blue;
+            & .order-info-title {
+                border-bottom: 0;
+            }
+        }
+        &-link {
+            font-weight: 600;
+            @include fz-14;
+            text-align: right;
+            text-decoration-line: underline;
+            color: #67AF28;
+        }
+        &-tabs {
+            margin-top: 30px;
+            display: flex;
+        }
+        &-tab {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            &:checked+label {
+                color: $white;
+                background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+                box-shadow: 0px 0px 6px rgba(253, 198, 48, 0.35);
+            }
+            &+label {
+                background: rgba(61, 79, 60, 0.05);
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 13px;
+                text-align: center;
+                min-width: 170px;
+                font-family: $oswald;
+                font-weight: 500;
+                @include fz-14;
+                color: $d-green;
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+                &:hover {
+                    box-shadow: 0px 0px 6px rgba(253, 198, 48, 0.35);
+                    background: linear-gradient(92.34deg, #67AF2833 -28.45%, #6CDA0D33 101.05%);
+                }
+            }
+        }
+        &-content {
+            display: none;
+            margin-top: 40px;
+            &.is-show {
+                display: block;
+            }
+        }
+        &-pickup {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+        &-map {
+            display: inline-block;
+            max-width: 542px;
+            width: 542px;
+            overflow: hidden;
+            height: 360px;
+        }
+        &-input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            &:checked+label {
+                border: 1px solid rgba(61, 79, 60, 0.5);
+            }
+        }
+        &-item {
+            cursor: pointer;
+            max-width: 285px;
+            display: block;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(61, 79, 60, 0.05);
+            border-radius: 5px;
+            border: 1px solid transparent;
+        }
+        &-address {
+            display: block;
+            @include fz-14;
+            font-weight: 600;
+            color: $d-green;
+        }
+        &-info {
+            margin-top: 10px;
+            display: block;
+            @include fz-12;
+            font-weight: 600;
+            color: $green;
+        }
+    }
+    &-date {
+        padding: 20px;
+        background: $d-white;
+        border-radius: 0 0 10px 10px;
+        &-wrapper {
+            margin-top: 30px;
+            display: flex;
+        }
+        &-input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        &-datepicker {
+            & .ui-widget.ui-widget-content {
+                background: rgba(61, 79, 60, 0.05);
+                border-radius: 5px;
+                border: none;
+                padding: 15px;
+            }
+            & .ui-datepicker .ui-datepicker-header {
+                padding: 0;
+                background: transparent;
+                border: none;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #dfe6db;
+            }
+            & .ui-datepicker-year {
+                display: none;
+            }
+            & .ui-datepicker .ui-datepicker-next {
+                background-image: url(../img/icons/pagination-next.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 8px;
+                height: 100%;
+                right: 15px;
+                top: 4px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+            & .ui-datepicker .ui-datepicker-prev {
+                background-image: url(../img/icons/pagination-prev.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 8px;
+                height: 100%;
+                left: 15px;
+                top: 4px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+            & .ui-datepicker .ui-datepicker-title {
+                font-family: $oswald;
+                font-weight: 500;
+                @include fz-16;
+                color: $d-green;
+            }
+            & .ui-datepicker th {
+                font-weight: 600;
+                @include fz-12;
+                color: $d-green;
+            }
+            & .ui-datepicker td a, & .ui-datepicker td span {
+                width: 28px;
+                height: 28px;
+                padding: 6px 7px;
+                font-weight: 600;
+                font-size: 12px;
+                color: #859182;
+                border: none;
+                background: transparent;
+                text-align: center;
+                margin-top: 5px;
+                border: 1px solid transparent;
+            }
+            & .ui-datepicker .ui-state-active {
+                border-radius: 5px;
+                background: $white;
+                border: 1px solid $green;
+            }
+        }
+        &-info {
+            margin-left: 20px;
+            width: 100%;
+        }
+        &-table {
+            border-collapse: separate;
+            border-spacing: 0 7px;
+            width: 100%;
+        }
+        &-thead {
+            text-align: left;
+            & tr {
+                background: none;
+            }
+            & th {
+                padding: 0;
+                font-weight: 600;
+                @include fz-12;
+                color: $d-green;
+                &:first-child {
+                    padding-left: 0;
+                    width: 33%;
+                }
+                &:nth-child(2) {
+                    width: 44%;
+                }
+            }
+        }
+        &-tr {
+            background: rgba(61, 79, 60, 0.05);
+        }
+        &-th {
+            border: none;
+            padding: 15px 0; 
+            text-align: left;
+            font-weight: 600;
+            @include fz-12;
+            color: #859182;
+            &:first-child {
+                border-radius: 5px 0 0 5px;
+                padding-left: 15px;
+            }
+            &:nth-child(2) {
+                width: 44%;
+            }
+            &:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+    &-pay {
+        margin-top: 30px;
+        padding: 20px;
+        background: $d-white;
+        border-radius: 10px;
+        &-subtitle {
+            margin-top: 20px;
+            font-weight: 600;
+            @include fz-14;
+            color: $d-green;
+        }
+        &-input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            &:not(:disabled):not(:checked)+label:hover::before {
+                background: #7DCB39;
+                border: 1px solid #99D764;
+            }
+            &:not(:disabled):not(:checked)+label:active::before {
+                background: #7DCB39;
+                border: 1px solid #99D764;
+            }
+            &:checked + label::before {
+                background: linear-gradient(92.34deg,#67af28 -28.45%,#6cda0d 101.05%);
+                border: 3px solid #a2e16b;
+            }
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-item {
+            cursor: pointer;
+            position: relative;
+            width: calc(33.33% - 23.3px);
+            border-radius: 5px;
+            padding: 15px 15px 15px 50px;
+            background: rgba(61, 79, 60, 0.05);
+            &::before {
+                position: absolute;
+                left: 15px;
+                top: calc(50% - 7.5px);
+                content: "";
+                width: 19px;
+                height: 19px;
+                border: 1px solid $gray;
+                border-radius: 50%;
+            }
+        }
+        &-way {
+            font-weight: 600;
+            @include fz-14;
+            color: $d-green;
+        }
+        &-info {
+            margin-top: 10px;
+            font-weight: 600;
+            @include fz-12;
+            color: #859182;
+        }
+    }
+    &-products {
+        margin-top: 30px;
+        padding: 20px 20px 0;
+        background: $d-white;
+        border-radius: 10px;
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.5px solid $blue;
+            padding-bottom: 20px;
+            & .order-info-title {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+        &-date {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-16;
+            color: $d-green;
+        }
+        &-items {
+            display: flex;
+            margin-top: 30px;
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+        &-item {
+            max-width: 23%;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-right: 20px;
+        }
+        &-photo {
+            margin: 0 auto;
+            width: 120px;
+            border-radius: 12px;
+            height: 154px;
+        }
+        &-name {
+            margin-top: 20px;
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-12;
+            color: $d-green;
+        }
+        &-quantity {
+            margin-top: 6;
+            font-weight: 600;
+            @include fz-12;
+            color: #899586;
+        }
+    }
+    &-services {
+        margin-top: 30px;
+        padding: 20px 20px 30px;
+        background: $d-white;
+        border-radius: 10px;
+        &-text {
+            margin-top: 30px;
+            font-weight: 700;
+            @include fz-12;
+            color: $d-green;
+        }
+        &-textarea {
+            margin-top: 5px;
+            font-weight: 600;
+            @include fz-14;
+            color: $d-green;
+            width: 100%;
+            height: 127px;
+            padding: 16px;
+            resize: none;
+            background: #e8eee4;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            &:hover {
+                border: 2px solid rgba(103, 175, 40, 0.6);
+            }
+            &:focus-visible {
+                outline: none;
+                background: $white;
+                border: 2px solid rgba(103, 175, 40, 0.6);
+            }
+        }
+    }
+}

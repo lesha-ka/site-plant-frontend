@@ -15,6 +15,8 @@ import { getSelect }from './modules/select.js';
 import { getRangeFilter }from './modules/range-filter.js';
 import { getCatalogControl } from './modules/catalog-control.js';
 import { getFormCount } from './modules/form-count.js';
+import { getDatepicker } from './modules/datepicker.js';
+import { getMap } from './modules/map.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,4 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	getRangeFilter();
 	getCatalogControl();
 	getFormCount();
+	getMap();
+	getDatepicker();
 });

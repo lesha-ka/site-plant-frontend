@@ -1,6 +1,7 @@
 @import "fonts";
 @import "vendor/slider";
 @import "vendor/ion.rangeSlider";
+@import "vendor/datepicker";
 @import "commons/var";
 @import "commons/mixins";
 @import "commons/base";
@@ -15,5 +16,6 @@
 @import "components/catalog";
 @import "components/card";
 @import "components/basket";
+@import "components/order";
 @import "components/stars";
 @import "commons/js";

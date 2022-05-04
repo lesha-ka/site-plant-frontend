@@ -1,6 +1,7 @@
 main(class=`main main-${page}`)
-    .container.container-narrow.container-notablet
+    .container.container-narrow
         +breadcrumb(['Главная'], 'Корзина')
+    .container.container-narrow.container-notablet
         section.basket
             h2.basket-title Корзина
             .basket-wrapper
@@ -19,14 +20,16 @@ main(class=`main main-${page}`)
                                 p.basket-products-name Гортензия метельчатая в ассортименте (саженцы)
                                 .basket-products-btns 
                                     button.basket-products-btn(type="button") В список желаемого
-                                    button.basket-products-btn(type="button") Отложить
+                                        span.basket-products-btn-less В желаемое
+                                        img.basket-products-btn-img(src="img/icons/heart.svg", alt="В избранное")
+                                    button.basket-products-btn.basket-products-btn-text(type="button") Отложить
                             .basket-products-price 
-                                p 18 090 ₽
-                                p.basket-products-price-del 19 390 ₽
-                                p.basket-products-price-sale Выгода 1 300 ₽ !
+                                p 18&nbsp;090&nbsp;₽
+                                p.basket-products-price-del 19&nbsp;390&nbsp;₽
+                                p.basket-products-price-sale Выгода 1&nbsp;300&nbsp;₽&nbsp;!
                             .basket-products-control.js-basketCount
                                 input.basket-products-minus.js-minus(type="button")
-                                input.basket-products-count.js-count(type="text" value="2")
+                                input.basket-products-count.js-count.js-countPieces(type="text" value="2") 
                                 input.basket-products-plus.js-plus(type="button")
                             button.basket-products-delete(type="button")
                         .basket-products-item
@@ -37,15 +40,16 @@ main(class=`main main-${page}`)
                             .basket-products-text 
                                 p.basket-products-name Гортензия метельчатая в ассортименте (саженцы)
                                 .basket-products-btns 
-                                    button.basket-products-btn(type="button") В список желаемого
-                                    button.basket-products-btn(type="button") Отложить
+                                    button.basket-products-btn(type="button") В список желаемого <span class="basket-products-btn-less"> В желаемое</span>
+                                        img.basket-products-btn-img(src="img/icons/heart.svg", alt="В избранное")
+                                    button.basket-products-btn.basket-products-btn-text(type="button") Отложить
                             .basket-products-price 
-                                p 18 090 ₽
-                                p.basket-products-price-del 19 390 ₽
-                                p.basket-products-price-sale Выгода 1 300 ₽ !
+                                p 18&nbsp;090&nbsp;₽
+                                p.basket-products-price-del 19&nbsp;390&nbsp;₽
+                                p.basket-products-price-sale Выгода 1300&nbsp;₽&nbsp;!
                             .basket-products-control.js-basketCount
                                 input.basket-products-minus.js-minus(type="button")
-                                input.basket-products-count.js-count(type="text" value="1")
+                                input.basket-products-count.js-count.js-countPieces(type="text" value="1")
                                 input.basket-products-plus.js-plus(type="button")
                             button.basket-products-delete(type="button")
                     .basket-banner
