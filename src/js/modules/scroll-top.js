@@ -1,7 +1,7 @@
 export const getScrollTop = () => {
     if(document.querySelector('.js-scrollTop')) {
             const bodyHeight = document.querySelector(".wrapper").offsetHeight;
-            const screenHeight = window.screen.height
+            const screenHeight = window.screen.height + 200;
             var target = document.querySelector("footer");
             var scrollToTopBtn = document.querySelector(".js-scrollTop");
             var rootElement = document.body;

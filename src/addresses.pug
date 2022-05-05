@@ -1,0 +1,13 @@
+block variables
+    - var title = 'Адресная книга'
+    - var page = 'addresses'
+include html/static/mixins
+
+html(lang='ru')
+    head 
+        include html/static/head
+    body 
+        div(class=`wrapper js-wrapper wrapper-${page}`)
+            include html/static/header
+            include html/pages/addresses
+            include html/static/footer

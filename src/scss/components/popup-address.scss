@@ -1,0 +1,86 @@
+.popup {
+    &-wrapper-address {
+        background: url(../img/popup-bg.png) center no-repeat;
+        background-size: cover;
+        padding-bottom: 0;
+    }
+    &-address {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    &-address-inner {
+        text-align: center;
+        width: 720px;
+        position: relative;
+        border-radius: 10px;
+        background: $d-white;
+        padding: 60px 30px 50px;
+    }
+    &-address-close {
+        cursor: pointer;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: url(../img/icons/popup-close.svg) center no-repeat;
+        top: 30px;
+        right: 30px;
+    }
+    &-address-title {
+        text-align: center;
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-24;
+        color: $d-green;
+        padding-bottom: 20px;
+    }
+    &-address-inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-address-input-wrapper {
+        display: inline-block;
+        margin-top: 40px;
+        width: 100%;
+        &-short {
+            width: calc(50% - 15px);
+        }
+    }
+    &-address-input-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: 600;
+        @include fz-12;
+        color: $d-green;
+    }
+    &-address-input {
+        max-height: 47px;
+        padding: 14px 15px;
+        @include fz-14;
+        font-weight: 600;
+        color: $d-green;
+        width: 100%;
+        background: rgba(61, 79, 60, 0.1);
+        border: 2px solid rgba(61, 79, 60, 0.05);
+        box-sizing: border-box;
+        border-radius: 5px;
+        &::placeholder {
+            opacity: 0.6;
+        }
+        &:hover {
+            background: rgba(61, 79, 60, 0.1);
+            border: 2px solid rgba(103, 175, 40, 0.6);
+        }
+        &:focus-visible {
+            background: #FFFFFF;
+            border: 2px solid rgba(103, 175, 40, 0.6);
+            outline: none;
+        }
+    }
+    &-address-btn {
+        margin-top: 60px;
+        width: 200px;
+    }
+}

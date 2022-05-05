@@ -1,0 +1,18 @@
+.links {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link {
+    font-family: $oswald;
+    font-size: 28px;
+    line-height: 1.33;
+    color: $d-green;
+    margin-top: 15px;
+    @media #{$w768} {
+        font-size: 18px;
+    }
+}

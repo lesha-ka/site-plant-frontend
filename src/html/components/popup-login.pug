@@ -1,0 +1,64 @@
+.popup.js-popup(id="login")
+    .popup-wrapper.js-fixBlock
+        .popup-login
+            .login-inner.login-tabs
+                input#tab-registration(type='radio' name='tab-btn' value='' checked)
+                label.login-tabs-label(for='tab-registration') Регистрация
+                input#tab-login(type='radio' name='tab-btn' value='')
+                label.login-tabs-label(for='tab-login') Вход
+                .login-tabs-item.tab-registration
+                    p.login-tabs-title Создать аккаунт
+                    .js-registrationStepFirst
+                        .login-tabs-way
+                            input.login-tabs-radio#way-email(type="radio" name="reg-way" value="email")
+                            label(for='way-email')
+                                .login-tabs-icon 
+                                    img(src="img/icons/email.svg" alt="емейл")
+                                p.login-tabs-text Регистрация по почте
+                        .login-tabs-way
+                            input.login-tabs-radio#way-phone(type="radio" name="reg-way" value="phone")
+                            label(for='way-phone')
+                                .login-tabs-icon 
+                                    img(src="img/icons/telephone.svg" alt="телефон")
+                                p.login-tabs-text Регистрация по телефону
+                        button.green-btn.login-tabs-btn.js-registrationWay(type="button") Продолжить
+                        p.login-tabs-close.js-popupClose Отмена
+                        .login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
+                    .js-hide.js-registrationMail
+                        form(action="post")
+                            input.login-tabs-input(type="mail" name="tel" placeholder="Почта")
+                            span.login-tabs-input-active
+                            input.login-tabs-input(type="password" name="password" placeholder="Пароль" autocomplete="off")
+                            span.login-tabs-input-active
+                            button.green-btn.login-tabs-btn(type="submit") Продолжить
+                        p.login-tabs-close.js-popupClose Отмена
+                        p.login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
+                    .js-hide.js-registrationPhone
+                        form(action="post")
+                            input.login-tabs-input(type="tel" name="tel" placeholder="Почта" autocomplete="off")
+                            span.login-tabs-input-active
+                            input.login-tabs-input(type="password" name="password" placeholder="Пароль" autocomplete="off")
+                            span.login-tabs-input-active
+                            button.green-btn.login-tabs-btn(type="submit") Продолжить
+                        p.login-tabs-close.js-popupClose Отмена
+                        p.login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
+                .login-tabs-item.tab-login
+                    p.login-tabs-title Войти
+                    form(action="post")
+                        input.login-tabs-input(type="text" name="login" placeholder="Почта/телефон" autocomplete="off")
+                        span.login-tabs-input-active
+                        input.login-tabs-input(type="password" name="password" placeholder="Пароль" autocomplete="off")
+                        span.login-tabs-input-active
+                        button.green-btn.login-tabs-btn(type="submit") Войти
+                    p.login-tabs-close.js-popupClose Отмена
+                    p.login-tabs-forget.js-popupOpen(data-popup="forget") Забыл пароль
+.popup.js-popup(id="forget") 
+    .popup-wrapper.js-fixBlock
+        .popup-login
+            .login-inner.login-forget
+                p.login-tabs-title Восстановить пароль
+                form(action="post")
+                        input.login-tabs-input(type="text" name="login" placeholder="Код с почты или телефона" autocomplete="off")
+                        span.login-tabs-input-active
+                        button.green-btn.login-tabs-btn(type="submit") Продолжить
+                p.login-tabs-close.js-popupClose Отмена

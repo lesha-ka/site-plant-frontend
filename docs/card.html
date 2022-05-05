@@ -114,82 +114,6 @@
               </nav>
             </div>
           </div>
-          <div class="popup js-popup" id="login">
-            <div class="popup-wrapper js-fixBlock">
-              <div class="popup-login">
-                <div class="login-inner login-tabs">
-                  <input id="tab-registration" type="radio" name="tab-btn" value="" checked="checked"/>
-                  <label class="login-tabs-label" for="tab-registration">Регистрация</label>
-                  <input id="tab-login" type="radio" name="tab-btn" value=""/>
-                  <label class="login-tabs-label" for="tab-login">Вход</label>
-                  <div class="login-tabs-item tab-registration">
-                    <p class="login-tabs-title">Создать аккаунт</p>
-                    <div class="js-registrationStepFirst">
-                      <div class="login-tabs-way">
-                        <input class="login-tabs-radio" id="way-email" type="radio" name="reg-way" value="email"/>
-                        <label for="way-email">
-                          <div class="login-tabs-icon"> <img src="img/icons/email.svg" alt="емейл"/></div>
-                          <p class="login-tabs-text">Регистрация по почте</p>
-                        </label>
-                      </div>
-                      <div class="login-tabs-way">
-                        <input class="login-tabs-radio" id="way-phone" type="radio" name="reg-way" value="phone"/>
-                        <label for="way-phone">
-                          <div class="login-tabs-icon"> <img src="img/icons/telephone.svg" alt="телефон"/></div>
-                          <p class="login-tabs-text">Регистрация по телефону</p>
-                        </label>
-                      </div>
-                      <button class="green-btn login-tabs-btn js-registrationWay" type="button">Продолжить</button>
-                      <p class="login-tabs-close js-popupClose">Отмена</p>
-                      <div class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</div>
-                    </div>
-                    <div class="js-hide js-registrationMail">
-                      <form action="post">
-                        <input class="login-tabs-input" type="mail" name="tel" placeholder="Почта"/><span class="login-tabs-input-active"></span>
-                        <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                        <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
-                      </form>
-                      <p class="login-tabs-close js-popupClose">Отмена</p>
-                      <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
-                    </div>
-                    <div class="js-hide js-registrationPhone">
-                      <form action="post">
-                        <input class="login-tabs-input" type="tel" name="tel" placeholder="Почта" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                        <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                        <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
-                      </form>
-                      <p class="login-tabs-close js-popupClose">Отмена</p>
-                      <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
-                    </div>
-                  </div>
-                  <div class="login-tabs-item tab-login">
-                    <p class="login-tabs-title">Войти</p>
-                    <form action="post">
-                      <input class="login-tabs-input" type="text" name="login" placeholder="Почта/телефон" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                      <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                      <button class="green-btn login-tabs-btn" type="submit">Войти</button>
-                    </form>
-                    <p class="login-tabs-close js-popupClose">Отмена</p>
-                    <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="popup js-popup" id="forget"> 
-            <div class="popup-wrapper js-fixBlock">
-              <div class="popup-login">
-                <div class="login-inner login-forget">
-                  <p class="login-tabs-title">Восстановить пароль</p>
-                  <form action="post">
-                    <input class="login-tabs-input" type="text" name="login" placeholder="Код с почты или телефона" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                    <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
-                  </form>
-                  <p class="login-tabs-close js-popupClose">Отмена</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </header>
       <main class="main main-product">
@@ -910,6 +834,180 @@
         </div>
       </footer>
       <script src="js/app.min.js"></script>
+      <div class="popup js-popup" id="login">
+        <div class="popup-wrapper js-fixBlock">
+          <div class="popup-login">
+            <div class="login-inner login-tabs">
+              <input id="tab-registration" type="radio" name="tab-btn" value="" checked="checked"/>
+              <label class="login-tabs-label" for="tab-registration">Регистрация</label>
+              <input id="tab-login" type="radio" name="tab-btn" value=""/>
+              <label class="login-tabs-label" for="tab-login">Вход</label>
+              <div class="login-tabs-item tab-registration">
+                <p class="login-tabs-title">Создать аккаунт</p>
+                <div class="js-registrationStepFirst">
+                  <div class="login-tabs-way">
+                    <input class="login-tabs-radio" id="way-email" type="radio" name="reg-way" value="email"/>
+                    <label for="way-email">
+                      <div class="login-tabs-icon"> <img src="img/icons/email.svg" alt="емейл"/></div>
+                      <p class="login-tabs-text">Регистрация по почте</p>
+                    </label>
+                  </div>
+                  <div class="login-tabs-way">
+                    <input class="login-tabs-radio" id="way-phone" type="radio" name="reg-way" value="phone"/>
+                    <label for="way-phone">
+                      <div class="login-tabs-icon"> <img src="img/icons/telephone.svg" alt="телефон"/></div>
+                      <p class="login-tabs-text">Регистрация по телефону</p>
+                    </label>
+                  </div>
+                  <button class="green-btn login-tabs-btn js-registrationWay" type="button">Продолжить</button>
+                  <p class="login-tabs-close js-popupClose">Отмена</p>
+                  <div class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</div>
+                </div>
+                <div class="js-hide js-registrationMail">
+                  <form action="post">
+                    <input class="login-tabs-input" type="mail" name="tel" placeholder="Почта"/><span class="login-tabs-input-active"></span>
+                    <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                    <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
+                  </form>
+                  <p class="login-tabs-close js-popupClose">Отмена</p>
+                  <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
+                </div>
+                <div class="js-hide js-registrationPhone">
+                  <form action="post">
+                    <input class="login-tabs-input" type="tel" name="tel" placeholder="Почта" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                    <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                    <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
+                  </form>
+                  <p class="login-tabs-close js-popupClose">Отмена</p>
+                  <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
+                </div>
+              </div>
+              <div class="login-tabs-item tab-login">
+                <p class="login-tabs-title">Войти</p>
+                <form action="post">
+                  <input class="login-tabs-input" type="text" name="login" placeholder="Почта/телефон" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                  <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                  <button class="green-btn login-tabs-btn" type="submit">Войти</button>
+                </form>
+                <p class="login-tabs-close js-popupClose">Отмена</p>
+                <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" id="forget"> 
+        <div class="popup-wrapper js-fixBlock">
+          <div class="popup-login">
+            <div class="login-inner login-forget">
+              <p class="login-tabs-title">Восстановить пароль</p>
+              <form action="post">
+                <input class="login-tabs-input" type="text" name="login" placeholder="Код с почты или телефона" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
+              </form>
+              <p class="login-tabs-close js-popupClose">Отмена</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" id="edit1">
+        <div class="popup-wrapper popup-wrapper-address js-fixBlock">
+          <div class="popup-address">
+            <div class="popup-address-inner">
+              <div class="popup-address-close js-popupClose"></div>
+              <h3 class="popup-address-title">Редактировать адрес "Дом Москва"</h3>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Название:</div>
+                <input class="popup-address-input" type="text" placeholder="Дом Москва"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Регион:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодарский Край"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Город:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодар"/>
+                </div>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Дом/офис:</div>
+                  <input class="popup-address-input" type="text" placeholder="Корп 'А'"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Улица:</div>
+                  <input class="popup-address-input" type="text" placeholder="ул. Северная"/>
+                </div>
+              </div>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Получатель:</div>
+                <input class="popup-address-input" type="text" placeholder="Вадим Громов"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Телефон:</div>
+                  <input class="popup-address-input" type="text" placeholder="8 (999) 123-45-67"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Email:</div>
+                  <input class="popup-address-input" type="email" placeholder="Gromow@mail.ru"/>
+                </div>
+              </div>
+              <button class="green-btn popup-address-btn" type="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" id="edit2">
+        <div class="popup-wrapper popup-wrapper-address js-fixBlock">
+          <div class="popup-address">
+            <div class="popup-address-inner">
+              <div class="popup-address-close js-popupClose"></div>
+              <h3 class="popup-address-title">Редактировать адрес "Офис Москва"</h3>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Название:</div>
+                <input class="popup-address-input" type="text" placeholder="Дом Москва"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Регион:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодарский Край"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Город:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодар"/>
+                </div>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Дом/офис:</div>
+                  <input class="popup-address-input" type="text" placeholder="Корп 'А'"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Улица:</div>
+                  <input class="popup-address-input" type="text" placeholder="ул. Северная"/>
+                </div>
+              </div>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Получатель:</div>
+                <input class="popup-address-input" type="text" placeholder="Вадим Громов"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Телефон:</div>
+                  <input class="popup-address-input" type="text" placeholder="8 (999) 123-45-67"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Email:</div>
+                  <input class="popup-address-input" type="email" placeholder="Gromow@mail.ru"/>
+                </div>
+              </div>
+              <button class="green-btn popup-address-btn" type="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

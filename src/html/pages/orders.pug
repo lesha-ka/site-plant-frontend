@@ -1,0 +1,74 @@
+main(class=`main main-${page}`)
+    .container.container-narrow
+        +breadcrumb(['Главная', 'Личный кабинет'], 'Мои заказы')
+    .container.container-narrow.container-notablet
+        section.profile
+            h2.profile-title Морару Валентин
+            .profile-wrapper 
+                aside.profile-menu
+                    nav.profile-menu-links
+                            .profile-menu-title Личный кабинет
+                            a.profile-menu-link(href="/index.html") Профиль
+                            a.profile-menu-link(href="/addresses.html") Адреса
+                            a.profile-menu-link.profile-menu-link-active(href="/orders.html") Мои заказы
+                    button.profile-menu-exit(type="button") Выйти
+                .profile-content
+                    .profile-orders
+                        .profile-orders-head
+                            h3.profile-info-title Мои заказы
+                            .profile-orders-tabs.js-tabMenu
+                                input.profile-orders-tab.js-tabItem(type="radio" name="orders-tab" id="orders-tab-1" class="js-tabItem" value="" checked) 
+                                label(for="order-tab-1") Активные заказы
+                                input.profile-orders-tab.js-tabItem(type="radio" name="orders-tab" id="orders-tab-2" class="js-tabItem" value="")
+                                label(for="order-tab-2") История заказов
+                        .js-tab-content
+                            .profile-orders-content(data-tab="orders-tab-1")
+                                .profile-orders-item 
+                                    .profile-orders-info 
+                                        .profile-orders-title
+                                            .profile-orders-number Заказ №39913105-0002
+                                            .profile-orders-date от 10 декабря 2019
+                                        .profile-orders-status Доставка
+                                        .profile-orders-count
+                                            .profile-orders-summ Заказ №39913105-0002
+                                            a.profile-orders-details(href="/details.html") Подробнее
+                                    .profile-orders-products 
+                                        .profile-orders-product
+                                            .profile-orders-img
+                                                img(src="img/card/offers3.jpg", alt="товар")
+                                            .profile-orders-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                            .profile-orders-quantity 1 шт.
+                                        .profile-orders-product
+                                            .profile-orders-img
+                                                img(src="img/card/offers3.jpg", alt="товар")
+                                            .profile-orders-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                            .profile-orders-quantity 1 шт.
+                                    .profile-orders-control
+                                        a.profile-orders-btn(href="#") Повторный заказ
+                                        a.profile-orders-btn(href="/details.html") Посмотреть заказ
+                                .profile-orders-item 
+                                    .profile-orders-info 
+                                        .profile-orders-title
+                                            .profile-orders-number Заказ №39913105-0002
+                                            .profile-orders-date от 10 декабря 2019
+                                        .profile-orders-status Получено
+                                        .profile-orders-count
+                                            .profile-orders-summ Заказ №39913105-0002
+                                            a.profile-orders-details(href="/details.html") Подробнее
+                                    .profile-orders-products 
+                                        .profile-orders-product
+                                            .profile-orders-img
+                                                img(src="img/card/offers3.jpg", alt="товар")
+                                            .profile-orders-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                            .profile-orders-quantity 1 шт.
+                                        .profile-orders-product
+                                            .profile-orders-img
+                                                img(src="img/card/offers3.jpg", alt="товар")
+                                            .profile-orders-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                            .profile-orders-quantity 1 шт.
+                                    .profile-orders-control
+                                        a.profile-orders-btn(href="#") Повторный заказ
+                                        a.profile-orders-btn(href="/details.html") Посмотреть заказ
+
+                            .profile-orders-content(data-tab="orders-tab-2")
+                                p 45

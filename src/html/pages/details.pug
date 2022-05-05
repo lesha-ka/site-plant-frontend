@@ -1,0 +1,16 @@
+main(class=`main main-${page}`)
+    .container.container-narrow
+        +breadcrumb(['Главная', 'Личный кабинет', 'Мои заказы'], 'Заказ №39913105-002')
+    .container.container-narrow.container-notablet
+        section.profile
+            h2.profile-title Морару Валентин
+            .profile-wrapper 
+                aside.profile-menu
+                    nav.profile-menu-links
+                            .profile-menu-title Личный кабинет
+                            a.profile-menu-link(href="/index.html") Профиль
+                            a.profile-menu-link(href="/addresses.html") Адреса
+                            a.profile-menu-link.profile-menu-link-active(href="/orders.html") Мои заказы
+                    button.profile-menu-exit(type="button") Выйти
+                .profile-content
+                    .profile-details

@@ -8,5 +8,17 @@ html(lang='ru')
     body 
         div(class=`wrapper js-wrapper wrapper-${page}`)
             include html/static/header
-            include html/pages/index
+            main(class=`main main-${page}`)
+                .container 
+                    ul.links 
+                        li.link <a href="main.html"> Главная</a>
+                        li.link <a href="card.html"> Карточка товара</a>
+                        li.link <a href="catalog.html"> Каталог</a>
+                        li.link <a href="basket.html"> Корзина</a>
+                        li.link <a href="order.html"> Оформление заказа</a>
+                        li.link <a href="wishes.html"> Мои желания</a>
+                        li.link <a href="profile.html"> Личный кабинет (Профиль)</a>
+                        li.link <a href="addresses.html"> Личный кабинет (Адреса)</a>
+                        li.link <a href="orders.html"> Личный кабинет (Мои заказы)</a>
+                        li.link <a href="details.html"> Личный кабинет (Заказ детально)</a>
             include html/static/footer

@@ -114,554 +114,22 @@
               </nav>
             </div>
           </div>
-          <div class="popup js-popup" id="login">
-            <div class="popup-wrapper js-fixBlock">
-              <div class="popup-login">
-                <div class="login-inner login-tabs">
-                  <input id="tab-registration" type="radio" name="tab-btn" value="" checked="checked"/>
-                  <label class="login-tabs-label" for="tab-registration">Регистрация</label>
-                  <input id="tab-login" type="radio" name="tab-btn" value=""/>
-                  <label class="login-tabs-label" for="tab-login">Вход</label>
-                  <div class="login-tabs-item tab-registration">
-                    <p class="login-tabs-title">Создать аккаунт</p>
-                    <div class="js-registrationStepFirst">
-                      <div class="login-tabs-way">
-                        <input class="login-tabs-radio" id="way-email" type="radio" name="reg-way" value="email"/>
-                        <label for="way-email">
-                          <div class="login-tabs-icon"> <img src="img/icons/email.svg" alt="емейл"/></div>
-                          <p class="login-tabs-text">Регистрация по почте</p>
-                        </label>
-                      </div>
-                      <div class="login-tabs-way">
-                        <input class="login-tabs-radio" id="way-phone" type="radio" name="reg-way" value="phone"/>
-                        <label for="way-phone">
-                          <div class="login-tabs-icon"> <img src="img/icons/telephone.svg" alt="телефон"/></div>
-                          <p class="login-tabs-text">Регистрация по телефону</p>
-                        </label>
-                      </div>
-                      <button class="green-btn login-tabs-btn js-registrationWay" type="button">Продолжить</button>
-                      <p class="login-tabs-close js-popupClose">Отмена</p>
-                      <div class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</div>
-                    </div>
-                    <div class="js-hide js-registrationMail">
-                      <form action="post">
-                        <input class="login-tabs-input" type="mail" name="tel" placeholder="Почта"/><span class="login-tabs-input-active"></span>
-                        <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                        <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
-                      </form>
-                      <p class="login-tabs-close js-popupClose">Отмена</p>
-                      <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
-                    </div>
-                    <div class="js-hide js-registrationPhone">
-                      <form action="post">
-                        <input class="login-tabs-input" type="tel" name="tel" placeholder="Почта" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                        <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                        <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
-                      </form>
-                      <p class="login-tabs-close js-popupClose">Отмена</p>
-                      <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
-                    </div>
-                  </div>
-                  <div class="login-tabs-item tab-login">
-                    <p class="login-tabs-title">Войти</p>
-                    <form action="post">
-                      <input class="login-tabs-input" type="text" name="login" placeholder="Почта/телефон" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                      <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                      <button class="green-btn login-tabs-btn" type="submit">Войти</button>
-                    </form>
-                    <p class="login-tabs-close js-popupClose">Отмена</p>
-                    <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="popup js-popup" id="forget"> 
-            <div class="popup-wrapper js-fixBlock">
-              <div class="popup-login">
-                <div class="login-inner login-forget">
-                  <p class="login-tabs-title">Восстановить пароль</p>
-                  <form action="post">
-                    <input class="login-tabs-input" type="text" name="login" placeholder="Код с почты или телефона" autocomplete="off"/><span class="login-tabs-input-active"></span>
-                    <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
-                  </form>
-                  <p class="login-tabs-close js-popupClose">Отмена</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </header>
       <main class="main main-index">
-        <section class="stocks">
-          <div class="container container-notablet">
-            <article class="banner">
-              <h2 class="banner-title">Акция</h2>
-              <p class="banner-subtitle">Скидки на все<br>ливственные деревья<span class="banner-date">Конец акции 25.03.2022</span></p>
-            </article>
-          </div>
-          <div class="container container-nomobile">
-            <article class="offers">
-              <h3 class="offers-title">Специальные предложения </h3>
-              <div class="offers-timer"><span class="offers-timer-item">1 день</span>:<span class="offers-timer-item">8 часов</span>:<span class="offers-timer-item">15 минут</span></div>
-              <ul class="offers-cards js-moreBox js-offerSlider">
-                <li class="offers-card"> <img src="img/index/offer1.jpg" alt="Кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer1" name="offer1"/>
-                      <label for="offer1"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </li>
-                <li class="offers-card"> <img src="img/index/offer2.jpg" alt="Кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer2" name="offer2"/>
-                      <label for="offer2"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </li>
-                <li class="offers-card"> <img src="img/index/offer3.jpg" alt="Кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer3" name="offer3"/>
-                      <label for="offer3"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </li>
-                <li class="offers-card"> <img src="img/index/offer4.jpg" alt="Кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer4" name="offer4"/>
-                      <label for="offer4"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="submit"></button>
-                      </div>
-                    </div>
-                  </form>
-                </li>
-                <li class="offers-card"> <img src="img/index/offer1.jpg" alt="Кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer5" name="offer5"/>
-                      <label for="offer5"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </li>
-              </ul>
-              <button class="offers-cards-more js-more" type="button">Показать еще</button>
-            </article>
-          </div>
-        </section>
-        <section class="indicators"> 
-          <div class="container container-notablet">
-            <div class="indicators-inner"> 
-              <div class="indicators-text"> 
-                <h3 class="indicators-title">В&nbsp;нашем саду <br> более 10&nbsp;000+ растений</h3>
-                <p class="indicators-description">Зелёные растения обогащают атмосферу кислородом&nbsp;и является основным источником энергии и&nbsp;органического материала почти для всех экосистем.</p>
-              </div>
-              <ul class="indicators-items">
-                <li class="indicators-item">
-                  <div class="indicators-value">52+</div>
-                  <div class="indicators-parameter">Столько расстений мы продаем в в час</div>
-                </li>
-                <li class="indicators-item">
-                  <div class="indicators-value">10+</div>
-                  <div class="indicators-parameter">Столько расстений мы продаем в в час</div>
-                </li>
-                <li class="indicators-item">
-                  <div class="indicators-value">30+</div>
-                  <div class="indicators-parameter">Столько расстений мы продаем в в час</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <div class="container container-notablet">
-          <section class="products">
-            <div class="products-item"> 
-              <div class="products-header"> 
-                <div class="products-name">Лето</div>
-              </div>
-              <div class="products-banner"> <img class="products-slider-img" src="img/index/summer1.jpg" alt="летнее растение"/>
-                <div class="products-slider-sale">
-                  <p class="products-slider-text">Скидки на все летние растения</p>
-                  <p class="products-slider-value"><small>До</small> 20%</p>
-                </div>
-              </div>
-              <div class="products-slider js-productsSlider">
-                <div class="products-slider-item card card-banner"><img class="products-slider-img" src="img/index/summer1.jpg" alt="летнее растение"/>
-                  <div class="products-slider-sale">
-                    <p class="products-slider-text">Скидки на все летние растения</p>
-                    <p class="products-slider-value"><small>До</small> 20%</p>
-                  </div>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer2.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="summer1" name="summer1"/>
-                      <label for="summer1"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer3.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="summer2" name="summer2"/>
-                      <label for="summer2"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer2.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="summer3" name="summer3"/>
-                      <label for="summer3"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/summer3.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="summer4" name="summer4"/>
-                      <label for="summer4"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="products-item"> 
-              <div class="products-header"> 
-                <div class="products-name">Кустарники</div>
-                <ul class="products-nav">
-                  <li class="products-nav-item"> <a href="#">Распродажа</a></li>
-                  <li class="products-nav-item"> <a href="#">Новинки</a></li>
-                  <li class="products-nav-item"> <a href="#">Советуем</a></li>
-                  <li class="products-nav-item"> <a href="#">Акция</a></li>
-                </ul>
-              </div>
-              <div class="products-slider js-productsSlider">
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush1.jpg" alt="кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="bush1" name="bush1"/>
-                      <label for="bush1"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush2.jpg" alt="кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="bush2" name="bush2"/>
-                      <label for="bush2"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush3.jpg" alt="кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="bush3" name="bush3"/>
-                      <label for="bush3"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush4.jpg" alt="кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="bush4" name="bush4"/>
-                      <label for="bush4"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/bush1.jpg" alt="кустарник"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="bush5" name="bush5"/>
-                      <label for="bush5"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div><a class="products-more" href="#">Все товары категории</a>
-            </div>
-            <div class="products-item"> 
-              <div class="products-header"> 
-                <div class="products-name">Ягоды</div>
-              </div>
-              <div class="products-banner"><img class="products-slider-img" src="img/index/berries3.jpg" alt="ягоды"/>
-                <div class="products-slider-sale">
-                  <p class="products-slider-text">Скидки на все растения из&nbsp;раздела "Ягодные"</p>
-                  <p class="products-slider-value products-slider-value-red"><small>До</small> 20%</p>
-                </div>
-              </div>
-              <div class="products-slider js-productsSlider">
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries1.jpg" alt="ягоды"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="berries1" name="berries1"/>
-                      <label for="berries1"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries2.jpg" alt="ягоды"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="berries2" name="berries2"/>
-                      <label for="berries2"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card card-banner"><img class="products-slider-img" src="img/index/berries3.jpg" alt="ягоды"/>
-                  <div class="products-slider-sale">
-                    <p class="products-slider-text">Скидки на все растения из&nbsp;раздела "Ягодные"</p>
-                    <p class="products-slider-value products-slider-value-red"><small>До</small> 20%</p>
-                  </div>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/berries1.jpg" alt="ягоды"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="berries3" name="berries3"/>
-                      <label for="berries3"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <section class="categories">
-          <div class="container container-notablet">
-            <h3 class="categories-title">Категории</h3>
-            <ul class="categories-list js-categoriesSlider">
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories1.svg" alt="Лиственные"/></div>
-                  <div class="categories-name">Лиственные деревья</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories2.svg" alt="Кустарники"/></div>
-                  <div class="categories-name">Кустарники</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories3.svg" alt="Хвойные"/></div>
-                  <div class="categories-name">Хвойные растения</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories4.svg" alt="Плодово-ягодные"/></div>
-                  <div class="categories-name">Плодово-ягодные</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories5.svg" alt="Бонсаи и топиары"/></div>
-                  <div class="categories-name">Бонсаи и топиары</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories6.svg" alt="Solitaire"/></div>
-                  <div class="categories-name">Solitaire</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories7.svg" alt="Крупномеры"/></div>
-                  <div class="categories-name">Крупномеры</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories8.svg" alt="Можжевильники"/></div>
-                  <div class="categories-name">Можжевильники</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories9.svg" alt="Растения в контейнерах"/></div>
-                  <div class="categories-name">Растения <br>в контейнерах</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories10.svg" alt="Хиты продаж"/></div>
-                  <div class="categories-name">Хиты продаж</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories11.svg" alt="Новинки"/></div>
-                  <div class="categories-name">Новинки</div></a></li>
-              <li class="categories-item"><a href="#"> 
-                  <div class="categories-img"> <img src="img/index/categories12.svg" alt="Сопутсвующие товары"/></div>
-                  <div class="categories-name">Сопутсвующие товары</div></a></li>
-            </ul>
-          </div>
-        </section>
-        <div class="container container-notablet">
-          <section class="viewed">
-            <div class="viewed-item"> 
-              <div class="products-header"> 
-                <div class="products-name">Вы просматривали</div>
-              </div>
-              <div class="products-slider products-slider-viewed js-productsSlider">
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/offer1.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer6" name="offer6"/>
-                      <label for="offer6"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/offer2.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer7" name="offer7"/>
-                      <label for="berries3"></label>
-                      <p class="card-name">offer7</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="products-slider-item card"><img class="products-slider-img" src="img/index/offer3.jpg" alt="летнее растение"/>
-                  <form method="post">
-                    <div class="card-inner"> 
-                      <input class="card-favorite" type="checkbox" id="offer8" name="offer8"/>
-                      <label for="offer8"></label>
-                      <p class="card-name">Кустарники</p>
-                      <p class="card-text">Гортензия метельчатая в ассортименте (саженцы)</p><span class="card-price">22&nbsp;600&nbsp;₽ <del>50&nbsp;990&nbsp;₽</del></span>
-                      <div class="card-basket js-basketCount">
-                        <input class="card-minus js-minus" type="button"/>
-                        <input class="card-count js-count" type="text" value="1"/>
-                        <input class="card-plus js-plus" type="button"/>
-                        <button class="card-add" type="button"></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
+        <div class="container"> 
+          <ul class="links"> 
+            <li class="link"><a href="main.html"> Главная</a></li>
+            <li class="link"><a href="card.html"> Карточка товара</a></li>
+            <li class="link"><a href="catalog.html"> Каталог</a></li>
+            <li class="link"><a href="basket.html"> Корзина</a></li>
+            <li class="link"><a href="order.html"> Оформление заказа</a></li>
+            <li class="link"><a href="wishes.html"> Мои желания</a></li>
+            <li class="link"><a href="profile.html"> Личный кабинет (Профиль)</a></li>
+            <li class="link"><a href="addresses.html"> Личный кабинет (Адреса)</a></li>
+            <li class="link"><a href="orders.html"> Личный кабинет (Мои заказы)</a></li>
+            <li class="link"><a href="details.html"> Личный кабинет (Заказ детально)</a></li>
+          </ul>
         </div>
       </main>
       <div class="scroll-top js-scrollTop">
@@ -701,6 +169,180 @@
         </div>
       </footer>
       <script src="js/app.min.js"></script>
+      <div class="popup js-popup" id="login">
+        <div class="popup-wrapper js-fixBlock">
+          <div class="popup-login">
+            <div class="login-inner login-tabs">
+              <input id="tab-registration" type="radio" name="tab-btn" value="" checked="checked"/>
+              <label class="login-tabs-label" for="tab-registration">Регистрация</label>
+              <input id="tab-login" type="radio" name="tab-btn" value=""/>
+              <label class="login-tabs-label" for="tab-login">Вход</label>
+              <div class="login-tabs-item tab-registration">
+                <p class="login-tabs-title">Создать аккаунт</p>
+                <div class="js-registrationStepFirst">
+                  <div class="login-tabs-way">
+                    <input class="login-tabs-radio" id="way-email" type="radio" name="reg-way" value="email"/>
+                    <label for="way-email">
+                      <div class="login-tabs-icon"> <img src="img/icons/email.svg" alt="емейл"/></div>
+                      <p class="login-tabs-text">Регистрация по почте</p>
+                    </label>
+                  </div>
+                  <div class="login-tabs-way">
+                    <input class="login-tabs-radio" id="way-phone" type="radio" name="reg-way" value="phone"/>
+                    <label for="way-phone">
+                      <div class="login-tabs-icon"> <img src="img/icons/telephone.svg" alt="телефон"/></div>
+                      <p class="login-tabs-text">Регистрация по телефону</p>
+                    </label>
+                  </div>
+                  <button class="green-btn login-tabs-btn js-registrationWay" type="button">Продолжить</button>
+                  <p class="login-tabs-close js-popupClose">Отмена</p>
+                  <div class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</div>
+                </div>
+                <div class="js-hide js-registrationMail">
+                  <form action="post">
+                    <input class="login-tabs-input" type="mail" name="tel" placeholder="Почта"/><span class="login-tabs-input-active"></span>
+                    <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                    <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
+                  </form>
+                  <p class="login-tabs-close js-popupClose">Отмена</p>
+                  <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
+                </div>
+                <div class="js-hide js-registrationPhone">
+                  <form action="post">
+                    <input class="login-tabs-input" type="tel" name="tel" placeholder="Почта" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                    <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                    <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
+                  </form>
+                  <p class="login-tabs-close js-popupClose">Отмена</p>
+                  <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
+                </div>
+              </div>
+              <div class="login-tabs-item tab-login">
+                <p class="login-tabs-title">Войти</p>
+                <form action="post">
+                  <input class="login-tabs-input" type="text" name="login" placeholder="Почта/телефон" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                  <input class="login-tabs-input" type="password" name="password" placeholder="Пароль" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                  <button class="green-btn login-tabs-btn" type="submit">Войти</button>
+                </form>
+                <p class="login-tabs-close js-popupClose">Отмена</p>
+                <p class="login-tabs-forget js-popupOpen" data-popup="forget">Забыл пароль</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" id="forget"> 
+        <div class="popup-wrapper js-fixBlock">
+          <div class="popup-login">
+            <div class="login-inner login-forget">
+              <p class="login-tabs-title">Восстановить пароль</p>
+              <form action="post">
+                <input class="login-tabs-input" type="text" name="login" placeholder="Код с почты или телефона" autocomplete="off"/><span class="login-tabs-input-active"></span>
+                <button class="green-btn login-tabs-btn" type="submit">Продолжить</button>
+              </form>
+              <p class="login-tabs-close js-popupClose">Отмена</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" id="edit1">
+        <div class="popup-wrapper popup-wrapper-address js-fixBlock">
+          <div class="popup-address">
+            <div class="popup-address-inner">
+              <div class="popup-address-close js-popupClose"></div>
+              <h3 class="popup-address-title">Редактировать адрес "Дом Москва"</h3>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Название:</div>
+                <input class="popup-address-input" type="text" placeholder="Дом Москва"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Регион:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодарский Край"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Город:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодар"/>
+                </div>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Дом/офис:</div>
+                  <input class="popup-address-input" type="text" placeholder="Корп 'А'"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Улица:</div>
+                  <input class="popup-address-input" type="text" placeholder="ул. Северная"/>
+                </div>
+              </div>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Получатель:</div>
+                <input class="popup-address-input" type="text" placeholder="Вадим Громов"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Телефон:</div>
+                  <input class="popup-address-input" type="text" placeholder="8 (999) 123-45-67"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Email:</div>
+                  <input class="popup-address-input" type="email" placeholder="Gromow@mail.ru"/>
+                </div>
+              </div>
+              <button class="green-btn popup-address-btn" type="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup" id="edit2">
+        <div class="popup-wrapper popup-wrapper-address js-fixBlock">
+          <div class="popup-address">
+            <div class="popup-address-inner">
+              <div class="popup-address-close js-popupClose"></div>
+              <h3 class="popup-address-title">Редактировать адрес "Офис Москва"</h3>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Название:</div>
+                <input class="popup-address-input" type="text" placeholder="Дом Москва"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Регион:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодарский Край"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Город:</div>
+                  <input class="popup-address-input" type="text" placeholder="Краснодар"/>
+                </div>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Дом/офис:</div>
+                  <input class="popup-address-input" type="text" placeholder="Корп 'А'"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Улица:</div>
+                  <input class="popup-address-input" type="text" placeholder="ул. Северная"/>
+                </div>
+              </div>
+              <div class="popup-address-input-wrapper">
+                <div class="popup-address-input-title">Получатель:</div>
+                <input class="popup-address-input" type="text" placeholder="Вадим Громов"/>
+              </div>
+              <div class="popup-address-inputs">
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Телефон:</div>
+                  <input class="popup-address-input" type="text" placeholder="8 (999) 123-45-67"/>
+                </div>
+                <div class="popup-address-input-wrapper popup-address-input-wrapper-short">
+                  <div class="popup-address-input-title">Email:</div>
+                  <input class="popup-address-input" type="email" placeholder="Gromow@mail.ru"/>
+                </div>
+              </div>
+              <button class="green-btn popup-address-btn" type="button">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
