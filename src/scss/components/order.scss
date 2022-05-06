@@ -66,7 +66,8 @@
         }
     }
     &-title {
-        margin-top: 30px;
+        margin-top: 31px;
+        margin-left: -3px;
         font-family: $oswald;
         font-weight: 500;
         font-size: 30px;
@@ -209,11 +210,12 @@
         }
     }
     &-type {
-        margin-top: 14px;
+        margin-top: 29px;
         padding: 23px 20px 20px;
         background: $d-white;
         border-radius: 10px 10px 0 0;
         @media #{$w768} {
+            margin-top: 14px;
             padding: 20px 30px;
         }
         @media #{$w360} {
@@ -333,6 +335,15 @@
                 margin-top: 15px;
                 width: 100%;
             }
+            &-delivery {
+                margin-top: 33px;
+                @media #{$w768} {
+                    margin-top: 29px;
+                }
+                @media #{$w360} {
+                    margin-top: 19px;
+                }
+            }
         }
         &-pickup {
             display: inline-block;
@@ -418,8 +429,15 @@
             &::after {
                 display: none;
             }
+            &:first-of-type {
+                margin-right: 0;
+            }
             & .select-toggle {
                 text-transform: none;
+                @media #{$w360} {
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
             }
             & .select-dropdown {
                 width: calc(100% + 4px);
@@ -439,10 +457,18 @@
         &-input-wrapper {
             margin-top: 30px;
             width: 31%;
+            @media #{$w360} {
+                margin-top: 21px;
+                width: 100%;
+            }
         }
         &-input-wrapper-long {
             flex: 1 0 auto;
             margin-left: 30px;
+            @media #{$w360} {
+                margin-top: 25px;
+                margin-left: 0;
+            }
         }
         &-input-name {
             @include fz-12;

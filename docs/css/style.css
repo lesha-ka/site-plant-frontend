@@ -9216,7 +9216,8 @@ main {
 }
 
 .order-title {
-  margin-top: 30px;
+  margin-top: 31px;
+  margin-left: -3px;
   font-family: "Oswald", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 30px;
@@ -9328,7 +9329,7 @@ main {
 }
 
 .order-type {
-  margin-top: 14px;
+  margin-top: 29px;
   padding: 23px 20px 20px;
   background: #FBFFF7;
   border-radius: 10px 10px 0 0;
@@ -9424,6 +9425,10 @@ main {
   display: block;
 }
 
+.order-type-content-delivery {
+  margin-top: 33px;
+}
+
 .order-type-pickup {
   display: inline-block;
   vertical-align: top;
@@ -9495,6 +9500,10 @@ main {
 
 .order-type-select::after {
   display: none;
+}
+
+.order-type-select:first-of-type {
+  margin-right: 0;
 }
 
 .order-type-select .select-toggle {
@@ -12610,6 +12619,7 @@ main {
   }
 
   .order-type {
+    margin-top: 14px;
     padding: 20px 30px;
   }
 
@@ -12628,6 +12638,10 @@ main {
 
   .order-type-content {
     margin-top: 48px;
+  }
+
+  .order-type-content-delivery {
+    margin-top: 29px;
   }
 
   .order-date {
@@ -14221,6 +14235,10 @@ main {
     width: 100%;
   }
 
+  .order-type-content-delivery {
+    margin-top: 19px;
+  }
+
   .order-type-pickup {
     display: block;
     width: 100%;
@@ -14235,6 +14253,21 @@ main {
 
   .order-type-item {
     margin-bottom: 15px;
+  }
+
+  .order-type-select .select-toggle {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .order-type-input-wrapper {
+    margin-top: 21px;
+    width: 100%;
+  }
+
+  .order-type-input-wrapper-long {
+    margin-top: 25px;
+    margin-left: 0;
   }
 
   .order-date {
