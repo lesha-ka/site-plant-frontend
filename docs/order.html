@@ -155,17 +155,17 @@
                     <h3 class="order-info-title">Способ получения</h3><a class="order-type-link" href="#">Изменить адрес</a>
                   </div>
                   <div class="order-type-tabs js-tabMenu">
-                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-1" value=""/>
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-1" value="" checked="checked"/>
                     <label for="order-tab-1">Самовывоз</label>
-                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-2" value="" checked="checked"/>
+                    <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-2" value=""/>
                     <label for="order-tab-2">Курьерская доставка</label>
                     <input class="order-type-tab js-tabItem js-tabItem" type="radio" name="order-tab" id="order-tab-3" value=""/>
                     <label for="order-tab-3">Транспортная компания</label>
                   </div>
                   <div class="js-tab-content">
-                    <div class="order-type-content" data-tab="order-tab-1">
+                    <div class="order-type-content is-show" data-tab="order-tab-1">
                       <div class="order-type-pickup"> 
-                        <input class="order-type-input js-changeMap" type="radio" id="address1" name="address" value="55.753995, 37.614069"/>
+                        <input class="order-type-input js-changeMap" type="radio" id="address1" name="address" value="55.753995, 37.614069" checked="checked"/>
                         <label class="order-type-item" for="address1"><span class="order-type-address">ул. Московская, д. 133 кор. 13</span><span class="order-type-info">В наличии 1 шт, забирайте сегодня</span></label>
                         <input class="order-type-input js-changeMap" type="radio" id="address2" name="address" value="54.753995, 37.614069"/>
                         <label class="order-type-item" for="address2"><span class="order-type-address">ул. Новороссийская, д. 240</span><span class="order-type-info">По предзаказу на 15 декабря, после 09:00</span></label>
@@ -174,7 +174,7 @@
                       </div>
                       <div class="order-type-map" id="map"></div>
                     </div>
-                    <div class="order-type-content is-show" data-tab="order-tab-2"> 
+                    <div class="order-type-content" data-tab="order-tab-2"> 
                       <p class="order-type-select-title">Адрес:</p>
                       <div class="select order-type-select control-select" id="js-selectAddress">
                         <button class="select-toggle" type="button" name="address" value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”" data-select="toggle" data-index="0">Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”</button>
@@ -257,24 +257,29 @@
                       <input class="order-date-input js-datepickerValue" type="text" value=""/>
                       <div class="order-date-datepicker" id="datepicker"></div>
                     </div>
+                    <div class="order-date-calendar-mobile">
+                      <div class="profile-info-input-wrapper">
+                        <input class="profile-info-input" type="text" placeholder="22.12.2019" id="mobiledate"/>
+                      </div>
+                    </div>
                     <div class="order-date-info"> 
                       <table class="order-date-table"> 
                         <thead class="order-date-thead">
                           <tr class="order-date-tr">
-                            <th class="order-date-th">Часы работы пункта:</th>
-                            <th class="order-date-th">Изменение заказа</th>
-                            <th class="order-date-th">Стоимость доставки</th>
+                            <th class="order-date-th"><span class="order-date-th-desktop">Часы работы пункта:</span><span class="order-date-th-tablet">Часы работы:</span></th>
+                            <th class="order-date-th order-date-th-nomobile">Изменение заказа</th>
+                            <th class="order-date-th"><span class="order-date-th-desktop">Стоимость доставки</span><span class="order-date-th-tablet">Доставка</span></th>
                           </tr>
                         </thead>
                         <tbody class="order-date-tbody">
                           <tr class="order-date-tr">
                             <th class="order-date-th">10:00 - 22:00</th>
-                            <th class="order-date-th">Изменение заказа недоступно</th>
+                            <th class="order-date-th order-date-th-nomobile"><span class="order-date-th-desktop">Изменение заказа недоступно</span><span class="order-date-th-tablet">Недоступно</span></th>
                             <th class="order-date-th">Бесплатно</th>
                           </tr>
                           <tr class="order-date-tr">
                             <th class="order-date-th">10:00 - 22:00</th>
-                            <th class="order-date-th">Изменение заказа недоступно</th>
+                            <th class="order-date-th order-date-th-nomobile"><span class="order-date-th-desktop">Изменение заказа недоступно</span><span class="order-date-th-tablet">Недоступно</span></th>
                             <th class="order-date-th">Бесплатно</th>
                           </tr>
                         </tbody>
@@ -335,7 +340,7 @@
               <div class="basket-result">
                 <div class="basket-result-head">
                   <div class="basket-result-title">Ваша корзина</div>
-                  <div class="basket-result-weight">1 товар - <span>2.30</span> кг </div>
+                  <div class="basket-result-weight">1 товар - <span>860</span> г </div>
                 </div>
                 <dl class="basket-result-details">
                   <dt class="basket-result-term">Товары</dt>
@@ -346,7 +351,7 @@
                   <dd class="basket-result-price">Бесплатно</dd>
                 </dl>
                 <dl class="basket-result-total">
-                  <dt>Общая стоимость</dt>
+                  <dt>Итого</dt>
                   <dd class="basket-result-summ">3 599 ₽</dd>
                 </dl>
                 <button class="basket-result-btn green-btn">Оплатить онлайн</button>

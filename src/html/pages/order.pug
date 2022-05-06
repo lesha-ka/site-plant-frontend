@@ -24,16 +24,16 @@ main(class=`main main-${page}`)
                             h3.order-info-title Способ получения
                             a.order-type-link(href="#") Изменить адрес
                         .order-type-tabs.js-tabMenu
-                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-1" class="js-tabItem" value="") 
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-1" class="js-tabItem" value="" checked) 
                             label(for="order-tab-1") Самовывоз
-                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-2" class="js-tabItem" value="" checked)
+                            input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-2" class="js-tabItem" value="")
                             label(for="order-tab-2") Курьерская доставка
                             input.order-type-tab.js-tabItem(type="radio" name="order-tab" id="order-tab-3" class="js-tabItem" value="")
                             label(for="order-tab-3") Транспортная компания
                         .js-tab-content
-                            .order-type-content(data-tab="order-tab-1")
+                            .order-type-content.is-show(data-tab="order-tab-1")
                                 .order-type-pickup 
-                                    input.order-type-input.js-changeMap(type="radio" id="address1" name="address" value="55.753995, 37.614069") 
+                                    input.order-type-input.js-changeMap(type="radio" id="address1" name="address" value="55.753995, 37.614069" checked) 
                                     label.order-type-item(for="address1")
                                         span.order-type-address ул. Московская, д. 133 кор. 13
                                         span.order-type-info В наличии 1 шт, забирайте сегодня
@@ -46,7 +46,7 @@ main(class=`main main-${page}`)
                                         span.order-type-address ул. Тургенева, д. 85
                                         span.order-type-info По предзаказу на 14 декабря, после 11:00
                                 .order-type-map#map
-                            .order-type-content.is-show(data-tab="order-tab-2") 
+                            .order-type-content(data-tab="order-tab-2") 
                                 p.order-type-select-title Адрес:
                                 .select.order-type-select.control-select#js-selectAddress
                                     button.select-toggle(type='button', name='address', value="Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”", data-select='toggle', data-index='0') Краснодарский Край, г. Краснодар, ул. Северная 175 корп “А”
@@ -106,21 +106,24 @@ main(class=`main main-${page}`)
                             .order-date-calendar 
                                 input.order-date-input.js-datepickerValue(type="text" value="")
                                 .order-date-datepicker#datepicker
+                            .order-date-calendar-mobile
+                                .profile-info-input-wrapper
+                                    input.profile-info-input(type="text" placeholder="22.12.2019" id="mobiledate")
                             .order-date-info 
                                 table.order-date-table 
                                     thead.order-date-thead
                                         tr.order-date-tr
-                                            th.order-date-th Часы работы пункта:
-                                            th.order-date-th Изменение заказа
-                                            th.order-date-th Стоимость доставки
+                                            th.order-date-th <span class="order-date-th-desktop">Часы работы пункта:</span><span class="order-date-th-tablet">Часы работы:</span>
+                                            th.order-date-th.order-date-th-nomobile Изменение заказа
+                                            th.order-date-th <span class="order-date-th-desktop">Стоимость доставки</span><span class="order-date-th-tablet">Доставка</span>
                                     tbody.order-date-tbody
                                         tr.order-date-tr
                                             th.order-date-th 10:00 - 22:00
-                                            th.order-date-th Изменение заказа недоступно
+                                            th.order-date-th.order-date-th-nomobile <span class="order-date-th-desktop">Изменение заказа недоступно</span><span class="order-date-th-tablet">Недоступно</span>
                                             th.order-date-th Бесплатно
                                         tr.order-date-tr
                                             th.order-date-th 10:00 - 22:00
-                                            th.order-date-th Изменение заказа недоступно
+                                            th.order-date-th.order-date-th-nomobile <span class="order-date-th-desktop">Изменение заказа недоступно</span><span class="order-date-th-tablet">Недоступно</span>
                                             th.order-date-th Бесплатно
                     .order-pay
                         h3.order-info-title Оплата
@@ -165,7 +168,7 @@ main(class=`main main-${page}`)
                 .basket-result
                     .basket-result-head
                         .basket-result-title Ваша корзина
-                        .basket-result-weight 1 товар - <span>2.30</span> кг 
+                        .basket-result-weight 1 товар - <span>860</span> г 
                     dl.basket-result-details
                         dt.basket-result-term Товары
                         dd.basket-result-price 5 990 ₽
@@ -174,7 +177,7 @@ main(class=`main main-${page}`)
                         dt.basket-result-term Доставка
                         dd.basket-result-price Бесплатно
                     dl.basket-result-total
-                        dt Общая стоимость
+                        dt Итого
                         dd.basket-result-summ 3 599 ₽
                     button.basket-result-btn.green-btn Оплатить онлайн
                     p.basket-result-disclaimer Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями</a>, а также с <a href="#" target="_blank">Условиями продажи</a>

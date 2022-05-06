@@ -36,4 +36,15 @@ export const getDatepicker = () => {
             },
         });
     });
+    $(function(){
+        $("#mobiledate").datepicker({
+            showOn: "button",
+            buttonImage: "../img/icons/calendar.svg",
+            buttonImageOnly: true,
+            buttonText: "Выбрать дату",
+            beforeShow: function( input, inst){
+              $(inst.dpDiv).addClass('profile-info-date');
+            },
+        });
+    });
 }
