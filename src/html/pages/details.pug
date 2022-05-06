@@ -14,3 +14,86 @@ main(class=`main main-${page}`)
                     button.profile-menu-exit(type="button") Выйти
                 .profile-content
                     .profile-details
+                        h3.profile-info-title Заказ №39913105-0002
+                        .profile-details-delivery
+                            .profile-details-delivery-head 
+                                .profile-details-delivery-title
+                                    .profile-details-title Отправление 1
+                                    .profile-details-date от 10 декабря 2019
+                                .profile-details-status Доставка
+                                .profile-details-expected Ожидаемая дата доставки: 12 декабря 2019
+                            .profile-details-product
+                                .profile-details-img 
+                                    img(src="img/card/card.jpg", alt="Товар")
+                                .profile-details-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                .profile-details-quantity 1 шт.
+                        .profile-details-delivery
+                            .profile-details-delivery-head 
+                                .profile-details-delivery-title
+                                    .profile-details-title Отправление 2
+                                    .profile-details-date от 10 декабря 2019
+                                .profile-details-status Доставка
+                                .profile-details-expected Ожидаемая дата доставки: 12 декабря 2019
+                            .profile-details-product
+                                .profile-details-img 
+                                    img(src="img/card/card.jpg", alt="Товар")
+                                .profile-details-name Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD
+                                .profile-details-quantity 1 шт.
+                        .profile-details-bill
+                            .profile-details-bill-head
+                                .profile-details-title Счёт №0001 от 10.12.2019
+                                .profile-details-status Оплачен
+                                .profile-details-price Сумма к оплате: 23 000 ₽
+                            p.order-pay-subtitle Способы оплаты
+                            .order-pay-wrapper
+                                input.order-pay-input(type="radio" id="pay1" name="pay") 
+                                label.order-pay-item(for="pay1")
+                                    p.order-pay-way Оплата при получении
+                                    p.order-pay-info Наличными или картой
+                                input.order-pay-input(type="radio" id="pay2" name="pay" checked) 
+                                label.order-pay-item(for="pay2")
+                                    p.order-pay-way Банковской картой
+                                    p.order-pay-info Оплата картой онлайн
+                                input.order-pay-input(type="radio" id="pay3" name="pay") 
+                                label.order-pay-item(for="pay3")
+                                    p.order-pay-way Яндекс.Деньги
+                                    p.order-pay-info Кэшбэк 5%
+                            button.green-btn.profile-details-pay(type="button" disabled) Оплатить
+                        .profile-details-bill
+                            .profile-details-bill-head
+                                .profile-details-title Счёт №0001 от 10.12.2019
+                                .profile-details-status Не оплачен
+                                .profile-details-price Сумма к оплате: 23 000 ₽
+                            p.order-pay-subtitle Способы оплаты
+                            .order-pay-wrapper
+                                input.order-pay-input(type="radio" id="pay1" name="pay" checked) 
+                                label.order-pay-item(for="pay1")
+                                    p.order-pay-way Оплата при получении
+                                    p.order-pay-info Наличными или картой
+                                input.order-pay-input(type="radio" id="pay2" name="pay") 
+                                label.order-pay-item(for="pay2")
+                                    p.order-pay-way Банковской картой
+                                    p.order-pay-info Оплата картой онлайн
+                                input.order-pay-input(type="radio" id="pay3" name="pay") 
+                                label.order-pay-item(for="pay3")
+                                    p.order-pay-way Яндекс.Деньги
+                                    p.order-pay-info Кэшбэк 5%
+                            button.green-btn.profile-details-pay(type="button") Оплатить
+                        .profile-details-info
+                            .profile-details-recipient
+                                .profile-details-recipient-subtitle Доставка в пункт выдачи
+                                p.profile-details-recipient-text Краснодарский край, г. Краснодар, ул. Черняховского, д. 70
+                                .profile-details-recipient-subtitle Получатель
+                                p.profile-details-recipient-text Вадим Громов
+                                p.profile-details-recipient-text Gromov22@mail.com
+                                p.profile-details-recipient-text 8 (999) 123 45 67
+                            .profile-details-summ
+                                .profile-details-summ-head 
+                                    p Итого: 
+                                    p 26 590 ₽ 
+                                .profile-details-summ-info 
+                                    p.profile-details-summ-text Служба доставки: <span>Доставка курьером</span> 
+                                    p.profile-details-summ-text Статус отгрузки: <span>Ожидает обработки</span> 
+                                .profile-details-btns 
+                                    button.profile-details-repeat(type="button") Повторный заказ
+                                    button.profile-details-cancel(type="button") Отменить заказ

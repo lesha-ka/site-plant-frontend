@@ -460,6 +460,368 @@
     &-orders {
         &-head {
             display: flex;
+            align-items: center;
+        }
+        &-tabs {
+            display: flex;
+        }
+        &-tab {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            &+label {
+                background: rgba(61, 79, 60, 0.05);
+                cursor: pointer;
+                border-radius: 3px;
+                padding: 13px;
+                text-align: center;
+                min-width: 140px;
+                font-family: $oswald;
+                font-weight: 500;
+                @include fz-14;
+                color: $d-green;
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+                &:hover {
+                    color: $d-green;
+                    box-shadow: 0px 0px 6px rgba(253, 198, 48, 0.35);
+                    background: linear-gradient(92.34deg, #67AF2833 -28.45%, #6CDA0D33 101.05%);
+                }
+            }
+            &:checked+label {
+                color: $white;
+                background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+                box-shadow: 0px 0px 20px rgba(253, 198, 48, 0.25);
+            }
+        }
+        &-main {
+            display: none;
+            margin-top: 40px;
+            &.is-show {
+                display: block;
+            }
+        }
+        &-item {
+            margin-top: 30px;
+            &-blur {
+                & .profile-orders-title {
+                    filter: blur(10px);
+                }
+                & .profile-orders-products  {
+                    filter: blur(10px);
+                }
+            }
+        }
+        &-wrapper {
+            background-color: #f1f6ed;
+            border-radius: 5px;
+            padding: 20px 20px 30px;
+        }
+        &-info {
+            display: flex;
+            align-items: center;
+            border-bottom: 1.5px solid #cbd5e2;
+            padding-bottom: 15px;
+        }
+        &-title {
+            margin-right: 40px;
+        }
+        &-number {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-18;
+            color: $d-green;
+        }
+        &-date {
+            margin-top: 5px;
+            font-weight: 600;
+            @include fz-12;
+            color: #859182;
+        }
+        &-status {
+            min-height: 30px;
+            padding: 5px 27px;
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-14;
+            color: $white;
+            border-radius: 5px;
+            background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+            &-blue {
+                background: $blue;
+            }
+        }
+        &-count {
+            margin-left: auto;
+        }
+        &-summ {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-18;
+            color: $d-green;
+            text-align: right;
+        }
+        &-details {
+            margin-top: 7px;
+            font-weight: 600;
+            @include fz-14;
+            color: $green;
+            text-align: right;
+        }
+        &-products {
+            display: flex;
+            margin-top: 20px;
+        }
+        &-product {
+            max-width: 200px;
+            margin-right: 35px;
+        }
+        &-img {
+            width: 120px;
+            height: 154px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        &-name {
+            margin-top: 20px;
+            font-family: $oswald;
+            font-weight: 500;
+            text-align: center;
+            @include fz-12;
+            color: $d-green;
+        }
+        &-quantity {
+            margin-top: 6px;
+            font-weight: 600;
+            text-align: center;
+            @include fz-12;
+            color: #859182;
+        }
+        &-control {
+            margin-top: 15px;
+        }
+        &-btn {
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            min-height: 42px;
+            margin-right: 15px;
+            padding: 11px;
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-14;
+            color: $d-green;
+            background: #f1f6ed;
+            border-radius: 3px;
+            &:hover, &:active {
+                color: $white;
+                background: #67AF28;
+                box-shadow: inset 2px 4px 2px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+    &-details {
+        &-delivery {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f1f6ec;
+            border-radius: 5px;
+        }
+        &-delivery-head {
+            display: flex;
+            align-items: center;
+            border-bottom: 1.5px solid #cbd5e2;
+            padding-bottom: 15px;
+        }
+        &-title {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-18;
+            color: $d-green;
+        }
+        &-date {
+            margin-top: 5px;
+            font-weight: 600;
+            @include fz-12;
+            color: #859182;
+        }
+        &-status {
+            margin-left: 40px;
+            min-height: 30px;
+            padding: 5px 27px;
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-14;
+            color: $white;
+            border-radius: 15px;
+            background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
+        }
+        &-expected {
+            margin-left: auto;
+            font-weight: 600;
+            @include fz-14;
+            color: #859182;
+        }
+        &-product {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        &-img {
+            margin-right: 23px;
+            width: 120px;
+            height: 113px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        &-name {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-16;
+            color: $d-green;
+        }
+        &-quantity {
+            margin-left: auto;
+            font-weight: 600;
+            @include fz-14;
+            color: #859182;
+        }
+        &-bill {
+            margin-top: 30px;
+            & .order-pay-wrapper {
+                justify-content: flex-start;
+            }
+            & .order-pay-item {
+                max-width: 260px;
+                margin-right: 30px;
+            }
+        }
+        &-bill-head {
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1.5px solid #404452;
+        }
+        &-price {
+            margin-left: auto;
+            font-family: $oswald;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: $d-green;
+        }
+        &-pay {
+            width: 210px;
+        }
+        &-info {
+            margin-top: 60px;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        &-recipient {
+            width: calc(50% - 12.5px);
+            background: #f1f6ec;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        &-recipient-subtitle {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-14;
+            margin-bottom: 10px;
+            color: $d-green;
+            &:not(:first-of-type) {
+                margin-top: 30px;
+            }
+        }
+        &-recipient-text {
+            font-weight: 600;
+            @include fz-12;
+            margin-bottom: 10px;
+            color: #859182;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-summ {
+            width: calc(50% - 12.5px);
+            background: #f1f6ec;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        &-summ-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-18;
+            color: $d-green;
+            padding-bottom: 10px;
+            border-bottom: 1.5px solid #e8ede3;
+        }
+        &-summ-info {
+            margin-top: 20px;
+        }
+        &-summ-text {
+            margin-bottom: 15px;
+            font-weight: 600;
+            @include fz-12;
+            color: #859182;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & span {
+                color: $d-green;
+            }
+        }
+        &-btns {
+            margin-top: 29px;
+        }
+        &-repeat {
+            cursor: pointer;
+            width: calc(50% - 12.5px);
+            height: 42px;
+            outline: none;
+            background: $white;
+            font-family: $oswald;
+            font-weight: 500;
+            color: $green;
+            @include fz-14;
+            border: 1px solid $green;
+            border-radius: 3px;
+            margin-right: 20px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                box-shadow: 0px 4px 4px rgba(103, 175, 40, 0.5);
+            }
+            &:active {
+                box-shadow: inset 2px 4px 3px rgba(82, 84, 79, 0.4);
+            }
+        }
+        &-cancel {
+            cursor: pointer;
+            width: calc(50% - 12.5px);
+            height: 42px;
+            outline: none;
+            background: #E52C43;
+            font-family: $oswald;
+            font-weight: 500;
+            color: $white;
+            @include fz-14;
+            border: 1px solid #E52C43;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                box-shadow: 2px 4px 4px rgba(214, 47, 62, 0.5);
+            }
+            &:active {
+                box-shadow: inset 2px 4px 4px #860B16;
+            }
         }
     }
 }

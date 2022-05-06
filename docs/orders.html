@@ -132,7 +132,7 @@
             <div class="profile-wrapper"> 
               <aside class="profile-menu">
                 <nav class="profile-menu-links">
-                  <div class="profile-menu-title">Личный кабинет</div><a class="profile-menu-link" href="/index.html">Профиль</a><a class="profile-menu-link" href="/addresses.html">Адреса</a><a class="profile-menu-link profile-menu-link-active" href="/orders.html">Мои заказы</a>
+                  <div class="profile-menu-title">Личный кабинет</div><a class="profile-menu-link" href="./profile.html">Профиль</a><a class="profile-menu-link" href="./addresses.html">Адреса</a><a class="profile-menu-link profile-menu-link-active" href="./orders.html">Мои заказы</a>
                 </nav>
                 <button class="profile-menu-exit" type="button">Выйти</button>
               </aside>
@@ -142,63 +142,68 @@
                     <h3 class="profile-info-title">Мои заказы</h3>
                     <div class="profile-orders-tabs js-tabMenu">
                       <input class="profile-orders-tab js-tabItem js-tabItem" type="radio" name="orders-tab" id="orders-tab-1" value="" checked="checked"/>
-                      <label for="order-tab-1">Активные заказы</label>
+                      <label for="orders-tab-1">Активные заказы</label>
                       <input class="profile-orders-tab js-tabItem js-tabItem" type="radio" name="orders-tab" id="orders-tab-2" value=""/>
-                      <label for="order-tab-2">История заказов</label>
+                      <label for="orders-tab-2">История заказов</label>
                     </div>
                   </div>
                   <div class="js-tab-content">
-                    <div class="profile-orders-content" data-tab="orders-tab-1">
-                      <div class="profile-orders-item"> 
-                        <div class="profile-orders-info"> 
-                          <div class="profile-orders-title">
-                            <div class="profile-orders-number">Заказ №39913105-0002</div>
-                            <div class="profile-orders-date">от 10 декабря 2019</div>
+                    <div class="profile-orders-content is-show js-moreBox" data-tab="orders-tab-1">
+                      <div class="profile-orders-item profile-orders-item-blur">
+                        <div class="profile-orders-wrapper">
+                          <div class="profile-orders-info"> 
+                            <div class="profile-orders-title">
+                              <div class="profile-orders-number">Заказ №39913105-0002</div>
+                              <div class="profile-orders-date">от 10 декабря 2019</div>
+                            </div>
+                            <div class="profile-orders-status profile-orders-status-blue">Доставка</div>
+                            <div class="profile-orders-count">
+                              <div class="profile-orders-summ">3 390 ₽</div><a class="profile-orders-details" href="/details.html">Подробнее</a>
+                            </div>
                           </div>
-                          <div class="profile-orders-status">Доставка</div>
-                          <div class="profile-orders-count">
-                            <div class="profile-orders-summ">Заказ №39913105-0002</div><a class="profile-orders-details" href="/details.html">Подробнее</a>
-                          </div>
-                        </div>
-                        <div class="profile-orders-products"> 
-                          <div class="profile-orders-product">
-                            <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
-                            <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
-                            <div class="profile-orders-quantity">1 шт.</div>
-                          </div>
-                          <div class="profile-orders-product">
-                            <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
-                            <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
-                            <div class="profile-orders-quantity">1 шт.</div>
-                          </div>
-                        </div>
-                        <div class="profile-orders-control"><a class="profile-orders-btn" href="#">Повторный заказ</a><a class="profile-orders-btn" href="/details.html">Посмотреть заказ</a></div>
-                      </div>
-                      <div class="profile-orders-item"> 
-                        <div class="profile-orders-info"> 
-                          <div class="profile-orders-title">
-                            <div class="profile-orders-number">Заказ №39913105-0002</div>
-                            <div class="profile-orders-date">от 10 декабря 2019</div>
-                          </div>
-                          <div class="profile-orders-status">Получено</div>
-                          <div class="profile-orders-count">
-                            <div class="profile-orders-summ">Заказ №39913105-0002</div><a class="profile-orders-details" href="/details.html">Подробнее</a>
-                          </div>
-                        </div>
-                        <div class="profile-orders-products"> 
-                          <div class="profile-orders-product">
-                            <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
-                            <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
-                            <div class="profile-orders-quantity">1 шт.</div>
-                          </div>
-                          <div class="profile-orders-product">
-                            <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
-                            <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
-                            <div class="profile-orders-quantity">1 шт.</div>
+                          <div class="profile-orders-products"> 
+                            <div class="profile-orders-product">
+                              <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
+                              <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
+                              <div class="profile-orders-quantity">1 шт.</div>
+                            </div>
+                            <div class="profile-orders-product">
+                              <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
+                              <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
+                              <div class="profile-orders-quantity">1 шт.</div>
+                            </div>
                           </div>
                         </div>
                         <div class="profile-orders-control"><a class="profile-orders-btn" href="#">Повторный заказ</a><a class="profile-orders-btn" href="/details.html">Посмотреть заказ</a></div>
                       </div>
+                      <div class="profile-orders-item"> 
+                        <div class="profile-orders-wrapper">
+                          <div class="profile-orders-info"> 
+                            <div class="profile-orders-title">
+                              <div class="profile-orders-number">Заказ №39913105-0002</div>
+                              <div class="profile-orders-date">от 10 декабря 2019</div>
+                            </div>
+                            <div class="profile-orders-status">Получено</div>
+                            <div class="profile-orders-count">
+                              <div class="profile-orders-summ">3 390 ₽</div><a class="profile-orders-details" href="/details.html">Подробнее</a>
+                            </div>
+                          </div>
+                          <div class="profile-orders-products"> 
+                            <div class="profile-orders-product">
+                              <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
+                              <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
+                              <div class="profile-orders-quantity">1 шт.</div>
+                            </div>
+                            <div class="profile-orders-product">
+                              <div class="profile-orders-img"><img src="img/card/offers3.jpg" alt="товар"/></div>
+                              <div class="profile-orders-name">Видеокарта Gigabyte GeForce GTX 1660 SUPER OC 6GB, GV-N166SOC-6GD</div>
+                              <div class="profile-orders-quantity">1 шт.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="profile-orders-control"><a class="profile-orders-btn" href="#">Повторный заказ</a><a class="profile-orders-btn" href="/details.html">Посмотреть заказ</a></div>
+                      </div>
+                      <div class="profile-addresses-more">Показать ещё</div>
                     </div>
                     <div class="profile-orders-content" data-tab="orders-tab-2">
                       <p>45</p>
