@@ -5,14 +5,16 @@ main(class=`main main-${page}`)
         section.profile
             h2.profile-title Морару Валентин
             .profile-wrapper 
-                aside.profile-menu
+                aside.profile-menu.profile-menu-details
                     nav.profile-menu-links
                             .profile-menu-title Личный кабинет
+                            .profile-menu-title-mobile Морару Валентин
                             a.profile-menu-link(href="/index.html") Профиль
                             a.profile-menu-link(href="/addresses.html") Адреса
                             a.profile-menu-link.profile-menu-link-active(href="/orders.html") Мои заказы
                     button.profile-menu-exit(type="button") Выйти
-                .profile-content
+                p.profile-details-subtitle Мои заказы
+                .profile-content.profile-content-details
                     .profile-details
                         h3.profile-info-title Заказ №39913105-0002
                         .profile-details-delivery

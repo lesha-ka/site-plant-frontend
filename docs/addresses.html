@@ -116,7 +116,7 @@
           </div>
         </div>
       </header>
-      <main class="main main-addresses">
+      <main class="main main-profile">
         <div class="container container-narrow">
           <div class="breadcrumb breadcrumb-addresses">
             <ul class="breadcrumb-list">
@@ -126,13 +126,14 @@
             </ul>
           </div>
         </div>
-        <div class="container container-narrow container-notablet">
+        <div class="container container-narrow">
           <section class="profile">
             <h2 class="profile-title">Морару Валентин</h2>
             <div class="profile-wrapper"> 
               <aside class="profile-menu">
                 <nav class="profile-menu-links">
-                  <div class="profile-menu-title">Личный кабинет</div><a class="profile-menu-link" href="./profile.html">Профиль</a><a class="profile-menu-link profile-menu-link-active" href="./addresses.html">Адреса</a><a class="profile-menu-link" href="./orders.html">Мои заказы</a>
+                  <div class="profile-menu-title">Личный кабинет</div>
+                  <div class="profile-menu-title-mobile">Морару Валентин</div><a class="profile-menu-link" href="./profile.html">Профиль</a><a class="profile-menu-link profile-menu-link-active" href="./addresses.html">Адреса</a><a class="profile-menu-link" href="./orders.html">Мои заказы</a>
                 </nav>
                 <button class="profile-menu-exit" type="button">Выйти</button>
               </aside>
@@ -140,13 +141,14 @@
                 <div class="profile-addresses">
                   <h3 class="profile-info-title">Адресная книга</h3>
                   <div class="profile-addresses-wrapper js-moreBox">
-                    <div class="profile-addresses-item">
-                      <div class="profile-addresses-head">
+                    <div class="profile-addresses-item js-addressesItem">
+                      <div class="profile-addresses-head js-addressesHead">
                         <p class="profile-addresses-name">Дом Москва</p>
                         <button class="profile-addresses-edit js-popupOpen" data-popup="edit1" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -157,13 +159,14 @@
                       </ul>
                       <div class="profile-addresses-default"> <span>По умолчанию</span></div>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Офис Москва</p>
                         <button class="profile-addresses-edit js-popupOpen" data-popup="edit2" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -173,13 +176,14 @@
                         <li class="profile-addresses-text">8 (999) 123 45 67</li>
                       </ul>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Адрес 3</p>
                         <button class="profile-addresses-edit" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -189,13 +193,14 @@
                         <li class="profile-addresses-text">8 (999) 123 45 67</li>
                       </ul>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Адрес 4</p>
                         <button class="profile-addresses-edit" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -205,13 +210,14 @@
                         <li class="profile-addresses-text">8 (999) 123 45 67</li>
                       </ul>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Адрес 5</p>
                         <button class="profile-addresses-edit" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -221,13 +227,14 @@
                         <li class="profile-addresses-text">8 (999) 123 45 67</li>
                       </ul>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Адрес 6</p>
                         <button class="profile-addresses-edit" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -237,13 +244,14 @@
                         <li class="profile-addresses-text">8 (999) 123 45 67</li>
                       </ul>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Адрес 7</p>
                         <button class="profile-addresses-edit" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -256,13 +264,14 @@
                     <div class="profile-addresses-item profile-addresses-item-add">
                       <button class="profile-addresses-add" type="button">Добавить адрес</button>
                     </div>
-                    <div class="profile-addresses-item">
+                    <div class="profile-addresses-item js-addressesItem">
                       <div class="profile-addresses-head">
                         <p class="profile-addresses-name">Адрес 7</p>
                         <button class="profile-addresses-edit" type="button"></button>
                         <button class="profile-addresses-delete" type="button"></button>
+                        <button class="profile-addresses-show js-addressesShow" type="button"></button>
                       </div>
-                      <ul class="profile-addresses-info">
+                      <ul class="profile-addresses-info js-addressesDetails">
                         <li class="profile-addresses-text">Вадим Громов</li>
                         <li class="profile-addresses-text">Ул. Северная</li>
                         <li class="profile-addresses-text">Краснодар</li>
@@ -398,7 +407,7 @@
           <div class="popup-address">
             <div class="popup-address-inner">
               <div class="popup-address-close js-popupClose"></div>
-              <h3 class="popup-address-title">Редактировать адрес "Дом Москва"</h3>
+              <h3 class="popup-address-title">Редактировать адрес "Дом&nbsp;Москва"</h3>
               <div class="popup-address-input-wrapper">
                 <div class="popup-address-input-title">Название:</div>
                 <input class="popup-address-input" type="text" placeholder="Дом Москва"/>

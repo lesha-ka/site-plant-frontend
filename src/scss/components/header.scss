@@ -1,6 +1,7 @@
 .header {
     padding: 29px 2px 1px; 
     background: $white;
+    z-index: 1;
     @media #{$w1280} {
         background: #fff;
         padding: 29px 2px 30px; 

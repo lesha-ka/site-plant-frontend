@@ -17,6 +17,7 @@ import { getFormCount } from './modules/form-count.js';
 import { getDatepicker } from './modules/datepicker.js';
 import { getMap } from './modules/map.js';
 import { getSelect }from './modules/select.js';
+import { getAddresses}from './modules/addresses.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,4 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	getFormCount();
 	getMap();
 	getDatepicker();
+	getAddresses();
 });

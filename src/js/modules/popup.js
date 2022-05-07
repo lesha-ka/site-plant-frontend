@@ -22,6 +22,7 @@ export const getPopup= () => {
         let popupClose = document.querySelectorAll('.js-popupClose');
         popupClose.forEach(function(elem) {
             function closePopup() {
+                elem.closest('.js-popup').classList.remove('js-block');
                 elem.closest('.js-popup').classList.add('js-hide');
                 wrapperUnfixPosition();
             }
@@ -32,6 +33,7 @@ export const getPopup= () => {
         let popups = document.querySelectorAll('.js-popup');
         if( e.keyCode == 27 ){ 
             popups.forEach(function(elem) {
+                elem.classList.remove('js-block');
                 elem.classList.add('js-hide');
                 wrapperUnfixPosition();
             })

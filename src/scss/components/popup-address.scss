@@ -3,6 +3,9 @@
         background: url(../img/popup-bg.png) center no-repeat;
         background-size: cover;
         padding-bottom: 0;
+        @media #{$w360} {
+            padding: 60px 0;
+        }
     }
     &-address {
         display: flex;
@@ -17,16 +20,29 @@
         position: relative;
         border-radius: 10px;
         background: $d-white;
-        padding: 60px 30px 50px;
+        padding: 70px 30px 50px;
+        @media #{$w360} {
+            padding: 30px 20px 43px;
+            width: calc(100% - 70px);
+            margin: 0 auto;
+            overflow: scroll;
+        }
     }
     &-address-close {
         cursor: pointer;
         position: absolute;
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
         background: url(../img/icons/popup-close.svg) center no-repeat;
-        top: 30px;
+        top: 35px;
         right: 30px;
+        @media #{$w360} {
+            background: url(../img/icons/popup-close-mob.svg) center no-repeat;
+            top: 20px;
+            right: 20px;
+            width: 12px;
+            height: 12px;
+        }
     }
     &-address-title {
         text-align: center;
@@ -35,17 +51,32 @@
         @include fz-24;
         color: $d-green;
         padding-bottom: 20px;
+        @media #{$w360} {
+            margin: 0 auto;
+            max-width: 75%;
+            font-size: 18px;
+            line-height: 26px;
+            padding-bottom: 0;
+        }
     }
     &-address-inputs {
         display: flex;
         justify-content: space-between;
+        @media #{$w360} {
+            display: block;
+            width: 100%;
+        }
     }
     &-address-input-wrapper {
         display: inline-block;
-        margin-top: 40px;
+        margin-top: 26px;
         width: 100%;
         &-short {
             width: calc(50% - 15px);
+            @media #{$w360} {
+                display: block;
+                width: 100%;
+            }
         }
     }
     &-address-input-title {
@@ -82,5 +113,11 @@
     &-address-btn {
         margin-top: 60px;
         width: 200px;
+        @media #{$w360} {
+            margin-top: 40px;
+            font-size: 16px;
+            line-height: 24px;
+            width: 100%;
+        }
     }
 }

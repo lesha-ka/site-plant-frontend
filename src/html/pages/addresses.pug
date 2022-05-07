@@ -1,13 +1,14 @@
-main(class=`main main-${page}`)
+main(class=`main main-profile`)
     .container.container-narrow
         +breadcrumb(['Главная', 'Личный кабинет'], 'Адресная книга')
-    .container.container-narrow.container-notablet
+    .container.container-narrow
         section.profile
             h2.profile-title Морару Валентин
             .profile-wrapper 
                 aside.profile-menu
                     nav.profile-menu-links
                             .profile-menu-title Личный кабинет
+                            .profile-menu-title-mobile Морару Валентин
                             a.profile-menu-link(href="./profile.html") Профиль
                             a.profile-menu-link.profile-menu-link-active(href="./addresses.html") Адреса
                             a.profile-menu-link(href="./orders.html") Мои заказы
@@ -16,12 +17,13 @@ main(class=`main main-${page}`)
                     .profile-addresses
                         h3.profile-info-title Адресная книга
                         .profile-addresses-wrapper.js-moreBox
-                            .profile-addresses-item
-                                .profile-addresses-head
+                            .profile-addresses-item.js-addressesItem
+                                .profile-addresses-head.js-addressesHead
                                     p.profile-addresses-name Дом Москва
                                     button.profile-addresses-edit.js-popupOpen(data-popup="edit1" type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -31,12 +33,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 8 (999) 123 45 67
                                 .profile-addresses-default 
                                     span По умолчанию
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Офис Москва
                                     button.profile-addresses-edit.js-popupOpen(data-popup="edit2" type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -44,12 +47,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 350 000
                                     li.profile-addresses-text Россия
                                     li.profile-addresses-text 8 (999) 123 45 67
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Адрес 3
                                     button.profile-addresses-edit(type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -57,12 +61,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 350 000
                                     li.profile-addresses-text Россия
                                     li.profile-addresses-text 8 (999) 123 45 67
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Адрес 4
                                     button.profile-addresses-edit(type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -70,12 +75,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 350 000
                                     li.profile-addresses-text Россия
                                     li.profile-addresses-text 8 (999) 123 45 67
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Адрес 5
                                     button.profile-addresses-edit(type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -83,12 +89,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 350 000
                                     li.profile-addresses-text Россия
                                     li.profile-addresses-text 8 (999) 123 45 67
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Адрес 6
                                     button.profile-addresses-edit(type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -96,12 +103,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 350 000
                                     li.profile-addresses-text Россия
                                     li.profile-addresses-text 8 (999) 123 45 67
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Адрес 7
                                     button.profile-addresses-edit(type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар
@@ -111,12 +119,13 @@ main(class=`main main-${page}`)
                                     li.profile-addresses-text 8 (999) 123 45 67
                             .profile-addresses-item.profile-addresses-item-add
                                 button.profile-addresses-add(type="button") Добавить адрес
-                            .profile-addresses-item
+                            .profile-addresses-item.js-addressesItem
                                 .profile-addresses-head
                                     p.profile-addresses-name Адрес 7
                                     button.profile-addresses-edit(type="button")
                                     button.profile-addresses-delete(type="button")
-                                ul.profile-addresses-info
+                                    button.profile-addresses-show.js-addressesShow(type="button")
+                                ul.profile-addresses-info.js-addressesDetails
                                     li.profile-addresses-text Вадим Громов
                                     li.profile-addresses-text Ул. Северная
                                     li.profile-addresses-text Краснодар

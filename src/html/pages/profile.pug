@@ -1,13 +1,14 @@
 main(class=`main main-${page}`)
     .container.container-narrow
         +breadcrumb(['Главная', 'Личный кабинет'], 'Личная информация')
-    .container.container-narrow.container-notablet
+    .container.container-narrow
         section.profile
             h2.profile-title Морару Валентин
             .profile-wrapper 
                 aside.profile-menu
                     nav.profile-menu-links
                             .profile-menu-title Личный кабинет
+                            .profile-menu-title-mobile Морару Валентин
                             a.profile-menu-link.profile-menu-link-active(href="./profile.html") Профиль
                             a.profile-menu-link(href="./addresses.html") Адреса
                             a.profile-menu-link(href="./orders.html") Мои заказы
@@ -46,7 +47,7 @@ main(class=`main main-${page}`)
                                 input.profile-info-input(type="tel" placeholder="8 (999) 123 45 67")
                                 button.profile-info-input-status(type="button") Подтвердить
                             .profile-info-input-wrapper
-                                .profile-info-input-title Телефон:
+                                .profile-info-input-title Email:
                                 input.profile-info-input(type="email" placeholder="Gromov@mail.ru")
                                 button.profile-info-input-status(type="button" disabled) Подтвержден
                         .profile-info-block
