@@ -8373,6 +8373,34 @@ main {
   margin-right: 121px;
 }
 
+.info-review-more {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #67AF28;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-review-more:hover {
+  -webkit-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.info-review-more:active {
+  color: #658945;
+}
+
 .info-subtitle {
   margin-top: 15px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -12720,8 +12748,21 @@ main {
     width: 27%;
   }
 
+  .info-reviews-result {
+    background-color: #F7FFEC;
+  }
+
   .info-reviews-items {
     margin-top: 18px;
+    background-color: #F7FFEC;
+  }
+
+  .info-reviews-items .info-title {
+    color: #3D4F3C;
+  }
+
+  .info-review-reply {
+    margin-right: 0;
   }
 
   .info-delivery-item {
@@ -14039,6 +14080,7 @@ main {
   }
 
   .info-reviews-result {
+    background-color: #FBFFF7;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 0;
@@ -14116,6 +14158,7 @@ main {
   }
 
   .info-reviews-items {
+    background-color: #FBFFF7;
     margin-top: 32px;
     padding: 0;
   }
@@ -14193,6 +14236,12 @@ main {
 
   .info-review-reply {
     display: none;
+  }
+
+  .info-review-more {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.3;
   }
 
   .info-subtitle {

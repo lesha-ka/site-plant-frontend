@@ -909,7 +909,11 @@
         border-radius: 10px;
         padding: 21px 31.5px 30px 29.5px;
         background-color: $d-white;
+        @media #{$w768} {
+            background-color: $beige;
+        }
         @media #{$w360} {
+            background-color: $d-white;
             flex-wrap: wrap;
             margin-top: 0;
             padding: 0 17px 0 0;
@@ -1042,12 +1046,17 @@
         background-color: $d-white;
         @media #{$w768} {
             margin-top: 18px;
+            background-color: $beige;
         }
         @media #{$w360} {
+            background-color: $d-white;
             margin-top: 32px;
             padding: 0;
         }
         & .info-title {
+            @media #{$w768} {
+                color: $d-green;
+            }
             @media #{$w360} {
                 display: none;
             }
@@ -1254,8 +1263,35 @@
         flex: 1 0 auto;
         text-align: right;
         margin-right: 121px;
+        @media #{$w768} {
+            margin-right: 0;
+        }
         @media #{$w360} {
             display: none;
+        }
+    }
+    &-review-more {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+        font-family: $oswald;
+        font-weight: 500;
+        @include fz-18;
+        color: $green;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.04);
+        }
+        &:active {
+            color: #658945;
+        }
+        @media #{$w360} {
+            margin-top: 20px;
+            @include fz-16;
         }
     }
     &-subtitle {
