@@ -12,7 +12,7 @@
 
 }
 .main-orders {
-    padding: 70px 0 139px;
+    padding: 70px 0 110px;
     @media #{$w1024} {
         padding: 30px 0 0;
         margin-bottom: 97px;
@@ -79,7 +79,9 @@
                 padding: 0 15px;
             }
             & .profile-menu-links {
-                background: transparent;
+                @media #{$w768} {
+                    background: transparent;
+                }
             }
         }
         &-links {
@@ -237,13 +239,16 @@
         }
         &-details {
             @media #{$w768} {
-                padding-top: 30px;
+                padding-top: 32px;
                 margin-top: 30px;             
             }
             @media #{$w360} {
                 padding-top: 0;
                 margin-top: 20px;             
             }
+        }
+        &-orders {
+            padding: 26px 30px 30px;
         }
     }
     &-info {
@@ -796,6 +801,10 @@
             @media #{$w1280} {
                 margin: 30px auto 0;
             }
+            @media #{$w360} {
+                margin-top: 32px;
+                @include fz-16;
+            }
             &:hover {
                 transform: scale(1.04);
             }
@@ -817,14 +826,18 @@
             }
         }
         &-content {
+            display: none;
             @media #{$w360} {
-                padding: 0 5px;
+                padding: 0 10px;
+            }
+            &.is-show {
+                display: block;
             }
         }
         &-tabs {
             display: flex;
             @media #{$w360} {
-                margin-top: 16px;
+                margin-top: 15px;
             }
         }
         &-tab {
@@ -844,11 +857,18 @@
                 color: $d-green;
                 &:not(:last-child) {
                     margin-right: 30px;
+                    @media #{$w360} {
+                        margin-right: 10px;
+                    }
                 }
                 &:hover {
                     color: $d-green;
                     box-shadow: 0px 0px 6px rgba(253, 198, 48, 0.35);
                     background: linear-gradient(92.34deg, #67AF2833 -28.45%, #6CDA0D33 101.05%);
+                }
+                @media #{$w360} {
+                    min-width: 160px;
+                    padding: 12px;
                 }
             }
             &:checked+label {
@@ -865,9 +885,12 @@
             }
         }
         &-item {
-            margin-top: 30px;
+            margin-top: 27px;
             @media #{$w360} {
                 margin-top: 16px;
+                &:not(:first-child) {
+                    margin-top: 60px;
+                }
             }
             &-blur {
                 & .profile-orders-title {
@@ -881,12 +904,12 @@
         &-wrapper {
             background-color: #f1f6ed;
             border-radius: 5px;
-            padding: 20px 20px 30px;
+            padding: 20px 20px 38px;
             @media #{$w768} {
-                padding: 20px 30px 30px;
+                padding: 22px 0 35px 30px;
             }
             @media #{$w360} {
-                padding: 15px 5px 16px;
+                padding: 17px 0px 19px 5px;
             }
         }
         &-info {
@@ -895,10 +918,12 @@
             border-bottom: 1.5px solid #cbd5e2;
             padding-bottom: 15px;
             @media #{$w768} {
-                padding: 0 15px 15px; 
+                padding: 0 30px 15px 20px; 
             }
             @media #{$w360} {
                 justify-content: space-between;
+                padding: 0 5px 12px 15px;
+                border-bottom: 1.5px solid #e8ede3;
             }
         }
         &-title {
@@ -918,6 +943,9 @@
             font-weight: 600;
             @include fz-12;
             color: #859182;
+            @media #{$w360} {
+                margin-top: 10px;
+            }
         }
         &-status {
             min-height: 30px;
@@ -930,6 +958,9 @@
             background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
             @media #{$w360} {
                 border-radius: 20px;
+                @include fz-12;
+                margin-bottom: 4px;
+                padding: 7px 27px 7px;
             }
             &-blue {
                 background: $blue;
@@ -949,6 +980,7 @@
             text-align: right;
         }
         &-details {
+            display: block;
             margin-top: 7px;
             font-weight: 600;
             @include fz-14;
@@ -957,13 +989,26 @@
         }
         &-products {
             display: flex;
+            flex-wrap: wrap;
+            row-gap: 20px;
             margin-top: 20px;
+            @media #{$w768} {
+                padding: 0 30px 0 10px
+            }
+            @media #{$w360} {
+                margin-top: 10px;
+                padding: 0 15px;
+            }
         }
         &-product {
             max-width: 200px;
             margin-right: 35px;
             @media #{$w360} {
                 margin-right: 20px;
+                max-width: 140px;
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
             }
         }
         &-img {
@@ -980,6 +1025,11 @@
             text-align: center;
             @include fz-12;
             color: $d-green;
+            @media #{$w360} {
+                margin-top: 11px;
+                font-size: 11px;
+                line-height: 1.6;
+            }
         }
         &-quantity {
             margin-top: 6px;
@@ -987,6 +1037,9 @@
             text-align: center;
             @include fz-12;
             color: #859182;
+            @media #{$w360} {
+                margin-top: 11px;
+            }
         }
         &-control {
             margin-top: 15px;
@@ -994,7 +1047,7 @@
                 padding: 0 30px;
             }
             @media #{$w360} {
-                padding: 0 10px;
+                padding: 0 5px;
                 margin-top: 10px;
             }
         }
@@ -1012,10 +1065,16 @@
             color: $d-green;
             background: #f1f6ed;
             border-radius: 3px;
+            @media #{$w768} {
+                width: 216px;
+                margin-right: 30px;
+            }
             @media #{$w360} {
-                margin-top: 16px;
+                margin-top: 0;
                 margin-right: 10px;
                 width: 160px;
+                @include fz-12;
+                padding: 12px;
                 &:last-child {
                     margin-right: 0;
                 }
@@ -1036,13 +1095,17 @@
         }
         &-delivery {
             margin-top: 30px;
-            padding: 20px;
+            padding: 24px 20px 30px;
             background: #f1f6ec;
             border-radius: 5px;
+            @media #{$w768} {
+               padding: 24px 10px 30px 20px; 
+            }
             @media #{$w360} {
                 margin-top: 20px;
+                margin-left: 20px;
                 position: relative;
-                padding: 15px 15px 40px;
+                padding: 15px 0 48px 15px;
                 &:not(:first-of-type) {
                     margin-top: 15px;
                 }
@@ -1052,13 +1115,21 @@
             display: flex;
             align-items: center;
             border-bottom: 1.5px solid #cbd5e2;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
+            @media #{$w360} {
+                padding-bottom: 15px;
+                padding-right: 15px;
+                border-bottom: 1.5px solid #e8ede3;
+            }
         }
         &-title {
             font-family: $oswald;
             font-weight: 500;
             @include fz-18;
             color: $d-green;
+            @media #{$w360} {
+                @include fz-14;       
+            }
         }
         &-subtitle {
             display: none;
@@ -1067,9 +1138,9 @@
                 font-weight: 500;
                 color: $d-green;
                 display: block;
-                margin-top: 30px;
+                margin-top: 35px;
                 @include fz-24;
-                padding: 0 35px;
+                padding: 0 30px;
             }
             @media #{$w360} {
                 display: none;
@@ -1080,6 +1151,9 @@
             font-weight: 600;
             @include fz-12;
             color: #859182;
+            @media #{$w360} {
+                margin-top: 10px;
+            }
         }
         &-status {
             margin-left: 40px;
@@ -1093,6 +1167,8 @@
             background: linear-gradient(92.34deg, #67AF28 -28.45%, #6CDA0D 101.05%);
             @media #{$w360} {
                 margin-left: auto;
+                padding: 5px 26px;
+                @include fz-12;
             }
         }
         &-expected {
@@ -1103,7 +1179,8 @@
             @media #{$w360} {
                 @include fz-12;
                 position: absolute;
-                bottom: 15px;
+                bottom: 16px;
+                left: 10px;
                 width: 100%;
             }
         }
@@ -1111,6 +1188,11 @@
             display: flex;
             align-items: center;
             margin-top: 20px;
+            @media #{$w360} {
+                margin-top: 15px;
+                padding-right: 10px;
+                padding-left: 5px;
+            }
         }
         &-img {
             margin-right: 23px;
@@ -1120,6 +1202,7 @@
             border-radius: 4px;
             @media #{$w360} {
                 flex: 1 0 auto;
+                margin-right: 27px;
                 width: 53px;
                 height: 50px;
             }
@@ -1133,35 +1216,82 @@
             @include fz-16;
             color: $d-green;
             @media #{$w360} {
-                @include fz-12;
+                font-size: 11px;
             }
         }
         &-quantity {
             margin-left: auto;
+            padding-left: 5px;
             font-weight: 600;
             @include fz-14;
             color: #859182;
             white-space: nowrap;
+            @media #{$w360} {
+                @include fz-12;
+            }
         }
         &-bill {
             margin-top: 30px;
+            @media #{$w768} {
+               padding-right: 10px;
+            }
             @media #{$w360} {
                 position: relative;
+                padding-right: 0;
             }
             & .order-pay-subtitle {
                 @media #{$w360} {
-                    padding: 0 25px;                
+                    margin-top: 20px;
+                    padding: 0 20px;
+                    @include fz-12;                
                 }
             }
             & .order-pay-wrapper {
                 justify-content: flex-start;
+                flex-wrap: wrap;
+                @media #{$w1024} {
+                    margin-top: 21px;
+                }
                 @media #{$w360} {
-                    padding: 0 25px;                
+                    margin-top: 14px;
+                    padding: 0 0 0 20px;                
                 }
             }
             & .order-pay-item {
                 max-width: 260px;
                 margin-right: 30px;
+                @media #{$w1280} {
+                    margin-right: 20px;  
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;              
+                }
+                @media #{$w1024} {
+                    margin-right: 30px;  
+                    width: 260px;
+                    padding: 16px 18px 16px 49px;
+                    &:last-of-type {
+                        margin-top: 10px;
+                        margin-right: 0;
+                        order: 4;
+                        @media #{$w360} {
+                            margin-top: 0;    
+                        }
+                    }            
+                }
+                @media #{$w360} {
+                    max-width: 100%;   
+                    width: 100%;      
+                }
+            }
+        }
+        &-bill-title {
+            font-family: $oswald;
+            font-weight: 500;
+            @include fz-20;
+            color: $d-green;
+            @media #{$w360} {
+                @include fz-18;
             }
         }
         &-bill-head {
@@ -1179,16 +1309,21 @@
             color: $d-green;
             @media #{$w360} {
                 position: absolute;
-                bottom: 75px;
+                bottom: 82px;
                 text-align: center;
                 width: 100%;
             }
         }
         &-pay {
             width: 210px;
+            @media #{$w1024} {
+                margin-top: auto;
+                align-self: flex-end;
+                margin-right: 80px;
+            }
             @media #{$w360} {
                 width: 100%;
-                margin-top: 60px;
+                margin-top: 50px;
             }
         }
         &-info {
@@ -1197,7 +1332,8 @@
             align-items: stretch;
             justify-content: space-between;
             @media #{$w768} {
-                display: block;          
+                display: block;  
+                margin-top: 30px;        
             }
         }
         &-recipient {
@@ -1206,10 +1342,13 @@
             border-radius: 5px;
             padding: 20px;
             @media #{$w768} {
-                width: 460px;       
+                width: 460px;  
+                padding: 25px 20px;     
             }
             @media #{$w360} {
-                width: 100%;       
+                width: calc(100% - 20px);
+                margin-left: 20px; 
+                padding: 22px 14px;
             }
         }
         &-recipient-subtitle {
@@ -1220,6 +1359,9 @@
             color: $d-green;
             &:not(:first-of-type) {
                 margin-top: 30px;
+                @media #{$w360} {
+                    margin-top: 16px;
+                }
             }
         }
         &-recipient-text {
@@ -1241,8 +1383,10 @@
                 width: 460px;       
             }
             @media #{$w360} {
+                padding: 20px 14px;
                 margin-top: 15px;
-                width: 100%;       
+                width: calc(100% - 20px);  
+                margin-left: 20px; 
             }
         }
         &-summ-head {
@@ -1273,6 +1417,9 @@
         }
         &-btns {
             margin-top: 29px;
+            @media #{$w360} {
+                margin-top: 19px;
+            }
         }
         &-repeat {
             cursor: pointer;
@@ -1294,6 +1441,11 @@
             &:active {
                 box-shadow: inset 2px 4px 3px rgba(82, 84, 79, 0.4);
             }
+            @media #{$w360} {
+                width: calc(50% - 6px);
+                margin-right: 6px;
+                @include fz-12;
+            }
         }
         &-cancel {
             cursor: pointer;
@@ -1313,6 +1465,10 @@
             }
             &:active {
                 box-shadow: inset 2px 4px 4px #860B16;
+            }
+            @media #{$w360} {
+                width: calc(50% - 5px);
+                @include fz-12;
             }
         }
     }

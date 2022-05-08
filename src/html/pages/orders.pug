@@ -13,7 +13,7 @@ main(class=`main main-${page}`)
                             a.profile-menu-link(href="./addresses.html") Адреса
                             a.profile-menu-link.profile-menu-link-active(href="./orders.html") Мои заказы
                     button.profile-menu-exit(type="button") Выйти
-                .profile-content
+                .profile-content.profile-content-orders
                     .profile-orders
                         .profile-orders-head
                             h3.profile-info-title Мои заказы
@@ -23,7 +23,7 @@ main(class=`main main-${page}`)
                                 input.profile-orders-tab.js-tabItem(type="radio" name="orders-tab" id="orders-tab-2" class="js-tabItem" value="")
                                 label(for="orders-tab-2") История заказов
                         .js-tab-content
-                            .profile-orders-content.is-show.js-moreBox(data-tab="orders-tab-1")
+                            .profile-orders-content.is-show(data-tab="orders-tab-1")
                                 .profile-orders-item.profile-orders-item-blur
                                     .profile-orders-wrapper
                                         .profile-orders-info 

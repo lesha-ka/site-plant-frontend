@@ -1,4 +1,4 @@
-main(class=`main main-${page}`)
+main(class=`main main-profile`)
     .container.container-narrow
         +breadcrumb(['Главная', 'Личный кабинет', 'Мои заказы'], 'Заказ №39913105-002')
     .container.container-narrow.container-notablet
@@ -43,7 +43,7 @@ main(class=`main main-${page}`)
                                 .profile-details-quantity 1 шт.
                         .profile-details-bill
                             .profile-details-bill-head
-                                .profile-details-title Счёт №0001 от 10.12.2019
+                                .profile-details-bill-title Счёт №0001 от 10.12.2019
                                 .profile-details-status Оплачен
                                 .profile-details-price Сумма к оплате: 23 000 ₽
                             p.order-pay-subtitle Способы оплаты
@@ -60,10 +60,10 @@ main(class=`main main-${page}`)
                                 label.order-pay-item(for="pay3")
                                     p.order-pay-way Яндекс.Деньги
                                     p.order-pay-info Кэшбэк 5%
-                            button.green-btn.profile-details-pay(type="button" disabled) Оплатить
+                                button.green-btn.profile-details-pay(type="button" disabled) Оплатить
                         .profile-details-bill
                             .profile-details-bill-head
-                                .profile-details-title Счёт №0001 от 10.12.2019
+                                .profile-details-bill-title Счёт №0001 от 10.12.2019
                                 .profile-details-status Не оплачен
                                 .profile-details-price Сумма к оплате: 23 000 ₽
                             p.order-pay-subtitle Способы оплаты
@@ -80,7 +80,7 @@ main(class=`main main-${page}`)
                                 label.order-pay-item(for="pay3")
                                     p.order-pay-way Яндекс.Деньги
                                     p.order-pay-info Кэшбэк 5%
-                            button.green-btn.profile-details-pay(type="button") Оплатить
+                                button.green-btn.profile-details-pay(type="button") Оплатить
                         .profile-details-info
                             .profile-details-recipient
                                 .profile-details-recipient-subtitle Доставка в пункт выдачи
