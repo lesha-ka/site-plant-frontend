@@ -3,6 +3,7 @@
         background: url(../img/popup-bg.png) center no-repeat;
         background-size: cover;
         padding-bottom: 0;
+        overflow: scroll;
         @media #{$w360} {
             padding: 60px 0;
         }

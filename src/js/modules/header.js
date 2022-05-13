@@ -4,6 +4,7 @@ export const getHeader = () => {
         const categories = document.querySelector('.js-categories');
         const categoryList = document.querySelector('.js-categoryList');
         const headerMenu = document.querySelector('.js-headerMenu');
+        const headerMenuMobile = document.querySelector('.js-headerMenuMobile');
         const menuInner = document.querySelector('.js-menuInner');
         const linkList = document.querySelector('.js-linkList');
         const linkItems = document.querySelector('.js-linkItems');
@@ -20,6 +21,7 @@ export const getHeader = () => {
         function showMenu() {
             menuInner.classList.toggle('js-block');
             headerMenu.classList.toggle('header-burger-open');
+            headerMenuMobile.classList.toggle('header-burger-open');
         }
         function showLinkItems() {
             linkItems.classList.toggle('js-block');
@@ -38,6 +40,7 @@ export const getHeader = () => {
         })
         linkList.addEventListener("click", showLinkItems);
         headerMenu.addEventListener("click", showMenu);
+        headerMenuMobile.addEventListener("click", showMenu);
         categories.addEventListener("click", showCategories);
     }
 }

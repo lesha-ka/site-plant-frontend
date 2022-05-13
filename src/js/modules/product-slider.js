@@ -86,7 +86,7 @@ export function getProductSlider() {
       $('.js-categoriesSlider').slick({
         responsive: [
             {
-              breakpoint: 2048,
+              breakpoint: 4048,
               settings: "unslick"
             },
             {
@@ -114,7 +114,7 @@ export function getProductSlider() {
         $('.js-offerSlider').slick({
           responsive: [
               {
-                breakpoint: 2048,
+                breakpoint: 4048,
                 settings: "unslick"
               },
               {

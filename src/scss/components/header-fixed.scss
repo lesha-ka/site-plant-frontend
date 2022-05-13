@@ -1,0 +1,27 @@
+.header-fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 1;
+    background: $white;
+    z-index: 1000;
+    padding: 14px 2px 12px; 
+    box-shadow: 0px 4px 6px rgba(99, 99, 99, 0.5);
+    @media #{$w1280} {
+        padding: 14px 2px 12px; 
+    }
+    @media #{$w768} {
+        padding: 14px 0px; 
+    }
+    @media #{$w360} {
+        padding: 10px 0px 9px; 
+    }
+    &--hidden {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    & .header-row {
+        margin-bottom: 0;
+    }
+}

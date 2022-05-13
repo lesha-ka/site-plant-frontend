@@ -8,6 +8,7 @@
         width: 260px;
         height: 580px;
         background: url(../img/index/leaf-left.png) no-repeat;
+        z-index: 2;
         @media #{$w1440} {
             width: 100px;
             background-position: right -2px;
@@ -23,6 +24,7 @@
         content: "";
         width: 255px;
         height: 580px;
+        z-index: 2;
         background: url(../img/index/leaf-right.png) no-repeat;
         @media #{$w1440} {
             width: 100px;

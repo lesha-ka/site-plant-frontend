@@ -18,12 +18,14 @@ import { getDatepicker } from './modules/datepicker.js';
 import { getMap } from './modules/map.js';
 import { getSelect }from './modules/select.js';
 import { getAddresses}from './modules/addresses.js';
+import { getHeaderFixed}from './modules/header-fixed.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
 	getVendor();
 	getPopup();
 	getProductSlider();
+	getHeaderFixed();
 	getScrollTop();
 	getMore();
 	getMoreText();

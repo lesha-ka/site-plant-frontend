@@ -28,7 +28,7 @@ export const getDatepicker = () => {
     $(function(){
         $("#birthdate").datepicker({
             showOn: "button",
-            buttonImage: "../img/icons/calendar.svg",
+            buttonImage: "img/icons/calendar.svg",
             buttonImageOnly: true,
             buttonText: "Выбрать дату",
             beforeShow: function( input, inst){
@@ -39,7 +39,7 @@ export const getDatepicker = () => {
     $(function(){
         $("#mobiledate").datepicker({
             showOn: "button",
-            buttonImage: "../img/icons/calendar.svg",
+            buttonImage: "img/icons/calendar.svg",
             buttonImageOnly: true,
             buttonText: "Выбрать дату",
             beforeShow: function( input, inst){
